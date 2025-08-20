@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #000;
+  background-color: white;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+  color: #0077ff;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+text-align: center;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+section {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px auto;
+  width: 80%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+table {
+  width: 80%;
+  border-collapse: collapse;
+  margin: 20px auto;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  table-layout: fixed;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+th, td {
+  padding: 12px 15px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  word-wrap: break-word;
+  text-align: left;
+}
+
+thead th {
+  background: linear-gradient(90deg, #005bbb, #00aaff);
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+thead th:nth-child(1), tbody td:nth-child(1) { width: 25%; }
+thead th:nth-child(2), tbody td:nth-child(2) { width: 20%; }
+thead th:nth-child(3), tbody td:nth-child(3) { width: 10%; }
+thead th:nth-child(4), tbody td:nth-child(4) { width: 45%; }
+
+tbody tr:nth-child(even) {
+  background: rgba(0, 119, 255, 0.05);
+}
+
+tbody tr:hover {
+  background: rgba(0, 191, 255, 0.15);
+  transition: 0.3s ease;
+}
+
+.menu-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.menu-buttons button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(90deg, #005bbb, #00aaff);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.menu-buttons button:hover {
+  background: linear-gradient(90deg, #003f7f, #0077ff);
+  transform: scale(1.05);
+}
+
+.menu-buttons button.active {
+  background: linear-gradient(90deg, #003f7f, #005bbb);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Ocultar todas las tablas por defecto */
+.table-content {
+  display: none;
+}
+
+/* Mostrar solo la activa con animación */
+.table-content.active {
+  display: table;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- Centrar imágenes grandes, una debajo de la otra --- */
+#tablas {
+  text-align: center;
+  margin: 30px auto;
+  width: 90%;
+}
+
+#tablas img {
+  display: block;           /* Cada imagen ocupa su propia línea */
+  margin: 15px auto;        /* Centra horizontalmente y separa un poco */
+  max-width: 800px;         /* Ancho máximo más grande */
+  width: 100%;              /* Ocupa el ancho disponible en pantallas pequeñas */
+  height: auto;             /* Mantiene proporciones */
+  border-radius: 10px;      /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra más marcada */
+}

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto ECOSYSTEM</title>
+    <link rel="stylesheet" href="prestamos.css">
+</head>
+<body>
+    <h1>Proyecto ECOSYSTEM</h1>
+
+    <section id="equipo">
+        <h2>Equipo de Desarrollo</h2>
+        <ul>
+            <li>Miguel Santiago Bocanegra - Gerente de Proyecto</li>
+            <li>Luis Fernando Pinto - Líder de Proyecto</li>
+            <li>Christian Ivan Mosquera - Desarrollador</li>
+            <li>Juan Pablo Tocarema - Desarrollador</li>
+        </ul>
+    </section>
+
+    <!-- Menú de navegación -->
+    <section id="menu">
+        <h2>Selecciona una Tabla</h2>
+        <div class="menu-buttons">
+            <button onclick="showTable('prestamos')">Préstamos</button>
+            <button onclick="showTable('reclamos')">Reclamos</button>
+            <button onclick="showTable('solicitud')">Solicitud</button>
+            <button onclick="showTable('equipos')">Equipos</button>
+            <button onclick="showTable('devolucion')">Devolución</button>
+            <button onclick="showTable('pendientes')">Persona solicitante</button>
+            <button onclick="showTable('responsables')">Responsables</button>
+        </div>
+    </section>
+
+    <!-- Contenedor de tablas -->
+    <div id="tables-container">
+
+        <!-- Tabla Préstamos -->
+        <table id="prestamos" class="table-content">
+            <thead>
+                <tr><th colspan="4">DICCIONARIO DE BASE DE DATOS DE ECOSYSTEM</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>nombre de la tabla</td><td colspan="3">Prestamos</td></tr>
+                <tr><td>creacion</td><td colspan="3">30-07-2025</td></tr>
+                <tr><td>descripcion</td><td colspan="3">Registro de préstamos de equipos del laboratorio ambiental.</td></tr>
+            </tbody>
+            <thead>
+                <tr><th>CAMPOS</th><th>TIPO DE DATOS</th><th>TAMAÑO</th><th>DESCRIPCION</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Id_prestamo</td><td>INT</td><td>1</td><td>Código único asignado del préstamo</td></tr>
+                <tr><td>Id_solicitud</td><td>INT</td><td>1</td><td>Código único de la solicitud que se trae de la tabla solicitud</td></tr>
+                <tr><td>Id_responsable</td><td>INT</td><td>1</td><td>Código único del responsable que hace entrega del equipo</td></tr>
+                <tr><td>pendiente_dias</td><td>INT</td><td>1</td><td>calculo automatico de los dias pendientes a entregar</td></tr>
+                <tr><td>estado</td><td>ENUM</td><td>3</td><td>El estado del equipo: vigente, vencido, entregado</td></tr>
+            </tbody>
+        </table>
+
+        <!-- Tabla Reclamos -->
+        <table id="reclamos" class="table-content">
+            <thead>
+                <tr><th colspan="4">DICCIONARIO DE BASE DE DATOS DE ECOSYSTEM</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>nombre de la tabla</td><td colspan="3">Reclamos</td></tr>
+                <tr><td>creacion</td><td colspan="3">30-07-2025</td></tr>
+                <tr><td>descripcion</td><td colspan="3">Registro de quejas e inconformidades.</td></tr>
+            </tbody>
+            <thead>
+                <tr><th>CAMPOS</th><th>TIPO DE DATOS</th><th>TAMAÑO</th><th>DESCRIPCION</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Id_Reclamo</td><td>INT</td><td>1</td><td>Identificador unico asignado del reclamo</td></tr>
+                <tr><td>Fecha_reclamo</td><td>DATE</td><td>25</td><td>Fecha del reclamo</td></tr>
+                <tr><td>Motivo_reclamo</td><td>VARCHAR</td><td>30</td><td>Motivo del reclamo</td></tr>
+            </tbody>
+        </table>
+
+        <!-- Tabla Solicitud -->
+        <table id="solicitud" class="table-content">
+            <thead>
+                <tr><th colspan="4">DICCIONARIO DE BASE DE DATOS DE ECOSYSTEM</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>nombre de la tabla</td><td colspan="3">Solicitud</td></tr>
+                <tr><td>creacion</td><td colspan="3">30-07-2025</td></tr>
+                <tr><td>descripcion</td><td colspan="3">Registro de solicitudes de préstamo.</td></tr>
+            </tbody>
+            <thead>
+                <tr><th>CAMPOS</th><th>TIPO DE DATOS</th><th>TAMAÑO</th><th>DESCRIPCION</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Id_solicitud</td><td>INT</td><td>1</td><td>Código único de la solicitud</td></tr>
+                <tr><td>fecha_hora_registro</td><td>DATETIME</td><td>10</td><td>Registro de la Fecha y hora de la solicitud</td></tr>
+                <tr><td>Id_equipo</td><td>INT</td><td>1</td><td>Codigo unico del equipo que se trae de la tabla Equipos </td></tr>
+                <tr><td>fecha_inicio</td><td>DATE</td><td>10</td><td>Registro de la Fecha que necesita el equipo</td></tr>
+                <tr><td>fecha_fin</td><td>INT</td><td>1</td><td>Registro de la fecha que va a devolver el equipo </td></tr>
+                <tr><td>Id_responsable</td><td>INT</td><td>1</td><td>Codigo unico del responsable que se trae de la tabla responsables</td></tr>
+                <tr><td>Id_persona_solicitante</td><td>INT</td><td>1</td><td>Identificador único que se trae de la la tabla persona solicitante</td></tr>
+            </tbody>
+        </table>
+
+        <!-- Tabla Equipos -->
+        <table id="equipos" class="table-content">
+            <thead>
+                <tr><th colspan="4">DICCIONARIO DE BASE DE DATOS DE ECOSYSTEM</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>nombre de la tabla</td><td colspan="3">Equipos</td></tr>
+                <tr><td>creacion</td><td colspan="3">30-07-2025</td></tr>
+                <tr><td>descripcion</td><td colspan="3">Inventario de equipos disponibles.</td></tr>
+            </tbody>
+            <thead>
+                <tr><th>CAMPOS</th><th>TIPO DE DATOS</th><th>TAMAÑO</th><th>DESCRIPCION</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Id_equipo</td><td>INT</td><td>1</td><td>Identificador único asignado para la tabla equipos</td></tr>
+                <tr><td>Nombre_equipos</td><td>VARCHAR</td><td>20</td><td>Registro del Nombre del equipo</td></tr>
+                <tr><td>modelo_equipo</td><td>VARCHAR</td><td>20</td><td>Registro del Modelo del equipo</td></tr>
+                <tr><td>marca_equipo</td><td>VARCHAR</td><td>20</td><td>Registro de la Marca del equipo</td></tr>
+                <tr><td>serial_equipo</td><td>VARCHAR</td><td>20</td><td>Registro del Serial del equipo</td></tr>
+            </tbody>
+        </table>
+
+        <!-- Tabla Devolución -->
+        <table id="devolucion" class="table-content">
+            <thead>
+                <tr><th colspan="4">DICCIONARIO DE BASE DE DATOS DE ECOSYSTEM</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>nombre de la tabla</td><td colspan="3">Devolución</td></tr>
+                <tr><td>creacion</td><td colspan="3">30-07-2025</td></tr>
+                <tr><td>descripcion</td><td colspan="3">Registro de devoluciones de equipos.</td></tr>
+            </tbody>
+            <thead>
+                <tr><th>CAMPOS</th><th>TIPO DE DATOS</th><th>TAMAÑO</th><th>DESCRIPCION</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>id_devolucion</td><td>INT</td><td>1</td><td>Identificador único asignado para la devolucion</td></tr>
+                <tr><td>Id_prestamo</td><td>INT</td><td>1</td><td>Código único asignado del préstamo</td></tr>
+                <tr><td>fecha_entrega</td><td>DATE</td><td>10</td><td>registro de la Fecha de la devolución</td></tr>
+                <tr><td>Id_responsable</td><td>INT</td><td>1</td><td>Codigo unico del responsable que recibe el equipo prestado</td></tr>
+                <tr><td>Observaciones</td><td>TEXT</td><td>50</td><td>Observaciones de como se recibe el equipo, dañado, bueno, etc...</td></tr>
+                
+                
+                
+            </tbody>
+        </table>
+
+        <!-- Tabla Persona solicitante -->
+        <table id="pendientes" class="table-content">
+            <thead>
+                <tr><th colspan="4">DICCIONARIO DE BASE DE DATOS DE ECOSYSTEM</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>nombre de la tabla</td><td colspan="3">Persona solicitante</td></tr>
+                <tr><td>creacion</td><td colspan="3">30-07-2025</td></tr>
+                <tr><td>descripcion</td><td colspan="3">Registros de las personas solicitantes.</td></tr>
+            </tbody>
+            <thead>
+                <tr><th>CAMPOS</th><th>TIPO DE DATOS</th><th>TAMAÑO</th><th>DESCRIPCION</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Id_persona_solicitante</td><td>INT</td><td>1</td><td>registro del Identificador único que se le asigna a la tabla persona solicitante</td></tr>
+                <tr><td>documento_solicitante</td><td>INT</td><td>10</td><td>Registro del nombre de la persona que solicita</td></tr>
+                <tr><td>nombre_solicitante</td><td>VARCHAR</td><td>16</td><td>Registro de documento de la persona que solicita</td></tr>
+                <tr><td>correo_solicitante</td><td>VARCHAR</td><td>20</td><td>Registro del correo de la persona que solicita</td></tr>
+                <tr><td>telefono_solicitante</td><td>VARCHAR</td><td>14</td><td>Registro del telefono de la persona que solicita</td></tr>
+                <tr><td>direccion_solicitante</td><td>VARCHAR</td><td>16</td><td>Registro de la direccion de la persona que solicita</td></tr>
+            </tbody>
+        </table>
+
+        <!-- Tabla Responsables -->
+        <table id="responsables" class="table-content">
+            <thead>
+                <tr><th colspan="4">DICCIONARIO DE BASE DE DATOS DE ECOSYSTEM</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>nombre de la tabla</td><td colspan="3">Responsables</td></tr>
+                <tr><td>creacion</td><td colspan="3">30-07-2025</td></tr>
+                <tr><td>descripcion</td><td colspan="3">Datos de los responsables a cargo.</td></tr>
+            </tbody>
+            <thead>
+                <tr><th>CAMPOS</th><th>TIPO DE DATOS</th><th>TAMAÑO</th><th>DESCRIPCION</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>id_Responsable</td><td>INT</td><td>1</td><td>Identificador único que asigna para el responsable</td></tr>
+                <tr><td>nombre_Responsable</td><td>VARCHAR</td><td>16</td><td>registro del nombre del responsable</td></tr>
+                <tr><td>numero_telefono</td><td>VARCHAR</td><td>10</td><td>registro del Teléfono del responsable</td></tr>
+                <tr><td>correo_responsable</td><td>VARCHAR</td><td>12</td><td>registro del Correo del responsable</td></tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <div id="tablas">
+     <h1>Todas Las Tablas de Ecosystem</h1>
+                 <h2>Tabla de Solicitud y Persona solicitante </h2>
+            <img src="img/1.jpg" alt="Solicitud Y Persona solicitante">
+             <h2>Tabla de Usuario,Funcionario,Equipo</h2>
+            <img src="img/2.jpg" alt="Usuario,Funcionario,Equipo">
+             <h2>Tabla de Prestamos y Devolucion </h2>
+            <img src="img/3.jpg" alt="Prestamos y Devolucion">
+            <h2>Tabla de Prestamos,personas solicitantes,solicitud </h2>
+            <img src="img/4.png" alt="Prestamos,personas solicitantes,solicitud">
+        
+    </div>
+
+    <script src="prestamos.js"></script>
+</body>
+</html>
