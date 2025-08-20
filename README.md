@@ -1,2 +1,2 @@
 # PROYECTO-ECOSYSTEM
-Proyecto educativo del Sena La Granja
+Proyecto educativo del Sena 
