@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto ECOSYSTEM</title>
+    <link rel="stylesheet" href="prestamos.css">
+</head>
+<body>
+    <h1>Proyecto ECOSYSTEM</h1>
+
+    <section id="equipo">
+        <h2>Equipo de Desarrollo</h2>
+        <ul>
+            <li>Miguel Santiago Bocanegra - Gerente de Proyecto</li>
+            <li>Luis Fernando Pinto - Líder de Proyecto</li>
+            <li>Christian Ivan Mosquera - Desarrollador</li>
+            <li>Juan Pablo Tocarema - Desarrollador</li>
+        </ul>
+        <p>presentado al instructor jorge</p>
+    </section>
+
+    <!-- Menú de navegación -->
+    <section id="menu">
+        <h2>Selecciona una Tabla</h2>
+        <div class="menu-buttons">
+            <button onclick="showTable('prestamos')">Préstamos</button>
+            <button onclick="showTable('reclamos')">Reclamos</button>
+            <button onclick="showTable('solicitud')">Solicitud</button>
+            <button onclick="showTable('equipos')">Equipos</button>
+            <button onclick="showTable('devolucion')">Devolución</button>
+            <button onclick="showTable('pendientes')">Persona solicitante</button>
+            <button onclick="showTable('responsables')">Responsables</button>
+        </div>
+    </section>
+     <div id="tables-container">
+
+        <!-- Tabla Préstamos -->
+        <table id="prestamos" class="table-content">
+            <thead>
+                <tr><th colspan="4">DICCIONARIO DE BASE DE DATOS DE ECOSYSTEM</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>nombre de la tabla</td><td colspan="3">Prestamos</td></tr>
+                <tr><td>creacion</td><td colspan="3">30-07-2025</td></tr>
+                <tr><td>descripcion</td><td colspan="3">Registro de préstamos de equipos del laboratorio ambiental.</td></tr>
+            </tbody>
+            <thead>
+                <tr><th>CAMPOS</th><th>TIPO DE DATOS</th><th>TAMAÑO</th><th>DESCRIPCION</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Id_prestamo</td><td>INT</td><td>1</td><td>Código único asignado del préstamo</td></tr>
+                <tr><td>Id_solicitud</td><td>INT</td><td>1</td><td>Código único de la solicitud que se trae de la tabla solicitud</td></tr>
+                <tr><td>Id_responsable</td><td>INT</td><td>1</td><td>Código único del responsable que hace entrega del equipo</td></tr>
+                <tr><td>pendiente_dias</td><td>INT</td><td>1</td><td>calculo automatico de los dias pendientes a entregar</td></tr>
+                <tr><td>estado</td><td>ENUM</td><td>3</td><td>El estado del equipo: vigente, vencido, entregado</td></tr>
+            </tbody>
+        </table>
+  <div id="tablas">
+     <h1>Todas Las Tablas de Ecosystem</h1>
+                 <h2>Tabla de Solicitud y Persona solicitante </h2>
+            <img src="img/1.jpg" alt="Solicitud Y Persona solicitante">
+             <h2>Tabla de Usuario,Funcionario,Equipo</h2>
+            <img src="img/2.jpg" alt="Usuario,Funcionario,Equipo">
+             <h2>Tabla de Prestamos y Devolucion </h2>
+            <img src="img/3.jpg" alt="Prestamos y Devolucion">
+            <h2>Tabla de Prestamos,personas solicitantes,solicitud </h2>
+            <img src="img/4.png" alt="Prestamos,personas solicitantes,solicitud">
+        
+    </div>
+
+    <script src="prestamos.js"></script>
+
+    </body>
+</html>
