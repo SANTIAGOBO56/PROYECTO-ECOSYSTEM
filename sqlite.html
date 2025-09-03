@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestor de Base de Datos</title>
+  <link rel="stylesheet" href="prestamos.css">
+</head>
+<body>
+  <h1>Proyecto ECOSYSTEM</h1>
+
+  <!-- Equipo -->
+  <section id="equipo">
+    <h2>Equipo de Desarrollo</h2>
+    <ul>
+      <li>Miguel Santiago Bocanegra - Gerente de Proyecto</li>
+      <li>Luis Fernando Pinto - Líder de Proyecto</li>
+      <li>Christian Ivan Mosquera - Desarrollador</li>
+      <li>Juan Pablo Tocarema - Desarrollador</li>
+    </ul>
+    <p>presentado al instructor jorge</p>
+  </section>
+
+  <!-- Menú -->
+  <section id="menu">
+    <h2>Selecciona una Tabla</h2>
+    <div class="menu-buttons">
+      <button onclick="location.href='cuadros.html#prestamos'">Préstamos</button>
+      <button onclick="location.href='cuadros.html#reclamos'">Reclamos</button>
+      <button onclick="location.href='cuadros.html#solicitud'">Solicitud</button>
+      <button onclick="location.href='cuadros.html#equipos'">Equipos</button>
+      <button onclick="location.href='cuadros.html#devolucion'">Devolución</button>
+      <button onclick="location.href='cuadros.html#pendientes'">Persona solicitante</button>
+      <button onclick="location.href='cuadros.html#responsables'">Responsables</button>
+      <button onclick="location.href='cuadros.html#tablas'">Diagramas</button>
+
+      <!-- Dropdown Consulta -->
+    <div class="dropdown">
+        <button class="dropbtn">Consulta</button>
+        <div class="dropdown-content">
+            <a href="gestor.html">¿Qué es un Gestor de Base de Datos?</a>
+        <div class="dropdown-submenu">
+            <a href="#">Motores de Base de Datos</a>
+            <div class="dropdown-submenu-content">
+                <a href="mysql.html">MySQL</a>
+                <a href="oracle.html">Oracle</a>
+                <a href="postgresql.html">PostgreSQL</a>
+                <a href="sqlserver.html">SQL Server</a>
+                <a href="mongodb.html">MongoDB</a>
+                <a href="sqlite.html">SQLite</a>
+                <a href="mariadb.html">MariaDB</a>
+                <a href="firebird.html">Firebird</a>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+  </section>
+
+  
+  <section id="contenido">
+
+    <h2>¿Que es SQLite?</h2>
+     <img src="img/sqlite.png" alt="Logo de SQLite" style="width:300px;height:200px;">
+    <p>
+        SQLite es un sistema de gestión de bases de datos relacional de código abierto, que se implementa como una biblioteca en C. A diferencia de otros sistemas de gestión de bases de datos, SQLite no requiere un servidor separado para funcionar, lo que lo hace ligero y fácil de usar. Es ampliamente utilizado en aplicaciones móviles, navegadores web y dispositivos embebidos debido a su simplicidad y eficiencia.
+    </p>
+     <p>Funciones principales:</p>
+    <ul>
+      <li>Gestión de bases de datos relacionales.</li>
+      <li>Soporte para múltiples motores de almacenamiento, incluyendo InnoDB y MyISAM.</li>
+      <li>Alta compatibilidad con MySQL, facilitando la migración entre ambos sistemas.</li>
+      <li>Mejoras en el rendimiento y la escalabilidad.</li>
+      <li>Características avanzadas como replicación, particionamiento y clustering.</li>
+      <li>Seguridad mejorada con autenticación y cifrado de datos.</li>
+      <li>Soporte para consultas SQL complejas y procedimientos almacenados.</li>
+       <li>Almacenamiento en disco y en memoria.</li>
