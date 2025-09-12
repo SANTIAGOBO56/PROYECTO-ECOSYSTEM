@@ -59,39 +59,85 @@
 
     <!-- Contenido propio de Gestor -->
 <section id="contenido">
-    <h2>Que es MongoDB</h2>
-    <img src="img/mongodb.jfif" alt="">
-    <p>
-MongoDB es un sistema de gestión de bases de datos (DBMS) no relacional de código abierto
-que emplea documentos flexibles en lugar de tablas y filas para procesar y almacenar diversas formas de datos.
-Como una solución de base de datos NoSQL, MongoDB no requiere un sistema de administración de bases de datos relacional (RDBMS)
-por lo que proporciona un modelo de almacenamiento de datos elástico que permite a los usuarios almacenar y consultar tipos de datos multivariados con facilidad.
-Esto no sólo simplifica la administración de bases de datos para los desarrolladores, sino que también crea un entorno altamente escalable para aplicaciones y servicios multiplataforma
-</p>
+   <!-- Contenido propio de Gestor -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>MongoDB - Ejemplo CRUD</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <section id="contenido">
+    <h2>¿Qué es MongoDB?</h2>
+    <img src="img/mongodb.jfif" alt="Logo de MongoDB">
+    <section>
+  <p>
+    MongoDB es un sistema de gestión de bases de datos (DBMS) no relacional de código abierto
+    que emplea documentos flexibles en lugar de tablas y filas para procesar y almacenar diversas formas de datos.
+    Como una solución de base de datos NoSQL, MongoDB no requiere un sistema de administración de bases de datos relacional (RDBMS),
+    por lo que proporciona un modelo de almacenamiento de datos elástico que permite a los usuarios almacenar y consultar tipos de datos multivariados con facilidad.
+    Esto no sólo simplifica la administración de bases de datos para los desarrolladores, sino que también crea un entorno altamente escalable para aplicaciones y servicios multiplataforma.
+  </p>
 
-    <h2>MongoDB es Relacional o no Relacional</h2>
-    <P>
+  <h2>¿MongoDB es Relacional o No Relacional?</h2>
+  <p>
     MongoDB es una base de datos no relacional (o NoSQL)
     que almacena datos en formato de documentos flexibles en lugar de tablas y filas, 
     lo que permite una gran flexibilidad para datos estructurados, semiestructurados 
-    Y no estructurados, y una fácil escalabilidad. A diferencia de las bases de datos
+    y no estructurados, y una fácil escalabilidad. A diferencia de las bases de datos
     relacionales que usan esquemas fijos, MongoDB utiliza un modelo de datos orientado
-    a documentos, como el formato BSON (una forma binaria de JSON). 
-    </P>
-    <h2>Ejemplo de una tabla de MongoDB No Relacional</h2>
-    <img src="img/crud-mongodb.png" alt="">
-    
+    a documentos, como el formato BSON (una forma binaria de JSON).
+  </p>
 
+  <h2>Ejemplo de CRUD en MongoDB</h2>
+  <pre><code class="language-js">
+  const { MongoClient } = require('mongodb');
 
+// Conexión al servidor
+const uri = "mongodb://localhost:27017";
+const client = new MongoClient(uri);
 
+async function run() {
+  try {
+    await client.connect();
+    const db = client.db("miBaseDeDatos");
 
+    // 1️⃣ Crear colección (similar a tabla en SQL)
+    await db.createCollection("Usuarios");
+    console.log("✅ Colección 'Usuarios' creada.");
 
+    const collection = db.collection("Usuarios");
+
+    // 2️⃣ Insertar documentos (filas en SQL)
+    await collection.insertMany([
+      { nombre: "Juan Pérez", edad: 30, correo: "juan.perez@example.com" },
+      { nombre: "María Gómez", edad: 25, correo: "maria.gomez@example.com" }
+    ]);
+    console.log("✅ Documentos insertados en la colección.");
+
+    // 3️⃣ Consultar documentos
+    const usuarios = await collection.find().toArray();
+    console.log("📋 Documentos encontrados:");
+    console.log(usuarios);
+
+    // 4️⃣ Eliminar colección (borrar la tabla completa)
+    await db.dropCollection("Usuarios");
+    console.log("🗑️ Colección 'Usuarios' eliminada.");
+
+  } finally {
+    await client.close();
+  }
+}
+
+run().catch(console.dir);
+
+  </code></pre>
 </section>
-  <footer>
-    <p>© 2025 ECOSYSTEM - SENA La Granja</p>
-  </footer>
+
+
+<footer>
+  <p>© 2025 ECOSYSTEM - SENA La Granja</p>
+</footer>
 </body>
 </html>
-
-</html>
-
