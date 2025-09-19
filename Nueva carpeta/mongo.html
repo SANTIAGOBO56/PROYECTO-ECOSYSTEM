@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/estilos.css">
+  <title>ECOSYSTEM</title>
+</head>
+<body>
+ 
 <nav id="menu">
     <ul>
       <li class="logo">
@@ -7,7 +17,7 @@
       <li><a href="index.html">Inicio</a></li>
       <li><a href="../Nueva carpeta/grri.html">Gestor y Motor de BD</a></li>
 
-      <!-- Submenú Tablas BD -->
+      
       <li>
         <a href="../Nueva carpeta/diagrama.html">Tablas BD</a>
         <ul>
@@ -21,7 +31,7 @@
         </ul>
       </li>
 
-      <!-- Submenú BD Relaciones  falta esto?--> 
+  
       <li>
         <a href="#">BD Relaciones</a>
         <ul>
@@ -35,17 +45,17 @@
         </ul>
       </li>
 
-      <!-- Submenú BD No Relacionales  tambien falta esto-->
+      
       <li>
         <a href="#">BD No Relaciones</a>
         <ul>
           <li><a href="../Nueva carpeta/mongo.html">MongoDB</a></li>
-          <li><a href="../Nueva carpeta/reclamos.html">Cassandra</a></li>
-          <li><a href="../Nueva carpeta/equipos.html">CoushDB</a></li>
-          <li><a href="../Nueva carpeta/solicitud.html">Redis</a></li>
-          <li><a href="../Nueva carpeta/devolucion.html">Neo4j</a></li>
-          <li><a href="../Nueva carpeta/personas_solicitante.html">Amazon DynamoDB</a></li>
-          <li><a href="../Nueva carpeta/responsables.html">HBase</a></li>
+          <li><a href="../Nueva carpeta/cassandra.html">Cassandra</a></li>
+          <li><a href="../Nueva carpeta/couchdb.html">CoushDB</a></li>
+          <li><a href="../Nueva carpeta/redis.html">Redis</a></li>
+          <li><a href="../Nueva carpeta/neo4j.html">Neo4j</a></li>
+          <li><a href="../Nueva carpeta/amazon.html">Amazon DynamoDB</a></li>
+          <li><a href="../Nueva carpeta/hbase.html">HBase</a></li>
         </ul>
       </li>
 
@@ -57,24 +67,45 @@
   <h2>Que es MongoDB</h2>
     <img src="img/mongodb.jfif" alt="">
     <p>
-MongoDB es un sistema de gestión de bases de datos (DBMS) no relacional de código abierto
-que emplea documentos flexibles en lugar de tablas y filas para procesar y almacenar diversas formas de datos.
-Como una solución de base de datos NoSQL, MongoDB no requiere un sistema de administración de bases de datos relacional (RDBMS)
-por lo que proporciona un modelo de almacenamiento de datos elástico que permite a los usuarios almacenar y consultar tipos de datos multivariados con facilidad.
-Esto no sólo simplifica la administración de bases de datos para los desarrolladores, sino que también crea un entorno altamente escalable para aplicaciones y servicios multiplataforma
-</p>
+      MongoDB es un sistema de gestión de bases de datos (DBMS) no relacional de código abierto
+      que emplea documentos flexibles en lugar de tablas y filas para procesar y almacenar diversas formas de datos.
+      Como una solución de base de datos NoSQL, MongoDB no requiere un sistema de administración de bases de datos relacional (RDBMS)
+      por lo que proporciona un modelo de almacenamiento de datos elástico que permite a los usuarios almacenar y consultar tipos de datos multivariados con facilidad.
+      Esto no sólo simplifica la administración de bases de datos para los desarrolladores, sino que también crea un entorno altamente escalable para aplicaciones y servicios multiplataforma
+      </p>
 
-    <h2>MongoDB es Relacional o no Relacional</h2>
-    <P>
-    MongoDB es una base de datos no relacional (o NoSQL)
-    que almacena datos en formato de documentos flexibles en lugar de tablas y filas, 
-    lo que permite una gran flexibilidad para datos estructurados, semiestructurados 
-    Y no estructurados, y una fácil escalabilidad. A diferencia de las bases de datos
-    relacionales que usan esquemas fijos, MongoDB utiliza un modelo de datos orientado
-    a documentos, como el formato BSON (una forma binaria de JSON). 
-    </P>
-    <h2>Ejemplo de una tabla de MongoDB No Relacional</h2>
-</div>
+              <h2>Crud de MongoDB</h2>
+              Crear tabla Productos
+            CREATE TABLE Productos (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                nombre TEXT NOT NULL,
+                precio DECIMAL(10,2) NOT NULL,
+                stock INTEGER DEFAULT 0
+            );
+
+             <h2>INSERT</h2>
+             Agregar productos
+            INSERT INTO Productos (nombre, precio, stock) 
+            VALUES ('Laptop Lenovo', 2500.00, 10);
+
+            INSERT INTO Productos (nombre, precio, stock) 
+            VALUES ('Mouse Inalámbrico', 50.00, 30);
+
+            <h2>SELECT</h2>
+             Consultar productos
+            SELECT * FROM Productos;
+
+             <h2>UPDATE</h2>
+              Actualizar precio y stock de un producto
+            UPDATE Productos 
+            SET precio = 2400.00, stock = 8 
+            WHERE id = 1;
+
+            <h2>DELETE</h2>
+            Eliminar un producto
+            DELETE FROM Productos WHERE id = 2;
+
+      </div>
 <footer>2025 ECOSYSTEM - SENA La Granja</footer>
 </body>
 </html>

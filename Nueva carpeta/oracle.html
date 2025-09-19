@@ -17,7 +17,7 @@
       <li><a href="index.html">Inicio</a></li>
       <li><a href="../Nueva carpeta/grri.html">Gestor y Motor de BD</a></li>
 
-      <!-- Submenú Tablas BD -->
+      
       <li>
         <a href="../Nueva carpeta/diagrama.html">Tablas BD</a>
         <ul>
@@ -31,7 +31,7 @@
         </ul>
       </li>
 
-      <!-- Submenú BD Relaciones  falta esto?--> 
+  
       <li>
         <a href="#">BD Relaciones</a>
         <ul>
@@ -45,17 +45,17 @@
         </ul>
       </li>
 
-      <!-- Submenú BD No Relacionales  tambien falta esto-->
+      
       <li>
         <a href="#">BD No Relaciones</a>
         <ul>
-          <li><a href="../Nueva carpeta/prestamos.html">MongoDB</a></li>
-          <li><a href="../Nueva carpeta/reclamos.html">Cassandra</a></li>
-          <li><a href="../Nueva carpeta/equipos.html">CoushDB</a></li>
-          <li><a href="../Nueva carpeta/solicitud.html">Redis</a></li>
-          <li><a href="../Nueva carpeta/devolucion.html">Neo4j</a></li>
-          <li><a href="../Nueva carpeta/personas_solicitante.html">Amazon DynamoDB</a></li>
-          <li><a href="../Nueva carpeta/responsables.html">HBase</a></li>
+          <li><a href="../Nueva carpeta/mongo.html">MongoDB</a></li>
+          <li><a href="../Nueva carpeta/cassandra.html">Cassandra</a></li>
+          <li><a href="../Nueva carpeta/couchdb.html">CoushDB</a></li>
+          <li><a href="../Nueva carpeta/redis.html">Redis</a></li>
+          <li><a href="../Nueva carpeta/neo4j.html">Neo4j</a></li>
+          <li><a href="../Nueva carpeta/amazon.html">Amazon DynamoDB</a></li>
+          <li><a href="../Nueva carpeta/hbase.html">HBase</a></li>
         </ul>
       </li>
 
@@ -68,6 +68,19 @@
     <p>
       es el nombre de una empresa tecnológica multinacional líder y su producto estrella, Oracle Database, que es un sistema de gestión de bases de datos relacionales para almacenar, organizar y gestionar grandes volúmenes de información de manera segura, escalable y con alta disponibilidad. La compañía ofrece, además, soluciones integradas en la nube, como la infraestructura (OCI) y aplicaciones empresariales (ERP, CRM, etc.) para diversos sectores. 
     </p>
+    <h2>Ejemplos de uso en operaciones CRUD</h2>
+     <h3>INSERTAR</h3>
+          <p>Contexto: Quieres guardar un nombre de usuario con un carácter especial.
+Ejemplo: Si el nombre de usuario fuera "Juan & Pérez", podrías insertarlo directamente en una columna VARCHAR2. No necesitas escapar el & a menos que estés construyendo un comando SQL y el & tenga un significado especial en ese contexto (como una variable en una sentencia de scripting), donde usarías & o una función para escapar su valor. </p>
+      <H2>SELECT (Leer)</H2>
+Contexto: Quieres buscar o recuperar datos que contengan un carácter específico.
+Ejemplo: Si buscas un producto llamado "Televisor 4K", puedes usar el comodín % para encontrar todas las coincidencias: SELECT * FROM productos WHERE nombre_producto LIKE '%Televisor 4K%'. 
+      <h2> (Actualizar)</h2>
+Contexto: Modificar la información de un registro, incluyendo caracteres especiales.
+Ejemplo: Actualizar un número de teléfono que contenga un guion: UPDATE contactos SET telefono = '123-456-7890' WHERE id = 1. El carácter - es una parte válida de los datos y se almacena tal cual. 
+        <h2>DELETE (Borrar)</h2>
+Contexto: Eliminar un registro basado en un criterio que incluya caracteres especiales.
+Ejemplo: Eliminar un registro donde el nombre de la ciudad sea "Nueva York": DELETE FROM ciudades WHERE nombre = 'Nueva York'. Las comillas simples ' pueden ser un carácter especial que, si se quiere almacenar, necesitaría ser escapado duplicándolas ('Nueva'' York') para que sea tratado como una coma, o usar un valor entre comillas simples para buscarlo sin problemas.
 </div>
 <footer>2025 ECOSYSTEM - SENA La Granja</footer>
 </body>
