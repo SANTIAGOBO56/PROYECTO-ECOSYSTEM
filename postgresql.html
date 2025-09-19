@@ -3,63 +3,66 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gestor de Base de Datos</title>
-  <link rel="stylesheet" href="prestamos.css">
+  <link rel="stylesheet" href="css/estilos.css">
+  <title>ECOSYSTEM</title>
 </head>
 <body>
-  <h1>Proyecto ECOSYSTEM</h1>
-
-  <!-- Equipo -->
-  <section id="equipo">
-    <h2>Equipo de Desarrollo</h2>
+<nav id="menu">
     <ul>
-      <li>Miguel Santiago Bocanegra - Gerente de Proyecto</li>
-      <li>Luis Fernando Pinto - Líder de Proyecto</li>
-      <li>Christian Ivan Mosquera - Desarrollador</li>
-      <li>Juan Pablo Tocarema - Desarrollador</li>
+      <li class="logo">
+        <a href="../cuadros.html"><img src="img/ecosystem.png" alt="Logo"></a>
+      </li>
+
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="../Nueva carpeta/grri.html">Gestor y Motor de BD</a></li>
+
+      
+      <li>
+        <a href="../Nueva carpeta/diagrama.html">Tablas BD</a>
+        <ul>
+          <li><a href="../Nueva carpeta/prestamos.html">Pestamos</a></li>
+          <li><a href="../Nueva carpeta/reclamos.html">Reclamos</a></li>
+          <li><a href="../Nueva carpeta/equipos.html">Equipos</a></li>
+          <li><a href="../Nueva carpeta/solicitud.html">Solicitud</a></li>
+          <li><a href="../Nueva carpeta/devolucion.html">Devolucion</a></li>
+          <li><a href="../Nueva carpeta/personas_solicitante.html">Personas Solicitante</a></li>
+          <li><a href="../Nueva carpeta/responsables.html">Responsable</a></li>
+        </ul>
+      </li>
+
+  
+      <li>
+        <a href="#">BD Relaciones</a>
+        <ul>
+          <li><a href="../Nueva carpeta/mysql.html">MySQL</a></li>
+          <li><a href="../Nueva carpeta/oracle.html">Oracle</a></li>
+          <li><a href="../Nueva carpeta/postgresql.html">PostgreSQL</a></li>
+          <li><a href="../Nueva carpeta/sqlite.html">SQlite</a></li>
+          <li><a href="../Nueva carpeta/sqlserver.html">SQL Server</a></li>
+          <li><a href="../Nueva carpeta/mariadb.html">MariaDB</a></li>
+          <li><a href="../Nueva carpeta/firebird.html">Firebird</a></li>
+        </ul>
+      </li>
+
+      
+      <li>
+        <a href="#">BD No Relaciones</a>
+        <ul>
+          <li><a href="../Nueva carpeta/mongo.html">MongoDB</a></li>
+          <li><a href="../Nueva carpeta/cassandra.html">Cassandra</a></li>
+          <li><a href="../Nueva carpeta/couchdb.html">CoushDB</a></li>
+          <li><a href="../Nueva carpeta/redis.html">Redis</a></li>
+          <li><a href="../Nueva carpeta/neo4j.html">Neo4j</a></li>
+          <li><a href="../Nueva carpeta/amazon.html">Amazon DynamoDB</a></li>
+          <li><a href="../Nueva carpeta/hbase.html">HBase</a></li>
+        </ul>
+      </li>
+
+      <li><a href="../Nueva carpeta/informacion.html">Acerca de los Integrantes</a></li>
     </ul>
-    <p>presentado al instructor jorge</p>
-  </section>
-
-  <!-- Menú -->
-  <section id="menu">
-    <h2>Selecciona una Tabla</h2>
-    <div class="menu-buttons">
-      <button onclick="location.href='cuadros.html#prestamos'">Préstamos</button>
-      <button onclick="location.href='cuadros.html#reclamos'">Reclamos</button>
-      <button onclick="location.href='cuadros.html#solicitud'">Solicitud</button>
-      <button onclick="location.href='cuadros.html#equipos'">Equipos</button>
-      <button onclick="location.href='cuadros.html#devolucion'">Devolución</button>
-      <button onclick="location.href='cuadros.html#pendientes'">Persona solicitante</button>
-      <button onclick="location.href='cuadros.html#responsables'">Responsables</button>
-      <button onclick="location.href='cuadros.html#tablas'">Diagramas</button>
-
-      <!-- Dropdown Consulta -->
-    <div class="dropdown">
-        <button class="dropbtn">Consulta</button>
-        <div class="dropdown-content">
-            <a href="gestor.html">¿Qué es un Gestor de Base de Datos?</a>
-        <div class="dropdown-submenu">
-            <a href="#">Motores de Base de Datos</a>
-            <div class="dropdown-submenu-content">
-                <a href="mysql.html">MySQL</a>
-                <a href="oracle.html">Oracle</a>
-                <a href="postgresql.html">PostgreSQL</a>
-                <a href="sqlserver.html">SQL Server</a>
-                <a href="mongodb.html">MongoDB</a>
-                <a href="sqlite.html">SQLite</a>
-                <a href="mariadb.html">MariaDB</a>
-                <a href="firebird.html">Firebird</a>
-            </div>
-        </div>
-        </div>
-    </div>
-    </div>
-  </section>
-
-  <!-- Contenido propio de Gestor -->
-  <section id="contenido">
-    <h2>Postgresql</h2>
+  </nav>
+<div>
+   <h2>Postgresql</h2>
     <img src="img/images.png">
     <p>
         PostgreSQL es un sistema de gestión de bases de datos relacionales (RDBMS) de código abierto, conocido por su estabilidad, fiabilidad y avanzada funcionalidad, que permite almacenar y gestionar datos tanto relacionales (SQL) como no relacionales (JSON). Es una solución popular para diversas aplicaciones, incluyendo web, móviles y geoespaciales, y se distingue por su soporte a estándares abiertos, su capacidad de escalabilidad y su comunidad activa de desarrollo. 
@@ -89,16 +92,28 @@
         Comunidad de Desarrollo Activa:
         Es mejorado y mantenido por una comunidad mundial de desarrolladores y empresas. 
     </p>
-    <br>
-    <br>
-    <p>Ejemplo de CRUD operacion</p>
-    <br>
-    <br>
-    <img src="img/crud-postgresql.png">
-  </section>
+    <h1>Operaciones crud de PostgreSQL</h1>
+    <h2>CREATE</h2> 
+      (INSERT): Insertar un producto con un nombre y descripción
+      INSERT INTO productos (nombre, description)
+      VALUES ('Teclado Mecánico', 'Teclado retroiluminado con switches azules y diseño ergonómico.');
 
-  <footer>
-    <p>© 2025 ECOSYSTEM - SENA La Granja</p>
-  </footer>
+    <h2>READ</h2>
+
+    (SELECT con condición): Leer un producto específico por su nombre
+    SELECT * FROM productos WHERE nombre = 'Teclado Mecánico';
+
+    <h2>UPDATE</h2>
+     Actualizar la descripción de un producto existente
+    UPDATE productos
+    SET description = 'Teclado mecánico de alto rendimiento con switches rojos y retroiluminación RGB.'
+    WHERE nombre = 'Teclado Mecánico';
+
+    <h2>DELETE</h2>
+     Eliminar un producto
+    DELETE FROM productos
+    WHERE nombre = 'Teclado Mecánico';
+</div>
+<footer>2025 ECOSYSTEM - SENA La Granja</footer>
 </body>
 </html>

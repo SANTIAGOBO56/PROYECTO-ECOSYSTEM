@@ -63,24 +63,13 @@
     </ul>
   </nav>
 <div>
-      <h2>Oracle</h2>
-    <img src="img/images (2).png">
-    <p>
-      es el nombre de una empresa tecnológica multinacional líder y su producto estrella, Oracle Database, que es un sistema de gestión de bases de datos relacionales para almacenar, organizar y gestionar grandes volúmenes de información de manera segura, escalable y con alta disponibilidad. La compañía ofrece, además, soluciones integradas en la nube, como la infraestructura (OCI) y aplicaciones empresariales (ERP, CRM, etc.) para diversos sectores. 
-    </p>
-    <h2>Ejemplos de uso en operaciones CRUD</h2>
-     <h3>INSERTAR</h3>
-          <p>Contexto: Quieres guardar un nombre de usuario con un carácter especial.
-Ejemplo: Si el nombre de usuario fuera "Juan & Pérez", podrías insertarlo directamente en una columna VARCHAR2. No necesitas escapar el & a menos que estés construyendo un comando SQL y el & tenga un significado especial en ese contexto (como una variable en una sentencia de scripting), donde usarías & o una función para escapar su valor. </p>
-      <H2>SELECT (Leer)</H2>
-Contexto: Quieres buscar o recuperar datos que contengan un carácter específico.
-Ejemplo: Si buscas un producto llamado "Televisor 4K", puedes usar el comodín % para encontrar todas las coincidencias: SELECT * FROM productos WHERE nombre_producto LIKE '%Televisor 4K%'. 
-      <h2> (Actualizar)</h2>
-Contexto: Modificar la información de un registro, incluyendo caracteres especiales.
-Ejemplo: Actualizar un número de teléfono que contenga un guion: UPDATE contactos SET telefono = '123-456-7890' WHERE id = 1. El carácter - es una parte válida de los datos y se almacena tal cual. 
-        <h2>DELETE (Borrar)</h2>
-Contexto: Eliminar un registro basado en un criterio que incluya caracteres especiales.
-Ejemplo: Eliminar un registro donde el nombre de la ciudad sea "Nueva York": DELETE FROM ciudades WHERE nombre = 'Nueva York'. Las comillas simples ' pueden ser un carácter especial que, si se quiere almacenar, necesitaría ser escapado duplicándolas ('Nueva'' York') para que sea tratado como una coma, o usar un valor entre comillas simples para buscarlo sin problemas.
+  <h1>Couch</h1>
+  <img src="img/couch.png" alt="">
+  <p> es una base de datos de documentos NoSQL de código abierto, desarrollada por la Fundación Apache Software
+ Foundation, que utiliza documentos JSON para almacenar datos sin una estructura fija y puede ser accesible vía web
+  mediante HTTP. Se destaca por su arquitectura distribuida, escalabilidad, replicación de datos y tolerancia a fallos,
+   facilitando el desarrollo de aplicaciones web y móviles modernas al permitir la sincronización de datos 
+   incluso cuando están offline. </p>
 </div>
 <footer>2025 ECOSYSTEM - SENA La Granja</footer>
 </body>

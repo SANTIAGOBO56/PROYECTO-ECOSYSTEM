@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,6 @@
   <title>ECOSYSTEM</title>
 </head>
 <body>
- 
 <nav id="menu">
     <ul>
       <li class="logo">
@@ -62,26 +61,26 @@
       <li><a href="../Nueva carpeta/informacion.html">Acerca de los Integrantes</a></li>
     </ul>
   </nav>
-<div>
-      <h2>Oracle</h2>
-    <img src="img/images (2).png">
-    <p>
-      es el nombre de una empresa tecnológica multinacional líder y su producto estrella, Oracle Database, que es un sistema de gestión de bases de datos relacionales para almacenar, organizar y gestionar grandes volúmenes de información de manera segura, escalable y con alta disponibilidad. La compañía ofrece, además, soluciones integradas en la nube, como la infraestructura (OCI) y aplicaciones empresariales (ERP, CRM, etc.) para diversos sectores. 
-    </p>
-    <h2>Ejemplos de uso en operaciones CRUD</h2>
-     <h3>INSERTAR</h3>
-          <p>Contexto: Quieres guardar un nombre de usuario con un carácter especial.
-Ejemplo: Si el nombre de usuario fuera "Juan & Pérez", podrías insertarlo directamente en una columna VARCHAR2. No necesitas escapar el & a menos que estés construyendo un comando SQL y el & tenga un significado especial en ese contexto (como una variable en una sentencia de scripting), donde usarías & o una función para escapar su valor. </p>
-      <H2>SELECT (Leer)</H2>
-Contexto: Quieres buscar o recuperar datos que contengan un carácter específico.
-Ejemplo: Si buscas un producto llamado "Televisor 4K", puedes usar el comodín % para encontrar todas las coincidencias: SELECT * FROM productos WHERE nombre_producto LIKE '%Televisor 4K%'. 
-      <h2> (Actualizar)</h2>
-Contexto: Modificar la información de un registro, incluyendo caracteres especiales.
-Ejemplo: Actualizar un número de teléfono que contenga un guion: UPDATE contactos SET telefono = '123-456-7890' WHERE id = 1. El carácter - es una parte válida de los datos y se almacena tal cual. 
-        <h2>DELETE (Borrar)</h2>
-Contexto: Eliminar un registro basado en un criterio que incluya caracteres especiales.
-Ejemplo: Eliminar un registro donde el nombre de la ciudad sea "Nueva York": DELETE FROM ciudades WHERE nombre = 'Nueva York'. Las comillas simples ' pueden ser un carácter especial que, si se quiere almacenar, necesitaría ser escapado duplicándolas ('Nueva'' York') para que sea tratado como una coma, o usar un valor entre comillas simples para buscarlo sin problemas.
-</div>
-<footer>2025 ECOSYSTEM - SENA La Granja</footer>
+      <table id="responsables" class="table-content">
+        <thead>
+          <tr><th colspan="4">DICCIONARIO DE BASE DE DATOS DE ECOSYSTEM</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>nombre de la tabla</td><td colspan="3">Responsables</td></tr>
+          <tr><td>creacion</td><td colspan="3">30-07-2025</td></tr>
+          <tr><td>descripcion</td><td colspan="3">Datos de responsables a cargo.</td></tr>
+        </tbody>
+        <thead>
+          <tr><th>CAMPOS</th><th>TIPO DE DATOS</th><th>TAMAÑO</th><th>DESCRIPCION</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>id_Responsable</td><td>INT</td><td>1</td><td>Identificador</td></tr>
+          <tr><td>nombre_Responsable</td><td>VARCHAR</td><td>16</td><td>Nombre</td></tr>
+          <tr><td>numero_telefono</td><td>VARCHAR</td><td>10</td><td>Teléfono</td></tr>
+          <tr><td>correo_responsable</td><td>VARCHAR</td><td>12</td><td>Correo</td></tr>
+        </tbody>
+    </table>
+    <footer>© 2025 ECOSYSTEM - SENA La Granja</footer>
+        
 </body>
 </html>

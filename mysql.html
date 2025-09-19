@@ -3,101 +3,100 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gestor de Base de Datos</title>
-  <link rel="stylesheet" href="prestamos.css">
+  <link rel="stylesheet" href="css/estilos.css">
+  <title>ECOSYSTEM - MySQL</title>
 </head>
 <body>
-  <h1>Proyecto ECOSYSTEM</h1>
 
-  <!-- Equipo -->
-  <section id="equipo">
-    <h2>Equipo de Desarrollo</h2>
-    <ul>
-      <li>Miguel Santiago Bocanegra - Gerente de Proyecto</li>
-      <li>Luis Fernando Pinto - Líder de Proyecto</li>
-      <li>Christian Ivan Mosquera - Desarrollador</li>
-      <li>Juan Pablo Tocarema - Desarrollador</li>
-    </ul>
-    <p>presentado al instructor jorge</p>
-  </section>
+<!-- Menú principal -->
+<nav id="menu">
+  <ul>
+    <li class="logo">
+      <a href="../cuadros.html"><img src="img/ecosystem.png" alt="Logo Ecosystem"></a>
+    </li>
 
-  <!-- Menú -->
-  <section id="menu">
-    <h2>Selecciona una Tabla</h2>
-    <div class="menu-buttons">
-      <button onclick="location.href='cuadros.html#prestamos'">Préstamos</button>
-      <button onclick="location.href='cuadros.html#reclamos'">Reclamos</button>
-      <button onclick="location.href='cuadros.html#solicitud'">Solicitud</button>
-      <button onclick="location.href='cuadros.html#equipos'">Equipos</button>
-      <button onclick="location.href='cuadros.html#devolucion'">Devolución</button>
-      <button onclick="location.href='cuadros.html#pendientes'">Persona solicitante</button>
-      <button onclick="location.href='cuadros.html#responsables'">Responsables</button>
-      <button onclick="location.href='cuadros.html#tablas'">Diagramas</button>
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="../Nueva carpeta/grri.html">Gestor y Motor de BD</a></li>
+    
+    <li>
+      <a href="../Nueva carpeta/diagrama.html">Tablas BD</a>
+      <ul>
+        <li><a href="../Nueva carpeta/prestamos.html">Préstamos</a></li>
+        <li><a href="../Nueva carpeta/reclamos.html">Reclamos</a></li>
+        <li><a href="../Nueva carpeta/equipos.html">Equipos</a></li>
+        <li><a href="../Nueva carpeta/solicitud.html">Solicitud</a></li>
+        <li><a href="../Nueva carpeta/devolucion.html">Devolución</a></li>
+        <li><a href="../Nueva carpeta/personas_solicitante.html">Personas Solicitantes</a></li>
+        <li><a href="../Nueva carpeta/responsables.html">Responsables</a></li>
+      </ul>
+    </li>
 
-      <!-- Dropdown Consulta -->
-    <div class="dropdown">
-        <button class="dropbtn">Consulta</button>
-        <div class="dropdown-content">
-            <a href="gestor.html">¿Qué es un Gestor de Base de Datos?</a>
-        <div class="dropdown-submenu">
-            <a href="#">Motores de Base de Datos</a>
-            <div class="dropdown-submenu-content">
-                <a href="mysql.html">MySQL</a>
-                <a href="oracle.html">Oracle</a>
-                <a href="postgresql.html">PostgreSQL</a>
-                <a href="sqlserver.html">SQL Server</a>
-                <a href="mongodb.html">MongoDB</a>
-                <a href="sqlite.html">SQLite</a>
-                <a href="mariadb.html">MariaDB</a>
-                <a href="firebird.html">Firebird</a>
-            </div>
-        </div>
-        </div>
-    </div>
-    </div>
-  </section>
+    <li>
+      <a href="#">BD Relacionales</a>
+      <ul>
+        <li><a href="mysql.html">MySQL</a></li>
+        <li><a href="oracle.html">Oracle</a></li>
+        <li><a href="postgresql.html">PostgreSQL</a></li>
+        <li><a href="sqlite.html">SQLite</a></li>
+        <li><a href="sqlserver.html">SQL Server</a></li>
+        <li><a href="mariadb.html">MariaDB</a></li>
+        <li><a href="firebird.html">Firebird</a></li>
+      </ul>
+    </li>
 
-    <!--<!-- Contenido propio de Gestor -->
+    <li>
+      <a href="#">BD No Relacionales</a>
+      <ul>
+        <li><a href="mongo.html">MongoDB</a></li>
+        <li><a href="cassandra.html">Cassandra</a></li>
+        <li><a href="couchdb.html">CouchDB</a></li>
+        <li><a href="redis.html">Redis</a></li>
+        <li><a href="neo4j.html">Neo4j</a></li>
+        <li><a href="amazon.html">Amazon DynamoDB</a></li>
+        <li><a href="hbase.html">HBase</a></li>
+      </ul>
+    </li>
+
+    <li><a href="informacion.html">Acerca de los Integrantes</a></li>
+  </ul>
+  <p>Presentado al instructor Jorge</p>
+</nav>
+
+<!-- Contenido principal -->
 <section id="contenido">
   <h2>¿Qué es MySQL?</h2>
-
-  <img src="logo mysql.png" alt="Logo de MySQL">
+  <img src="img/mysql.png" alt="Logo de MySQL" style="max-width:200px;">
 
   <p>
     <strong>MySQL</strong> es un sistema de gestión de bases de datos relacional de código abierto, 
-    rápido y confiable. Utilizado por millones de desarrolladores en todo el mundo, permite almacenar, 
-    organizar y acceder a datos de forma eficiente mediante el uso del lenguaje <span class="resaltado">SQL</span>.
+    rápido y confiable. Permite almacenar, organizar y acceder a datos de forma eficiente mediante el lenguaje 
+    <span class="resaltado">SQL</span>.
   </p>
 
   <p>
-    Es especialmente popular en aplicaciones web gracias a su integración con tecnologías como <span class="resaltado">PHP</span>, 
-    y es un componente clave en pilas de software como <span class="resaltado">LAMP</span> (Linux, Apache, MySQL, PHP).
+    Es ampliamente utilizado en aplicaciones web, gracias a su integración con tecnologías como 
+    <span class="resaltado">PHP</span>, y forma parte de la popular pila <span class="resaltado">LAMP</span> 
+    (Linux, Apache, MySQL, PHP).
   </p>
-</section>
 
-MySQL es un sistema de gestión de bases de datos 
-(DBMS, por sus siglas en inglés) de código abierto desarrollado por Oracle.
-Se ha ganado su lugar en el mundo digital como una base de datos relacional
-que permite almacenar, organizar y recuperar datos de manera eficiente. 
-MySQL es utilizado por una amplia variedad de organizaciones y aplicaciones en todo el mundo.
-Además, utiliza el lenguaje SQL (Structured Query Language) para acceder y manipular los datos.        
-   </p>
-   <h2>MySQL es Relacional o no Relacional</h2>
-MySQL es una base de datos relacional (RDBMS) que organiza los datos en tablas estructuradas con filas y columnas, utilizando el lenguaje SQL
-para gestionar y consultar la información. Se diferencia de las bases de datos no relacionales (NoSQL), que no usan tablas y son útiles para 
-otros tipos de aplicaciones. 
+  <h2>¿MySQL es Relacional o No Relacional?</h2>
+  <p>
+    MySQL es una base de datos <strong>relacional (RDBMS)</strong>. Organiza los datos en tablas estructuradas con filas y columnas, 
+    y permite gestionarlos mediante SQL. A diferencia de las bases de datos <strong>NoSQL</strong>, que no usan tablas, 
+    MySQL se centra en la consistencia y en relaciones bien definidas entre los datos.
+  </p>
 
-<p>Ejemplo CRUD operacion</p>
-<img src="Código de conexión MongoDB en Node.js (2).jpg" alt="px 23">
-
-
-
-
+  <h2>Operaciones CRUD en MySQL</h2>
+  <p><strong>Crear (INSERT):</strong> INSERT INTO tabla (col1, col2) VALUES (val1, val2);</p>
+  <p><strong>Leer (SELECT):</strong> SELECT col1, col2 FROM tabla WHERE condicion;</p>
+  <p><strong>Actualizar (UPDATE):</strong> UPDATE tabla SET col1 = nuevo_valor WHERE condicion;</p>
+  <p><strong>Eliminar (DELETE):</strong> DELETE FROM tabla WHERE condicion;</p>
 
 </section>
 
-  <footer>
-    <p>© 2025 ECOSYSTEM - SENA La Granja</p>
-  </footer>
+<footer>
+  <p>2025 ECOSYSTEM - SENA La Granja</p>
+</footer>
+
 </body>
 </html>

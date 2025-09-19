@@ -62,26 +62,50 @@
       <li><a href="../Nueva carpeta/informacion.html">Acerca de los Integrantes</a></li>
     </ul>
   </nav>
-<div>
-      <h2>Oracle</h2>
-    <img src="img/images (2).png">
+
+  <div>
+  <h2>Que es MongoDB</h2>
+    <img src="img/mongodb.jfif" alt="">
     <p>
-      es el nombre de una empresa tecnológica multinacional líder y su producto estrella, Oracle Database, que es un sistema de gestión de bases de datos relacionales para almacenar, organizar y gestionar grandes volúmenes de información de manera segura, escalable y con alta disponibilidad. La compañía ofrece, además, soluciones integradas en la nube, como la infraestructura (OCI) y aplicaciones empresariales (ERP, CRM, etc.) para diversos sectores. 
-    </p>
-    <h2>Ejemplos de uso en operaciones CRUD</h2>
-     <h3>INSERTAR</h3>
-          <p>Contexto: Quieres guardar un nombre de usuario con un carácter especial.
-Ejemplo: Si el nombre de usuario fuera "Juan & Pérez", podrías insertarlo directamente en una columna VARCHAR2. No necesitas escapar el & a menos que estés construyendo un comando SQL y el & tenga un significado especial en ese contexto (como una variable en una sentencia de scripting), donde usarías & o una función para escapar su valor. </p>
-      <H2>SELECT (Leer)</H2>
-Contexto: Quieres buscar o recuperar datos que contengan un carácter específico.
-Ejemplo: Si buscas un producto llamado "Televisor 4K", puedes usar el comodín % para encontrar todas las coincidencias: SELECT * FROM productos WHERE nombre_producto LIKE '%Televisor 4K%'. 
-      <h2> (Actualizar)</h2>
-Contexto: Modificar la información de un registro, incluyendo caracteres especiales.
-Ejemplo: Actualizar un número de teléfono que contenga un guion: UPDATE contactos SET telefono = '123-456-7890' WHERE id = 1. El carácter - es una parte válida de los datos y se almacena tal cual. 
-        <h2>DELETE (Borrar)</h2>
-Contexto: Eliminar un registro basado en un criterio que incluya caracteres especiales.
-Ejemplo: Eliminar un registro donde el nombre de la ciudad sea "Nueva York": DELETE FROM ciudades WHERE nombre = 'Nueva York'. Las comillas simples ' pueden ser un carácter especial que, si se quiere almacenar, necesitaría ser escapado duplicándolas ('Nueva'' York') para que sea tratado como una coma, o usar un valor entre comillas simples para buscarlo sin problemas.
-</div>
+      MongoDB es un sistema de gestión de bases de datos (DBMS) no relacional de código abierto
+      que emplea documentos flexibles en lugar de tablas y filas para procesar y almacenar diversas formas de datos.
+      Como una solución de base de datos NoSQL, MongoDB no requiere un sistema de administración de bases de datos relacional (RDBMS)
+      por lo que proporciona un modelo de almacenamiento de datos elástico que permite a los usuarios almacenar y consultar tipos de datos multivariados con facilidad.
+      Esto no sólo simplifica la administración de bases de datos para los desarrolladores, sino que también crea un entorno altamente escalable para aplicaciones y servicios multiplataforma
+      </p>
+
+              <h2>Crud de MongoDB</h2>
+              Crear tabla Productos
+            CREATE TABLE Productos (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                nombre TEXT NOT NULL,
+                precio DECIMAL(10,2) NOT NULL,
+                stock INTEGER DEFAULT 0
+            );
+
+             <h2>INSERT</h2>
+             Agregar productos
+            INSERT INTO Productos (nombre, precio, stock) 
+            VALUES ('Laptop Lenovo', 2500.00, 10);
+
+            INSERT INTO Productos (nombre, precio, stock) 
+            VALUES ('Mouse Inalámbrico', 50.00, 30);
+
+            <h2>SELECT</h2>
+             Consultar productos
+            SELECT * FROM Productos;
+
+             <h2>UPDATE</h2>
+              Actualizar precio y stock de un producto
+            UPDATE Productos 
+            SET precio = 2400.00, stock = 8 
+            WHERE id = 1;
+
+            <h2>DELETE</h2>
+            Eliminar un producto
+            DELETE FROM Productos WHERE id = 2;
+
+      </div>
 <footer>2025 ECOSYSTEM - SENA La Granja</footer>
 </body>
 </html>

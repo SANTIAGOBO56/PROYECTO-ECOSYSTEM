@@ -2,68 +2,6 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MongoDB</title>
-  <link rel="stylesheet" href="prestamos.css">
-</head>
-<body>
-  <h1>Proyecto ECOSYSTEM</h1>
-
-  <!-- Equipo -->
-  <section id="equipo">
-    <h2>Equipo de Desarrollo</h2>
-    <ul>
-      <li>Miguel Santiago Bocanegra - Gerente de Proyecto</li>
-      <li>Luis Fernando Pinto - Líder de Proyecto</li>
-      <li>Christian Ivan Mosquera - Desarrollador</li>
-      <li>Juan Pablo Tocarema - Desarrollador</li>
-    </ul>
-    <p>presentado al instructor jorge</p>
-  </section>
-
-  <!-- Menú -->
-  <section id="menu">
-    <h2>Selecciona una Tabla</h2>
-    <div class="menu-buttons">
-      <button onclick="location.href='cuadros.html#prestamos'">Préstamos</button>
-      <button onclick="location.href='cuadros.html#reclamos'">Reclamos</button>
-      <button onclick="location.href='cuadros.html#solicitud'">Solicitud</button>
-      <button onclick="location.href='cuadros.html#equipos'">Equipos</button>
-      <button onclick="location.href='cuadros.html#devolucion'">Devolución</button>
-      <button onclick="location.href='cuadros.html#pendientes'">Persona solicitante</button>
-      <button onclick="location.href='cuadros.html#responsables'">Responsables</button>
-      <button onclick="location.href='cuadros.html#tablas'">Diagramas</button>
-
-      <!-- Dropdown Consulta -->
-    <div class="dropdown">
-        <button class="dropbtn">Consulta</button>
-        <div class="dropdown-content">
-            <a href="gestor.html">¿Qué es un Gestor de Base de Datos?</a>
-        <div class="dropdown-submenu">
-            <a href="#">Motores de Base de Datos</a>
-            <div class="dropdown-submenu-content">
-                <a href="mysql.html">MySQL</a>
-                <a href="oracle.html">Oracle</a>
-                <a href="postgresql.html">PostgreSQL</a>
-                <a href="sqlserver.html">SQL Server</a>
-                <a href="mongodb.html">MongoDB</a>
-                <a href="sqlite.html">SQLite</a>
-                <a href="mariadb.html">MariaDB</a>
-                <a href="firebird.html">Firebird</a>
-            </div>
-        </div>
-        </div>
-    </div>
-    </div>
-  </section>
-
-    <!-- Contenido propio de Gestor -->
-<section id="contenido">
-   <!-- Contenido propio de Gestor -->
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
   <title>MongoDB - Ejemplo CRUD</title>
   <link rel="stylesheet" href="estilos.css">
 </head>
@@ -71,28 +9,28 @@
   <section id="contenido">
     <h2>¿Qué es MongoDB?</h2>
     <img src="img/mongodb.jfif" alt="Logo de MongoDB">
-    <section>
-  <p>
-    MongoDB es un sistema de gestión de bases de datos (DBMS) no relacional de código abierto
-    que emplea documentos flexibles en lugar de tablas y filas para procesar y almacenar diversas formas de datos.
-    Como una solución de base de datos NoSQL, MongoDB no requiere un sistema de administración de bases de datos relacional (RDBMS),
-    por lo que proporciona un modelo de almacenamiento de datos elástico que permite a los usuarios almacenar y consultar tipos de datos multivariados con facilidad.
-    Esto no sólo simplifica la administración de bases de datos para los desarrolladores, sino que también crea un entorno altamente escalable para aplicaciones y servicios multiplataforma.
-  </p>
 
-  <h2>¿MongoDB es Relacional o No Relacional?</h2>
-  <p>
-    MongoDB es una base de datos no relacional (o NoSQL)
-    que almacena datos en formato de documentos flexibles en lugar de tablas y filas, 
-    lo que permite una gran flexibilidad para datos estructurados, semiestructurados 
-    y no estructurados, y una fácil escalabilidad. A diferencia de las bases de datos
-    relacionales que usan esquemas fijos, MongoDB utiliza un modelo de datos orientado
-    a documentos, como el formato BSON (una forma binaria de JSON).
-  </p>
+    <p>
+      MongoDB es un sistema de gestión de bases de datos (DBMS) no relacional de código abierto
+      que emplea documentos flexibles en lugar de tablas y filas para procesar y almacenar diversas formas de datos.
+      Como una solución de base de datos NoSQL, MongoDB no requiere un sistema de administración de bases de datos relacional (RDBMS),
+      por lo que proporciona un modelo de almacenamiento de datos elástico que permite a los usuarios almacenar y consultar tipos de datos multivariados con facilidad.
+      Esto no sólo simplifica la administración de bases de datos para los desarrolladores, sino que también crea un entorno altamente escalable para aplicaciones y servicios multiplataforma.
+    </p>
 
-  <h2>Ejemplo de CRUD en MongoDB</h2>
-  <pre><code class="language-js">
-  const { MongoClient } = require('mongodb');
+    <h2>¿MongoDB es Relacional o No Relacional?</h2>
+    <p>
+      MongoDB es una base de datos no relacional (o NoSQL)
+      que almacena datos en formato de documentos flexibles en lugar de tablas y filas, 
+      lo que permite una gran flexibilidad para datos estructurados, semiestructurados 
+      y no estructurados, y una fácil escalabilidad. A diferencia de las bases de datos
+      relacionales que usan esquemas fijos, MongoDB utiliza un modelo de datos orientado
+      a documentos, como el formato BSON (una forma binaria de JSON).
+    </p>
+
+    <h2>Ejemplo de CRUD en MongoDB</h2>
+    <pre><code class="language-js">
+const { MongoClient } = require('mongodb');
 
 // Conexión al servidor
 const uri = "mongodb://localhost:27017";
@@ -131,13 +69,11 @@ async function run() {
 }
 
 run().catch(console.dir);
+    </code></pre>
+  </section>
 
-  </code></pre>
-</section>
-
-
-<footer>
-  <p>© 2025 ECOSYSTEM - SENA La Granja</p>
-</footer>
+  <footer>
+    <p>© 2025 ECOSYSTEM - SENA La Granja</p>
+  </footer>
 </body>
 </html>

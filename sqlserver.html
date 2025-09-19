@@ -3,63 +3,67 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gestor de Base de Datos</title>
-  <link rel="stylesheet" href="prestamos.css">
+  <link rel="stylesheet" href="css/estilos.css">
+  <title>ECOSYSTEM</title>
 </head>
 <body>
-  <h1>Proyecto ECOSYSTEM</h1>
-
-  <!-- Equipo -->
-  <section id="equipo">
-    <h2>Equipo de Desarrollo</h2>
+ 
+<nav id="menu">
     <ul>
-      <li>Miguel Santiago Bocanegra - Gerente de Proyecto</li>
-      <li>Luis Fernando Pinto - Líder de Proyecto</li>
-      <li>Christian Ivan Mosquera - Desarrollador</li>
-      <li>Juan Pablo Tocarema - Desarrollador</li>
+      <li class="logo">
+        <a href="../cuadros.html"><img src="img/ecosystem.png" alt="Logo"></a>
+      </li>
+
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="../Nueva carpeta/grri.html">Gestor y Motor de BD</a></li>
+
+      
+      <li>
+        <a href="../Nueva carpeta/diagrama.html">Tablas BD</a>
+        <ul>
+          <li><a href="../Nueva carpeta/prestamos.html">Pestamos</a></li>
+          <li><a href="../Nueva carpeta/reclamos.html">Reclamos</a></li>
+          <li><a href="../Nueva carpeta/equipos.html">Equipos</a></li>
+          <li><a href="../Nueva carpeta/solicitud.html">Solicitud</a></li>
+          <li><a href="../Nueva carpeta/devolucion.html">Devolucion</a></li>
+          <li><a href="../Nueva carpeta/personas_solicitante.html">Personas Solicitante</a></li>
+          <li><a href="../Nueva carpeta/responsables.html">Responsable</a></li>
+        </ul>
+      </li>
+
+  
+      <li>
+        <a href="#">BD Relaciones</a>
+        <ul>
+          <li><a href="../Nueva carpeta/mysql.html">MySQL</a></li>
+          <li><a href="../Nueva carpeta/oracle.html">Oracle</a></li>
+          <li><a href="../Nueva carpeta/postgresql.html">PostgreSQL</a></li>
+          <li><a href="../Nueva carpeta/sqlite.html">SQlite</a></li>
+          <li><a href="../Nueva carpeta/sqlserver.html">SQL Server</a></li>
+          <li><a href="../Nueva carpeta/mariadb.html">MariaDB</a></li>
+          <li><a href="../Nueva carpeta/firebird.html">Firebird</a></li>
+        </ul>
+      </li>
+
+      
+      <li>
+        <a href="#">BD No Relaciones</a>
+        <ul>
+          <li><a href="../Nueva carpeta/mongo.html">MongoDB</a></li>
+          <li><a href="../Nueva carpeta/cassandra.html">Cassandra</a></li>
+          <li><a href="../Nueva carpeta/couchdb.html">CoushDB</a></li>
+          <li><a href="../Nueva carpeta/redis.html">Redis</a></li>
+          <li><a href="../Nueva carpeta/neo4j.html">Neo4j</a></li>
+          <li><a href="../Nueva carpeta/amazon.html">Amazon DynamoDB</a></li>
+          <li><a href="../Nueva carpeta/hbase.html">HBase</a></li>
+        </ul>
+      </li>
+
+      <li><a href="../Nueva carpeta/informacion.html">Acerca de los Integrantes</a></li>
     </ul>
-    <p>presentado al instructor jorge</p>
-  </section>
-
-  <!-- Menú -->
-  <section id="menu">
-    <h2>Selecciona una Tabla</h2>
-    <div class="menu-buttons">
-      <button onclick="location.href='cuadros.html#prestamos'">Préstamos</button>
-      <button onclick="location.href='cuadros.html#reclamos'">Reclamos</button>
-      <button onclick="location.href='cuadros.html#solicitud'">Solicitud</button>
-      <button onclick="location.href='cuadros.html#equipos'">Equipos</button>
-      <button onclick="location.href='cuadros.html#devolucion'">Devolución</button>
-      <button onclick="location.href='cuadros.html#pendientes'">Persona solicitante</button>
-      <button onclick="location.href='cuadros.html#responsables'">Responsables</button>
-      <button onclick="location.href='cuadros.html#tablas'">Diagramas</button>
-
-      <!-- Dropdown Consulta -->
-    <div class="dropdown">
-        <button class="dropbtn">Consulta</button>
-        <div class="dropdown-content">
-            <a href="gestor.html">¿Qué es un Gestor de Base de Datos?</a>
-        <div class="dropdown-submenu">
-            <a href="#">Motores de Base de Datos</a>
-            <div class="dropdown-submenu-content">
-                <a href="mysql.html">MySQL</a>
-                <a href="oracle.html">Oracle</a>
-                <a href="postgresql.html">PostgreSQL</a>
-                <a href="sqlserver.html">SQL Server</a>
-                <a href="mongodb.html">MongoDB</a>
-                <a href="sqlite.html">SQLite</a>
-                <a href="mariadb.html">MariaDB</a>
-                <a href="firebird.html">Firebird</a>
-            </div>
-        </div>
-        </div>
-    </div>
-    </div>
-  </section>
-
-  <!-- Contenido propio de Gestor -->
-  <section id="contenido">
-    <h2>Sql Server</h2>
+  </nav>
+<div>
+  <h2>Sql Server</h2>
     <img src="img/images (1).png">
     <p>
         Microsoft SQL Server es un sistema de gestión de bases de datos relacionales (RDBMS) desarrollado por Microsoft que permite almacenar y recuperar datos de forma segura y eficiente utilizando Transact-SQL (T-SQL), un lenguaje de consulta estructurado (SQL) con extensiones propias. Sirve como un servidor de bases de datos para aplicaciones y herramientas, gestionando desde grandes aplicaciones conectadas a Internet hasta aplicaciones locales, y ofrece diversas herramientas para el análisis y la gestión de datos. 
@@ -86,11 +90,21 @@
       <br>
       <p>Ejemplo de CRUD operacion</p>
       <br>
-      <br>
-      <img src="img/crud-sql-server.png">
-  </section>
-  <footer>
-    <p>© 2025 ECOSYSTEM - SENA La Granja</p>
-  </footer>
+
+    <p>Crear Tabla</p>
+      CREATE TABLE Usuarios (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        nombre TEXT NOT NULL,
+        telefono int(11) UNIQUE)
+    <p>INSERT</p>
+        INSERT INTO Usuarios (nombre, telefono) VALUES ('Cristiam Mosquera', '3141388129');
+    <P>Update</P>   
+        UPDATE Usuarios SET telefono = '3141388129' WHERE id = 1;
+    <p>select</p>
+        SELECT nombre, telefono FROM Usuarios WHERE nombre LIKE 'Mosquera%'; 
+    <p>Delete</p>
+           DELETE FROM Usuarios WHERE id = 1; 
+</div>
+<footer>2025 ECOSYSTEM - SENA La Granja</footer>
 </body>
 </html>

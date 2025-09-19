@@ -3,11 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/estilos.css">
-  <title>ECOSYSTEM</title>
+  <title>Diccionario de Datos - Ecosystem</title>
+<link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
- 
 <nav id="menu">
     <ul>
       <li class="logo">
@@ -62,26 +61,50 @@
       <li><a href="../Nueva carpeta/informacion.html">Acerca de los Integrantes</a></li>
     </ul>
   </nav>
-<div>
-      <h2>Oracle</h2>
-    <img src="img/images (2).png">
+   <h2>¿Qué es un Gestor de Base de Datos?</h2>
     <p>
-      es el nombre de una empresa tecnológica multinacional líder y su producto estrella, Oracle Database, que es un sistema de gestión de bases de datos relacionales para almacenar, organizar y gestionar grandes volúmenes de información de manera segura, escalable y con alta disponibilidad. La compañía ofrece, además, soluciones integradas en la nube, como la infraestructura (OCI) y aplicaciones empresariales (ERP, CRM, etc.) para diversos sectores. 
+      Un Gestor de Base de Datos es un software que sirve como interfaz entre los usuarios, las aplicaciones y la base de datos, permitiendo definir, manipular, asegurar y recuperar la información de manera eficiente y organizada. Su principal función es gestionar el almacenamiento, la organización y el acceso a grandes volúmenes de datos, garantizando su integridad, seguridad y disponibilidad. 
+      <br>
+      <br>
+      Funciones principales de un gestor de base de datos:
+      <br>
+      <br>
+      Definir los datos:
+      <br>
+      Permite establecer la estructura y los tipos de los datos que se almacenarán en la base de datos. 
+      <br>
+      <br>
+      Manipular los datos:
+      <br>
+      Realiza operaciones como insertar, actualizar, eliminar o extraer información según las solicitudes de los usuarios. 
+      <br>
+      <br>
+      Preservar la seguridad e integridad:
+      <br>
+      Implementa medidas de seguridad para proteger los datos de accesos no autorizados y garantiza su validez. 
+      <br>
+      <br>
+      Recuperación y restauración de datos:
+      <br>
+      Ofrece mecanismos para restaurar la información en caso de fallos del sistema. 
+      <br>
+      <br>
+      Generación de informes y análisis:
+      <br>
+      Facilita la creación de análisis y la generación de informes a partir de los datos almacenados. 
+      <br>
+      <br>
+      Ejemplos de gestores de bases de datos: 
+      <br>
+      MySQL, MariaDB, PostgreSQL, Microsoft SQL Server, Oracle Database, Microsoft Access.
     </p>
-    <h2>Ejemplos de uso en operaciones CRUD</h2>
-     <h3>INSERTAR</h3>
-          <p>Contexto: Quieres guardar un nombre de usuario con un carácter especial.
-Ejemplo: Si el nombre de usuario fuera "Juan & Pérez", podrías insertarlo directamente en una columna VARCHAR2. No necesitas escapar el & a menos que estés construyendo un comando SQL y el & tenga un significado especial en ese contexto (como una variable en una sentencia de scripting), donde usarías & o una función para escapar su valor. </p>
-      <H2>SELECT (Leer)</H2>
-Contexto: Quieres buscar o recuperar datos que contengan un carácter específico.
-Ejemplo: Si buscas un producto llamado "Televisor 4K", puedes usar el comodín % para encontrar todas las coincidencias: SELECT * FROM productos WHERE nombre_producto LIKE '%Televisor 4K%'. 
-      <h2> (Actualizar)</h2>
-Contexto: Modificar la información de un registro, incluyendo caracteres especiales.
-Ejemplo: Actualizar un número de teléfono que contenga un guion: UPDATE contactos SET telefono = '123-456-7890' WHERE id = 1. El carácter - es una parte válida de los datos y se almacena tal cual. 
-        <h2>DELETE (Borrar)</h2>
-Contexto: Eliminar un registro basado en un criterio que incluya caracteres especiales.
-Ejemplo: Eliminar un registro donde el nombre de la ciudad sea "Nueva York": DELETE FROM ciudades WHERE nombre = 'Nueva York'. Las comillas simples ' pueden ser un carácter especial que, si se quiere almacenar, necesitaría ser escapado duplicándolas ('Nueva'' York') para que sea tratado como una coma, o usar un valor entre comillas simples para buscarlo sin problemas.
-</div>
-<footer>2025 ECOSYSTEM - SENA La Granja</footer>
+    <br>
+    <br>
+    <img src="../img/gestorbd.png">
+  </section>
+
+  <footer>
+    <p>© 2025 ECOSYSTEM - SENA La Granja</p>
+  </footer>
 </body>
 </html>
