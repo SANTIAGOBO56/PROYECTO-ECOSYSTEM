@@ -56,25 +56,82 @@
   <div>
   <h2>Que es MongoDB</h2>
     <img src="img/mongodb.jfif" alt="">
-    <p>
-MongoDB es un sistema de gestión de bases de datos (DBMS) no relacional de código abierto
-que emplea documentos flexibles en lugar de tablas y filas para procesar y almacenar diversas formas de datos.
-Como una solución de base de datos NoSQL, MongoDB no requiere un sistema de administración de bases de datos relacional (RDBMS)
-por lo que proporciona un modelo de almacenamiento de datos elástico que permite a los usuarios almacenar y consultar tipos de datos multivariados con facilidad.
-Esto no sólo simplifica la administración de bases de datos para los desarrolladores, sino que también crea un entorno altamente escalable para aplicaciones y servicios multiplataforma
-</p>
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MongoDB - Operaciones CRUD</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <!-- Menú de navegación -->
+    <nav id="menu">
+        <ul>
+            <li class="logo">
+                <a href="../cuadros.html"><img src="img/ecosystem.png" alt="Logo Ecosystem"></a>
+            </li>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="mysql.html">MySQL</a></li>
+            <li><a href="oracle.html">Oracle</a></li>
+            <li><a href="sqlite.html">SQLite</a></li>
+            <li><a href="mongo.html" class="active">MongoDB</a></li>
+        </ul>
+    </nav>
 
-    <h2>MongoDB es Relacional o no Relacional</h2>
-    <P>
-    MongoDB es una base de datos no relacional (o NoSQL)
-    que almacena datos en formato de documentos flexibles en lugar de tablas y filas, 
-    lo que permite una gran flexibilidad para datos estructurados, semiestructurados 
-    Y no estructurados, y una fácil escalabilidad. A diferencia de las bases de datos
-    relacionales que usan esquemas fijos, MongoDB utiliza un modelo de datos orientado
-    a documentos, como el formato BSON (una forma binaria de JSON). 
-    </P>
-    <h2>Ejemplo de una tabla de MongoDB No Relacional</h2>
-</div>
-<footer>2025 ECOSYSTEM - SENA La Granja</footer>
+    <!-- Contenido principal -->
+    <section>
+        <h1>MongoDB</h1>
+        <p>
+            MongoDB es un <strong>sistema de gestión de bases de datos NoSQL</strong> orientado a documentos y de <strong>código abierto</strong>.
+            A diferencia de las bases de datos relacionales, almacena la información en <strong>documentos BSON</strong> (similares a JSON) 
+            dentro de colecciones, lo que permite mayor flexibilidad y escalabilidad.
+        </p>
+        <p>
+            Este gestor es ampliamente utilizado en aplicaciones modernas gracias a su capacidad de manejar <strong>grandes volúmenes de datos</strong>,
+            su fácil integración con la nube y su eficiencia en entornos distribuidos.
+        </p>
+
+        <h2>Operaciones CRUD en MongoDB</h2>
+        <p>
+            Las operaciones CRUD (<em>Create, Read, Update, Delete</em>) permiten gestionar los datos en colecciones. 
+            A continuación, se muestran ejemplos prácticos:
+        </p>
+
+        <h3>🟢 CREATE – Crear</h3>
+        <p>Inserta un nuevo documento en una colección.</p>
+        <pre><code>
+db.usuarios.insertOne(
+  { nombre: "Ana", email: "ana@mail.com" }
+);
+        </code></pre>
+
+        <h3>🔵 READ – Leer</h3>
+        <p>Consulta uno o varios documentos de la colección.</p>
+        <pre><code>
+db.usuarios.find(); // Muestra todos los documentos
+
+db.usuarios.find(
+  { nombre: "Ana" } // Filtra por nombre
+);
+        </code></pre>
+
+        <h3>🟡 UPDATE – Actualizar</h3>
+        <p>Modifica un documento existente.</p>
+        <pre><code>
+db.usuarios.updateOne(
+  { nombre: "Ana" }, 
+  { $set: { email: "nuevo@mail.com" } }
+);
+        </code></pre>
+
+        <h3>🔴 DELETE – Eliminar</h3>
+        <p>Elimina un documento de la colección.</p>
+        <pre><code>
+db.usuarios.deleteOne(
+  { nombre: "Ana" }
+);
+        </code></pre>
+    </section>
 </body>
 </html>

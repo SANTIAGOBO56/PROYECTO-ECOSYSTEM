@@ -80,7 +80,48 @@
       <li>Almacenamiento en disco y en memoria.</li>
     </ul>
     <p>Ejemplo de CRUD operacion</p>
-</div>
-<footer>2025 ECOSYSTEM - SENA La Granja</footer>
-</body>
-</html>
+    <!-- Sección CRUD en MySQL -->
+<section id="crud">
+ <!-- Sección CRUD Mejorada -->
+<section id="crud">
+  <h2>Operaciones CRUD en MySQL</h2>
+
+  <img src="crud-diagram.png" alt="Diagrama de operaciones CRUD en MySQL">
+
+  <p>
+    Las operaciones <strong>CRUD</strong> son los comandos esenciales para manipular datos en una base de datos. 
+    <strong>MySQL</strong> utiliza <span class="resaltado">SQL</span> para realizar estas acciones:
+  </p>
+
+  <div class="crud-lista">
+
+    <!-- CREATE -->
+    <div class="crud-item">
+      <h3>🟢 CREATE – Crear</h3>
+      <p>Crea nuevos registros en una tabla de la base de datos.</p>
+      <code>INSERT INTO usuarios (nombre, email) VALUES ('Ana', 'ana@mail.com');</code>
+    </div>
+
+    <!-- READ -->
+    <div class="crud-item">
+      <h3>🔵 READ – Leer</h3>
+      <p>Obtiene y muestra datos almacenados.</p>
+      <code>SELECT * FROM usuarios;</code>
+    </div>
+
+    <!-- UPDATE -->
+    <div class="crud-item">
+      <h3>🟡 UPDATE – Actualizar</h3>
+      <p>Modifica información existente.</p>
+      <code>UPDATE usuarios SET email = 'nuevo@mail.com' WHERE id = 1;</code>
+    </div>
+
+    <!-- DELETE -->
+    <div class="crud-item">
+      <h3>🔴 DELETE – Eliminar</h3>
+      <p>Elimina registros que ya no se necesitan.</p>
+      <code>DELETE FROM usuarios WHERE id = 1;</code>
+    </div>
+
+  </div>
+</section>
