@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Visor de Diagramas</title>
+    <script src='js/main.js' defer></script>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<nav id="menu">
+    <ul>
+      <li class="logo">
+        <a href="../cuadros.html"><img src="img/ecosystem.png" alt="Logo"></a>
+      </li>
+
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="../Nueva carpeta/grri.html">Gestor y Motor de BD</a></li>
+
+      <!-- Submenú Tablas BD -->
+      <li>
+        <a href="../Nueva carpeta/diagrama.html">Tablas BD</a>
+        <ul>
+          <li><a href="../Nueva carpeta/prestamos.html">Pestamos</a></li>
+          <li><a href="../Nueva carpeta/reclamos.html">Reclamos</a></li>
+          <li><a href="../Nueva carpeta/equipos.html">Equipos</a></li>
+          <li><a href="../Nueva carpeta/solicitud.html">Solicitud</a></li>
+          <li><a href="../Nueva carpeta/devolucion.html">Devolucion</a></li>
+          <li><a href="../Nueva carpeta/personas_solicitante.html">Personas Solicitante</a></li>
+          <li><a href="../Nueva carpeta/responsables.html">Responsable</a></li>
+        </ul>
+      </li>
+
+      <!-- Submenú BD Relaciones  falta esto?--> 
+      <li>
+        <a href="#">BD Relaciones</a>
+        <ul>
+          <li><a href="../Nueva carpeta/mysql.html">MySQL</a></li>
+          <li><a href="../Nueva carpeta/oracle.html">Oracle</a></li>
+          <li><a href="../Nueva carpeta/postgresql.html">PostgreSQL</a></li>
+          <li><a href="../Nueva carpeta/sqlite.html">SQlite</a></li>
+          <li><a href="../Nueva carpeta/sqlserver.html">SQL Server</a></li>
+          <li><a href="../Nueva carpeta/mariadb.html">MariaDB</a></li>
+          <li><a href="../Nueva carpeta/firebird.html">Firebird</a></li>
+        </ul>
+      </li>
+
+      <!-- Submenú BD No Relacionales  tambien falta esto-->
+      <li>
+        <a href="#">BD No Relaciones</a>
+        <ul>
+          <li><a href="../Nueva carpeta/prestamos.html">MongoDB</a></li>
+          <li><a href="../Nueva carpeta/reclamos.html">Cassandra</a></li>
+          <li><a href="../Nueva carpeta/equipos.html">CoushDB</a></li>
+          <li><a href="../Nueva carpeta/solicitud.html">Redis</a></li>
+          <li><a href="../Nueva carpeta/devolucion.html">Neo4j</a></li>
+          <li><a href="../Nueva carpeta/personas_solicitante.html">Amazon DynamoDB</a></li>
+          <li><a href="../Nueva carpeta/responsables.html">HBase</a></li>
+        </ul>
+      </li>
+
+      <li><a href="../Nueva carpeta/informacion.html">Acerca de los Integrantes</a></li>
+    </ul>
+  </nav>
+    <h1 id="titulo">diagrama1</h1>
+
+    <div id="principal">
+        <img id="diagrama1" src="img/1.jpg" alt="diagrama1">
+    </div>
+
+    <div id="imagenes">
+        <img src="img/1.jpg" alt="diagrama1" onclick="cambioimagen(1)">
+        <img src="img/2.jpg" alt="diagrama2" onclick="cambioimagen(2)">
+        <img src="img/3.jpg" alt="diagrama3" onclick="cambioimagen(3)">
+        <img src="img/4.png" alt="diagrama4" onclick="cambioimagen(4)">
+    </div>
+
+    <div id="botones">
+        <button id="atras"><img src="img/ico22.jpg" alt="anterior"></button>
+        <button id="adelante"><img src="img/ico23.jpg" alt="siguiente"></button>
+    </div>
+    <footer>2025 ECOSYSTEM - SENA La Granja</footer>  
+</body>
+</html>

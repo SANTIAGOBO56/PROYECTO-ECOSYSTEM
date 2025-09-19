@@ -1,0 +1,137 @@
+<nav id="menu">
+    <ul>
+      <li class="logo">
+        <a href="../cuadros.html"><img src="img/ecosystem.png" alt="Logo"></a>
+      </li>
+
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="../Nueva carpeta/grri.html">Gestor y Motor de BD</a></li>
+
+      <!-- Submenú Tablas BD -->
+      <li>
+        <a href="../Nueva carpeta/diagrama.html">Tablas BD</a>
+        <ul>
+          <li><a href="../Nueva carpeta/prestamos.html">Pestamos</a></li>
+          <li><a href="../Nueva carpeta/reclamos.html">Reclamos</a></li>
+          <li><a href="../Nueva carpeta/equipos.html">Equipos</a></li>
+          <li><a href="../Nueva carpeta/solicitud.html">Solicitud</a></li>
+          <li><a href="../Nueva carpeta/devolucion.html">Devolucion</a></li>
+          <li><a href="../Nueva carpeta/personas_solicitante.html">Personas Solicitante</a></li>
+          <li><a href="../Nueva carpeta/responsables.html">Responsable</a></li>
+        </ul>
+      </li>
+
+      <!-- Submenú BD Relaciones  falta esto?--> 
+      <li>
+        <a href="#">BD Relaciones</a>
+        <ul>
+          <li><a href="../Nueva carpeta/mysql.html">MySQL</a></li>
+          <li><a href="../Nueva carpeta/oracle.html">Oracle</a></li>
+          <li><a href="../Nueva carpeta/postgresql.html">PostgreSQL</a></li>
+          <li><a href="../Nueva carpeta/sqlite.html">SQlite</a></li>
+          <li><a href="../Nueva carpeta/sqlserver.html">SQL Server</a></li>
+          <li><a href="../Nueva carpeta/mariadb.html">MariaDB</a></li>
+          <li><a href="../Nueva carpeta/firebird.html">Firebird</a></li>
+        </ul>
+      </li>
+
+      <!-- Submenú BD No Relacionales  tambien falta esto-->
+      <li>
+        <a href="#">BD No Relaciones</a>
+        <ul>
+          <li><a href="../Nueva carpeta/mongo.html">MongoDB</a></li>
+          <li><a href="../Nueva carpeta/reclamos.html">Cassandra</a></li>
+          <li><a href="../Nueva carpeta/equipos.html">CoushDB</a></li>
+          <li><a href="../Nueva carpeta/solicitud.html">Redis</a></li>
+          <li><a href="../Nueva carpeta/devolucion.html">Neo4j</a></li>
+          <li><a href="../Nueva carpeta/personas_solicitante.html">Amazon DynamoDB</a></li>
+          <li><a href="../Nueva carpeta/responsables.html">HBase</a></li>
+        </ul>
+      </li>
+
+      <li><a href="../Nueva carpeta/informacion.html">Acerca de los Integrantes</a></li>
+    </ul>
+  </nav>
+
+  <div>
+  <h2>Que es MongoDB</h2>
+    <img src="img/mongodb.jfif" alt="">
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MongoDB - Operaciones CRUD</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <!-- Menú de navegación -->
+    <nav id="menu">
+        <ul>
+            <li class="logo">
+                <a href="../cuadros.html"><img src="img/ecosystem.png" alt="Logo Ecosystem"></a>
+            </li>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="mysql.html">MySQL</a></li>
+            <li><a href="oracle.html">Oracle</a></li>
+            <li><a href="sqlite.html">SQLite</a></li>
+            <li><a href="mongo.html" class="active">MongoDB</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido principal -->
+    <section>
+        <h1>MongoDB</h1>
+        <p>
+            MongoDB es un <strong>sistema de gestión de bases de datos NoSQL</strong> orientado a documentos y de <strong>código abierto</strong>.
+            A diferencia de las bases de datos relacionales, almacena la información en <strong>documentos BSON</strong> (similares a JSON) 
+            dentro de colecciones, lo que permite mayor flexibilidad y escalabilidad.
+        </p>
+        <p>
+            Este gestor es ampliamente utilizado en aplicaciones modernas gracias a su capacidad de manejar <strong>grandes volúmenes de datos</strong>,
+            su fácil integración con la nube y su eficiencia en entornos distribuidos.
+        </p>
+
+        <h2>Operaciones CRUD en MongoDB</h2>
+        <p>
+            Las operaciones CRUD (<em>Create, Read, Update, Delete</em>) permiten gestionar los datos en colecciones. 
+            A continuación, se muestran ejemplos prácticos:
+        </p>
+
+        <h3>🟢 CREATE – Crear</h3>
+        <p>Inserta un nuevo documento en una colección.</p>
+        <pre><code>
+db.usuarios.insertOne(
+  { nombre: "Ana", email: "ana@mail.com" }
+);
+        </code></pre>
+
+        <h3>🔵 READ – Leer</h3>
+        <p>Consulta uno o varios documentos de la colección.</p>
+        <pre><code>
+db.usuarios.find(); // Muestra todos los documentos
+
+db.usuarios.find(
+  { nombre: "Ana" } // Filtra por nombre
+);
+        </code></pre>
+
+        <h3>🟡 UPDATE – Actualizar</h3>
+        <p>Modifica un documento existente.</p>
+        <pre><code>
+db.usuarios.updateOne(
+  { nombre: "Ana" }, 
+  { $set: { email: "nuevo@mail.com" } }
+);
+        </code></pre>
+
+        <h3>🔴 DELETE – Eliminar</h3>
+        <p>Elimina un documento de la colección.</p>
+        <pre><code>
+db.usuarios.deleteOne(
+  { nombre: "Ana" }
+);
+        </code></pre>
+    </section>
+</body>
+</html>
