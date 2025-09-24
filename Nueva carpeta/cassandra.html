@@ -71,6 +71,25 @@
      en una serie de nodos iguales que se comunican con un protocolo P2P con lo que la redundancia es máxima. Esta soportada por la Apache Software Fundation.
 Cassandra se basa en una arquitectura distribuida que permite replicar los datos en múltiples nodos, 
 proporcionando tolerancia a fallos y garantizando que los datos permanezcan disponibles incluso en caso de fallos de hardware o de red</p>
+<h1>CRUD DE CASSANDRA</h1>
+Create (Insertar datos)
+INSERT INTO productos (id, nombre, precio, stock)
+VALUES (uuid(), 'Laptop Lenovo', 2500.00, 10);
+
+<h1>Read (Consultar datos)</h1> 
+-- Consultar todos los productos
+SELECT * FROM productos;
+
+-- Consultar un producto específico
+SELECT * FROM productos WHERE id = id_del_producto
+
+<h1> (Actualizar datos)</h1>
+UPDATE productos
+SET stock = 15, precio = 2400.00
+WHERE id = id_del_producto
+<h1>Delete (Eliminar datos)</h1>
+DELETE FROM productos WHERE id = id_del_producto
+
 </div>
 <footer>2025 ECOSYSTEM - SENA La Granja</footer>
 </body>

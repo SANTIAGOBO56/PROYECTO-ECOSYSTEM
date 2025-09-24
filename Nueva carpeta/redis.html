@@ -68,6 +68,58 @@
     pero que opcionalmente puede ser usada como una base de datos durable o persistente.
      Está escrito en ANSI C por Salvatore Sanfilippo, quien es patrocinado por Redis Labs.
     Es distribuido bajo un modelo de licencias dual: RSALv2 y SSP</p>
+    <h1>CRUD DE REDIS</h1>
+    <h1></h1>REATE (Insertar datos)
+
+Redis almacena valores bajo una clave:
+
+SET producto:1 "Laptop Lenovo"
+SET producto:2 "Smartphone Samsung"
+
+
+Con estructuras más complejas (ejemplo con HASH):
+
+HSET producto:1 nombre "Laptop Lenovo" precio 2500 stock 10
+
+📌 2. READ (Leer datos)
+
+Obtener un valor simple:
+
+GET producto:1
+
+
+Obtener todos los campos de un HASH:
+
+HGETALL producto:1
+
+
+Leer solo un campo:
+
+HGET producto:1 precio
+
+📌 3. UPDATE (Actualizar datos)
+
+En Redis actualizar es lo mismo que sobrescribir la clave.
+
+Ejemplo con SET:
+
+SET producto:1 "Laptop Lenovo - Actualizado"
+
+
+Ejemplo con HASH:
+
+HSET producto:1 stock 15
+
+📌 4. DELETE (Eliminar datos)
+
+Eliminar una clave entera:
+
+DEL producto:1
+
+
+Eliminar un campo dentro de un hash:
+
+HDEL producto:1 precio
 </div>
 <footer>2025 ECOSYSTEM - SENA La Granja</footer>
 </body>

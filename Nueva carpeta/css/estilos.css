@@ -17,7 +17,7 @@ h1 {
 
 /* ---------- Menú y Navegación ---------- */
 #menu {
-  background-color: #006400; /* verde */
+  background-color: #007bff; /* verde */
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -214,15 +214,13 @@ table tr:hover {
   background-color: #e8f5e9;
   font-style: italic;
 }
-
-/* ---------- Pie de página ---------- */
+/* Footer normal al final del contenido */
 footer {
-  background: #006400;
-  color: #fff;
+  background: #007bff;
+  color: white;
   text-align: center;
-  padding: 15px;
-  margin-top: 40px;
-  font-size: 0.9rem;
-  box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
-  border-radius: 6px;
+  padding: 15px 0;
+  width: 100%;
+  margin-top: auto;  /* Empuja el footer hacia abajo */
 }
+
