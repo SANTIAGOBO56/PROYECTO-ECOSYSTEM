@@ -1,40 +1,57 @@
 /* ---------- Estilos Globales ---------- */
-body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+html, body {
+  height: 100%;
   margin: 0;
   padding: 0;
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto; /* header | contenido | footer */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: #f4f6f9;
   color: #333;
   text-align: center;
-
 }
-
-
 
 h1 {
   text-align: center;
 }
 
-/* ---------- Menú y Navegación ---------- */
-#menu {
-  background-color: #007bff; /* verde */
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+#titulo {
+  color: #007bff;
 }
 
+/* ---------- Menú y Navegación ---------- */
+#menu {
+  background-color: #007bff;
+  /* Anulamos cualquier flex global aplicado a nav para este menú */
+  display: block; 
+}
+
+/* UL centrado como bloque ajustado al contenido */
 #menu ul {
   list-style: none;
-  margin: 0;
-  padding: 0;
+  margin: 0 auto;       /* centrar el bloque ul en su contenedor */
+  padding: 8px 0;       /* espacio vertical dentro de la barra */
   display: flex;
-  justify-content: center;
+  justify-content: center; /* centra los items dentro del ul */
   align-items: center;
+  gap: 26px;            /* espacio entre logo y enlaces (mejor que margin en li) */
+  width: fit-content;   /* que el ul mida sólo lo necesario */
+}
+
+/* si el navegador no soporta fit-content: fallback */
+@supports not (width: fit-content) {
+  #menu ul { width: auto; }
 }
 
 #menu ul li {
-  margin: 0 10px;
-  position: relative; /* necesario para submenús */
+  margin: 0;            /* espaciado controlado por gap */
+  position: relative;
 }
 
+/* Enlaces del menú */
 #menu ul li a {
   display: block;
   padding: 14px 20px;
@@ -45,13 +62,13 @@ h1 {
 }
 
 #menu ul li a:hover {
-  background-color: #007bff;
+  background-color: #0056b3; /* tono más oscuro al pasar */
   border-radius: 5px;
 }
 
 /* ---------- Submenús ocultos ---------- */
 #menu ul li ul {
-  display: none; /* ocultos por defecto */
+  display: none;
   position: absolute;
   top: 100%;
   left: 0;
@@ -74,7 +91,7 @@ h1 {
 }
 
 #menu ul li ul li a:hover {
-  background-color: #007bff;
+  background-color: #0056b3;
 }
 
 /* Mostrar submenú al pasar el mouse */
@@ -84,16 +101,22 @@ h1 {
 }
 
 /* ---------- Logo ---------- */
+/* Quité margin-right: auto que forzaba el logo a la izquierda */
 #menu .logo {
-  margin-right: auto;
+  margin: 0;
+  display: flex;
+  align-items: center;
 }
+
 #menu .logo img {
   height: 40px;
   width: 40px;
-  margin-right: 20px;
+  display: block;
 }
 
-/* Barra nav extra (si la usas) */
+/* ---------- Barra nav extra (otros navs) ---------- */
+/* Esta regla sigue existiendo para otros nav que uses,
+   pero no afectará a #menu porque hemos forzado #menu {display:block;} */
 nav {
   background: #007bff;
   padding: 12px 40px;
@@ -159,6 +182,7 @@ nav a:hover {
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
+
 .title-box {
   background: #007bff;
   color: #fff;
@@ -215,6 +239,7 @@ table tr:hover {
   font-style: italic;
 }
 
+/* ---------- Footer ---------- */
 footer {
   background: #007bff;
   color: #fff;
@@ -222,6 +247,5 @@ footer {
   padding: 15px;
   font-size: 0.9rem;
   box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
-  border-radius: 6px 6px 0 0; /* mejor que abajo redondo */
-  margin-top: auto; /* lo empuja al fondo */
+  border-radius: 6px 6px 0 0;
 }
