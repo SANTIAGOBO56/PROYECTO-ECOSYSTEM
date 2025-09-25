@@ -71,6 +71,15 @@
       La versión 1.0 de Neo4j fue lanzada en febrero de 2010.
      La base de datos está licenciada en un modelo dual, tanto bajo Affero General Public License (AGPL) v3 como bajo licencia comercial.</p>
 </div>
+<h2>Operaciones CRUD en Neo4j</h2>
+  <p><strong>Crear (INSERT):</strong> CREATE (n:Persona {col1: val1, col2: val2});
+  </p>
+  <p><strong>Leer (SELECT):</strong> MATCH (n:Persona {col1: val1}) RETURN n.col1, n.col2;
+  </p>
+  <p><strong>Actualizar (UPDATE):</strong> MATCH (n:Persona {col1: val1}) SET n.col2 = nuevo_valor;
+  </p>
+  <p><strong>Eliminar (DELETE):</strong> MATCH (n:Persona {col1: val1}) DELETE n;
+  </p>
 <footer>2025 ECOSYSTEM - SENA La Granja</footer>
 </body>
 </html>

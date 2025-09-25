@@ -71,6 +71,25 @@
    facilitando el desarrollo de aplicaciones web y móviles modernas al permitir la sincronización de datos 
    incluso cuando están offline. </p>
 </div>
+<h2>Operaciones CRUD en CouchDB</h2>
+  <p><strong>Crear (INSERT):</strong> PUT /basedatos/mi_doc_id
+    {
+      "col1": "val1",
+      "col2": "val2"
+    }
+  </p>
+  <p><strong>Leer (SELECT):</strong> GET /basedatos/mi_doc_id
+  </p>
+  <p><strong>Actualizar (UPDATE):</strong> PUT /basedatos/mi_doc_id?rev=1-xxx
+    {
+      "col1": "val1",
+      "col2": "nuevo_valor"
+    }
+    
+  </p>
+  <p><strong>Eliminar (DELETE):</strong> DELETE /basedatos/mi_doc_id?rev=1-xxx
+
+  </p>
 <footer>2025 ECOSYSTEM - SENA La Granja</footer>
 </body>
 </html>

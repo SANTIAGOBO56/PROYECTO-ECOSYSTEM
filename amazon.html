@@ -69,6 +69,33 @@
       pero tiene una implementación subyacente diferente. Dynamo tenía un diseño multimaestro que requería que el cliente resolviera conflictos de versiones y DynamoDB usa replicación síncrona
        en múltiples centros de datos para una alta durabilidad y disponibilidad. DynamoDB fue anunciado por Amazon CTO Werner Vogels el 18 de enero de 2012.</p>
 </div>
+<h2>Operaciones CRUD en Amazon DinamoDB</h2>
+  <p><strong>Crear (INSERT):</strong> PutItem {
+    "TableName": "tabla",
+    "Item": { "col1": {"S": "val1"}, "col2": {"S": "val2"} }
+  }
+  
+  </p>
+  <p><strong>Leer (SELECT):</strong> GetItem {
+    "TableName": "tabla",
+    "Key": { "col1": {"S": "val1"} }
+  }
+  
+  </p>
+  <p><strong>Actualizar (UPDATE):</strong> UpdateItem {
+    "TableName": "tabla",
+    "Key": { "col1": {"S": "val1"} },
+    "UpdateExpression": "SET col2 = :nuevo",
+    "ExpressionAttributeValues": { ":nuevo": {"S": "nuevo_valor"} }
+  }
+  
+  </p>
+  <p><strong>Eliminar (DELETE):</strong> DeleteItem {
+    "TableName": "tabla",
+    "Key": { "col1": {"S": "val1"} }
+  }
+  
+  </p>
 <footer>2025 ECOSYSTEM - SENA La Granja</footer>
 </body>
 </html>
