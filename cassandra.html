@@ -4,20 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/estilos.css">
-  <title>ECOSYSTEM</title>
+  <title>ECOSYSTEM - Cassandra</title>
 </head>
 <body>
- 
 <nav id="menu">
     <ul>
       <li class="logo">
         <a href="login/login.html"><img src="img/ecosystem.png" alt="Logo"></a>
       </li>
-
       <li><a href="index.html">Inicio</a></li>
       <li><a href="grri.html">Gestor y Motor de BD</a></li>
-
-      
       <li>
         <a href="diagrama.html">Tablas BD</a>
         <ul>
@@ -30,8 +26,6 @@
           <li><a href="responsables.html">Responsable</a></li>
         </ul>
       </li>
-
-  
       <li>
         <a href="#">BD Relaciones</a>
         <ul>
@@ -44,8 +38,6 @@
           <li><a href="firebird.html">Firebird</a></li>
         </ul>
       </li>
-
-      
       <li>
         <a href="#">BD No Relaciones</a>
         <ul>
@@ -58,30 +50,36 @@
           <li><a href="hbase.html">HBase</a></li>
         </ul>
       </li>
-
       <li><a href="informacion.html">Acerca de los Integrantes</a></li>
     </ul>
-  </nav>
+</nav>
 <main>
-    <div class="container">
-<div>
-  <h1>Cassandra</h1>
-  <img src="img/cassandra.jpg" alt="">
-  <p>se trata de un software NoSQL distribuido y basado en un modelo de almacenamiento «tabular», de código abierto que está escrito en Java.
-     Permite grandes volúmenes de datos en forma distribuida. Por ejemplo, lo usa X para su plataforma.
-      Su objetivo principal es la escalabilidad lineal y la disponibilidad. La arquitectura distribudores de Cassandra está basada
-     en una serie de nodos iguales que se comunican con un protocolo P2P con lo que la redundancia es máxima. Esta soportada por la Apache Software Fundation.
-Cassandra se basa en una arquitectura distribuida que permite replicar los datos en múltiples nodos, 
-proporcionando tolerancia a fallos y garantizando que los datos permanezcan disponibles incluso en caso de fallos de hardware o de red</p>
-</div>
-<h2>Operaciones CRUD en Cassandra</h2>
-  <p><strong>Crear (INSERT):</strong> INSERT INTO tabla (col1, col2) VALUES (val1, val2);</p>
-  <p><strong>Leer (SELECT):</strong> SELECT col1, col2 FROM tabla WHERE col1 = val1;</p>
-  <p><strong>Actualizar (UPDATE):</strong> UPDATE tabla SET col2 = nuevo_valor WHERE col1 = val1;
-  </p>
-  <p><strong>Eliminar (DELETE):</strong> DELETE FROM tabla WHERE col1 = val1;
-  </p>
-</div>
+  <div class="page-header">
+    <h1>Cassandra</h1>
+    <img src="img/cassandra.jpg" alt="Logo de Cassandra" class="header-logo">
+  </div>
+  <div class="container two-cols">
+    <!-- Columna izquierda: Definición -->
+    <div class="col definicion">
+      <h2>¿Qué es Cassandra?</h2>
+      <p>
+        Se trata de un software NoSQL distribuido y basado en un modelo de almacenamiento «tabular», de código abierto que está escrito en Java.
+        Permite grandes volúmenes de datos en forma distribuida. Por ejemplo, lo usa X para su plataforma.
+        Su objetivo principal es la escalabilidad lineal y la disponibilidad. La arquitectura distribudores de Cassandra está basada
+        en una serie de nodos iguales que se comunican con un protocolo P2P con lo que la redundancia es máxima. Esta soportada por la Apache Software Fundation.
+        Cassandra se basa en una arquitectura distribuida que permite replicar los datos en múltiples nodos, 
+        proporcionando tolerancia a fallos y garantizando que los datos permanezcan disponibles incluso en caso de fallos de hardware o de red.
+      </p>
+    </div>
+    <!-- Columna derecha: CRUD -->
+    <div class="col crud">
+      <h2>Operaciones CRUD en Cassandra</h2>
+      <p><strong>Crear (INSERT):</strong> INSERT INTO tabla (col1, col2) VALUES (val1, val2);</p>
+      <p><strong>Leer (SELECT):</strong> SELECT col1, col2 FROM tabla WHERE col1 = val1;</p>
+      <p><strong>Actualizar (UPDATE):</strong> UPDATE tabla SET col2 = nuevo_valor WHERE col1 = val1;</p>
+      <p><strong>Eliminar (DELETE):</strong> DELETE FROM tabla WHERE col1 = val1;</p>
+    </div>
+  </div>
 </main>
 <footer>2025 ECOSYSTEM - SENA La Granja</footer>
 </body>

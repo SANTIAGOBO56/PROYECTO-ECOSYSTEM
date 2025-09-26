@@ -63,23 +63,28 @@
     </ul>
   </nav>
 <main>
-  <div class="container"> 
-<div>
-  <h1>Apache HBASE</h1>
-  <img src="img/hbase.png" alt="">
-  <p>HBase es una base de datos NoSQL distribuida, de código abierto y orientada a columnas que se ejecuta sobre Apache Hadoop y su sistema de archivos
-     (HDFS), modelada a partir de Google Bigtable. Su función principal es proporcionar un acceso aleatorio y de lectura/escritura en tiempo real a grandes
-      volúmenes de datos (macrodatos), ya que organiza la información en tablas con filas y columnas, permitiendo escalar linealmente en miles de nodos. </p>
-</div>
-<h2>Operaciones CRUD en MySQL</h2>
-  <p><strong>Crear (INSERT):</strong> put 'tabla', 'row1', 'col1', 'val1'
-  </p>
-  <p><strong>Leer (SELECT):</strong> get 'tabla', 'row1'
-  </p>
-  <p><strong>Actualizar (UPDATE):</strong> put 'tabla', 'row1', 'col1', 'nuevo_valor'
-  </p>
-  <p><strong>Eliminar (DELETE):</strong> delete 'tabla', 'row1', 'col1'
-  </p>
+  <div class="page-header">
+    <h1>Apache HBase</h1>
+    <img src="img/hbase.png" alt="Logo de HBase" class="header-logo">
+  </div>
+  <div class="container two-cols">
+    <div class="col definicion">
+      <h2>¿Qué es HBase?</h2>
+      <p>
+        HBase es una base de datos NoSQL distribuida, de código abierto y orientada a columnas que se ejecuta sobre Apache Hadoop y su sistema de archivos (HDFS), modelada a partir de Google Bigtable. Su función principal es proporcionar acceso aleatorio y de lectura/escritura en tiempo real a grandes volúmenes de datos (macrodatos), organizando la información en tablas con filas y columnas, permitiendo escalar linealmente en miles de nodos.
+      </p>
+    </div>
+    <div class="col crud">
+      <h2>Operaciones CRUD en HBase</h2>
+      <h3>Crear (INSERT):</h3>
+      <pre>put 'tabla', 'row1', 'col1', 'val1'</pre>
+      <h3>Leer (SELECT):</h3>
+      <pre>get 'tabla', 'row1'</pre>
+      <h3>Actualizar (UPDATE):</h3>
+      <pre>put 'tabla', 'row1', 'col1', 'nuevo_valor'</pre>
+      <h3>Eliminar (DELETE):</h3>
+      <pre>delete 'tabla', 'row1', 'col1'</pre>
+    </div>
   </div>
 </main>
 <footer>2025 ECOSYSTEM - SENA La Granja</footer>

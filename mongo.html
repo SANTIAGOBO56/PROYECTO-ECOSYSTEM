@@ -63,53 +63,43 @@
     </ul>
   </nav>
   <main>
-  <div class="container">
-
-  <div>
-  <h2>Que es MongoDB</h2>
-    <img src="img/mongodb.png" alt="">
-    <p>
-      MongoDB es un sistema de gestión de bases de datos (DBMS) no relacional de código abierto
-      que emplea documentos flexibles en lugar de tablas y filas para procesar y almacenar diversas formas de datos.
-      Como una solución de base de datos NoSQL, MongoDB no requiere un sistema de administración de bases de datos relacional (RDBMS)
-      por lo que proporciona un modelo de almacenamiento de datos elástico que permite a los usuarios almacenar y consultar tipos de datos multivariados con facilidad.
-      Esto no sólo simplifica la administración de bases de datos para los desarrolladores, sino que también crea un entorno altamente escalable para aplicaciones y servicios multiplataforma
-      </p>
-
-              <h2>Crud de MongoDB</h2>
-              Crear tabla Productos
-            CREATE TABLE Productos (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                nombre TEXT NOT NULL,
-                precio DECIMAL(10,2) NOT NULL,
-                stock INTEGER DEFAULT 0
-            );
-
-             <h2>INSERT</h2>
-             Agregar productos
-            INSERT INTO Productos (nombre, precio, stock) 
-            VALUES ('Laptop Lenovo', 2500.00, 10);
-
-            INSERT INTO Productos (nombre, precio, stock) 
-            VALUES ('Mouse Inalámbrico', 50.00, 30);
-
-            <h2>SELECT</h2>
-             Consultar productos
-            SELECT * FROM Productos;
-
-             <h2>UPDATE</h2>
-              Actualizar precio y stock de un producto
-            UPDATE Productos 
-            SET precio = 2400.00, stock = 8 
-            WHERE id = 1;
-
-            <h2>DELETE</h2>
-            Eliminar un producto
-            DELETE FROM Productos WHERE id = 2;
-
-      </div>
+  <div class="page-header">
+    <h1>MongoDB</h1>
+    <img src="img/mongodb.png" alt="Logo de MongoDB" class="header-logo">
   </div>
-  </main>
+  <div class="container two-cols">
+    <div class="col definicion">
+      <h2>¿Qué es MongoDB?</h2>
+      <p>
+        MongoDB es un sistema de gestión de bases de datos NoSQL de código abierto que emplea documentos flexibles en lugar de tablas y filas para procesar y almacenar diversas formas de datos. Permite un modelo de almacenamiento elástico para datos multivariados, simplifica la administración y es altamente escalable para aplicaciones multiplataforma.
+      </p>
+    </div>
+    <div class="col crud">
+      <h2>Operaciones CRUD en MongoDB</h2>
+      <h3>Crear colección (equivalente a tabla):</h3>
+      <pre>
+db.createCollection("Productos")
+      </pre>
+      <h3>Insertar documento:</h3>
+      <pre>
+db.Productos.insertOne({nombre: "Laptop Lenovo", precio: 2500.00, stock: 10})
+db.Productos.insertOne({nombre: "Mouse Inalámbrico", precio: 50.00, stock: 30})
+      </pre>
+      <h3>Leer (Buscar):</h3>
+      <pre>
+db.Productos.find({})
+      </pre>
+      <h3>Actualizar:</h3>
+      <pre>
+db.Productos.updateOne({id: 1}, {$set: {precio: 2400.00, stock: 8}})
+      </pre>
+      <h3>Eliminar:</h3>
+      <pre>
+db.Productos.deleteOne({id: 2})
+      </pre>
+    </div>
+  </div>
+</main>
 <footer>2025 ECOSYSTEM - SENA La Granja</footer>
 </body>
 </html>

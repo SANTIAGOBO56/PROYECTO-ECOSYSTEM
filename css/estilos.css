@@ -7,7 +7,7 @@ html, body {
 
 body {
   display: grid;
-  grid-template-rows: auto 1fr auto; /* header | contenido | footer */
+  grid-template-rows: auto 1fr auto;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: #f4f6f9;
   color: #333;
@@ -25,33 +25,30 @@ h1 {
 /* ---------- Menú y Navegación ---------- */
 #menu {
   background-color: #007bff;
-  /* Anulamos cualquier flex global aplicado a nav para este menú */
-  display: block; 
+  display: block;
 }
 
-/* UL centrado como bloque ajustado al contenido */
+/* UL centrado y responsivo */
 #menu ul {
   list-style: none;
-  margin: 0 auto;       /* centrar el bloque ul en su contenedor */
-  padding: 8px 0;       /* espacio vertical dentro de la barra */
+  margin: 0 auto;
+  padding: 8px 0;
   display: flex;
-  justify-content: center; /* centra los items dentro del ul */
+  justify-content: center;
   align-items: center;
-  gap: 26px;            /* espacio entre logo y enlaces (mejor que margin en li) */
-  width: fit-content;   /* que el ul mida sólo lo necesario */
+  gap: 26px;
+  width: fit-content;
 }
 
-/* si el navegador no soporta fit-content: fallback */
 @supports not (width: fit-content) {
   #menu ul { width: auto; }
 }
 
 #menu ul li {
-  margin: 0;            /* espaciado controlado por gap */
+  margin: 0;
   position: relative;
 }
 
-/* Enlaces del menú */
 #menu ul li a {
   display: block;
   padding: 14px 20px;
@@ -62,11 +59,11 @@ h1 {
 }
 
 #menu ul li a:hover {
-  background-color: #0056b3; /* tono más oscuro al pasar */
+  background-color: #0056b3;
   border-radius: 5px;
 }
 
-/* ---------- Submenús ocultos ---------- */
+/* Submenús */
 #menu ul li ul {
   display: none;
   position: absolute;
@@ -94,14 +91,12 @@ h1 {
   background-color: #0056b3;
 }
 
-/* Mostrar submenú al pasar el mouse */
 #menu ul li:hover > ul {
   display: flex;
   flex-direction: column;
 }
 
-/* ---------- Logo ---------- */
-/* Quité margin-right: auto que forzaba el logo a la izquierda */
+/* Logo */
 #menu .logo {
   margin: 0;
   display: flex;
@@ -114,9 +109,7 @@ h1 {
   display: block;
 }
 
-/* ---------- Barra nav extra (otros navs) ---------- */
-/* Esta regla sigue existiendo para otros nav que uses,
-   pero no afectará a #menu porque hemos forzado #menu {display:block;} */
+/* Barra nav extra */
 nav {
   background: #007bff;
   padding: 12px 40px;
@@ -143,6 +136,7 @@ nav a:hover {
   border: 2px solid #333;
   border-radius: 8px;
   margin: 20px 0;
+  max-width: 100%;
 }
 
 #imagenes {
@@ -156,6 +150,7 @@ nav a:hover {
   border: 2px solid transparent;
   border-radius: 5px;
   transition: 0.3s;
+  max-width: 100%;
 }
 #imagenes img:hover {
   border: 2px solid #007bff;
@@ -171,6 +166,7 @@ nav a:hover {
 #botones img {
   width: 60px;
   height: auto;
+  max-width: 100%;
 }
 
 /* ---------- Contenedor principal ---------- */
@@ -181,6 +177,8 @@ nav a:hover {
   padding: 25px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+  width: 95vw;
 }
 
 .title-box {
@@ -198,12 +196,13 @@ nav a:hover {
 table {
   margin: 20px auto;
   border-collapse: collapse;
-  width: 70%;
+  width: 100%;
   text-align: center;
   background: #fff;
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
   border-radius: 8px;
   overflow: hidden;
+  font-size: 1rem;
 }
 thead tr:first-child {
   background: #007bff;
@@ -215,6 +214,7 @@ table th, table td {
   padding: 12px 15px;
   border: 1px solid #ddd;
   text-align: left;
+  word-break: break-word;
 }
 table th {
   background: #f0f5f0;
@@ -249,6 +249,7 @@ footer {
   box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
   border-radius: 6px 6px 0 0;
 }
+
 /* Encabezado con título arriba y logo debajo */
 .page-header {
   text-align: center;
@@ -262,33 +263,191 @@ footer {
 }
 
 .page-header img {
-  width: 120px;
+  width: 400px;
   height: auto;
   display: block;
   margin: 0 auto;
+  max-width: 95vw;
 }
 
-/* Contenedor dividido en dos columnas */
+/* ---------- Columnas Dos Cols ---------- */
 .container {
   display: flex;
-  gap: 20px;
+  gap: 40px;
   max-width: 1000px;
-  margin: 20px auto 40px;
+  margin: 40px auto;
   background: #fff;
-  padding: 25px;
+  padding: 34px 38px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  position: relative;
+  box-sizing: border-box;
+  width: 95vw;
 }
 
-/* Columnas */
-.container .col {
-  flex: 1;
+/* Columnas con suficiente espacio lateral */
+.container.two-cols .col {
+  flex: 1 1 0;
   text-align: left;
+  position: relative;
+  z-index: 1;
+  padding-left: 48px;
+  padding-right: 48px;
+  box-sizing: border-box;
 }
 
-/* Responsive: en pantallas pequeñas se apilan */
-@media (max-width: 768px) {
+/* Línea divisoria vertical */
+.container.two-cols::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  bottom: 40px;
+  left: 50%;
+  width: 2px;
+  background: #007bff;
+  transform: translateX(-1px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Ajuste para los <pre> dentro de la columna CRUD */
+.col.crud pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+  max-width: 100%;
+  background: #f8f9fa;
+  padding: 10px 12px;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 1100px) {
+  .container {
+    max-width: 98vw;
+    padding: 15px 0px;
+  }
+  .page-header img {
+    width: 95vw;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 900px) {
   .container {
     flex-direction: column;
+    padding: 22px 5vw;
+    gap: 20px;
+    max-width: 99vw;
   }
+  .container.two-cols .col {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .container.two-cols::before {
+    display: none;
+  }
+  #menu ul {
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 98vw;
+  }
+  #menu ul li a {
+    padding: 10px 8px;
+    font-size: 0.95rem;
+  }
+  .page-header h1 {
+    font-size: 2rem;
+  }
+  .page-header img {
+    max-width: 320px;
+  }
+  table th, table td {
+    padding: 7px 5px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 600px) {
+  #menu ul {
+    flex-direction: column;
+    gap: 0;
+    width: 100vw;
+    padding: 0;
+  }
+  #menu ul li {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2px;
+  }
+  #menu ul li a {
+    padding: 10px 2vw;
+    font-size: 1.1rem;
+  }
+  .container {
+    padding: 10px 1vw;
+    gap: 10px;
+  }
+  .container.two-cols .col {
+    padding-left: 3px;
+    padding-right: 3px;
+  }
+  .page-header img {
+    max-width: 98vw;
+    width: 98vw;
+  }
+  table {
+    width: 99vw;
+    font-size: 0.95rem;
+  }
+  table th, table td {
+    padding: 5px 3px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 430px) {
+  body, html, .container, table {
+    font-size: 0.88rem;
+  }
+  .page-header h1 {
+    font-size: 1.2rem;
+  }
+  footer {
+    font-size: 0.8rem;
+    padding: 8px;
+  }
+}
+
+/* ---------- Carrusel ---------- */
+.carrusel-img {
+  display: block;
+  width: 100%;       /* ocupa todo el ancho del carrusel */
+  height: 500px;     /* altura fija */
+  object-fit: cover; /* recorta sin deformar */
+  border-radius: 30px;
+}
+
+@media (max-width: 900px) {
+  .carrusel-img {
+    height: 230px;
+  }
+}
+@media (max-width: 600px) {
+  .carrusel-img {
+    height: 160px;
+  }
+}
+
+/* Imagen equipo responsiva y centrada */
+.equipo-img {
+  display: block;
+  margin: 40px auto 20px auto;
+  width: 100%;
+  max-width: 600px;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.09);
 }

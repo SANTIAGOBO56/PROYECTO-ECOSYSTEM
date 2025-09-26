@@ -62,26 +62,28 @@
     </ul>
   </nav>
 <main>
-  <div class="container">
-<div>
-  <h1>Redis</h1>
-  <img src="img/redis.jpg" alt="">
-  <p>es un motor de base de datos en memoria, basado en el almacenamiento en tablas de hashes (clave/valor) 
-    pero que opcionalmente puede ser usada como una base de datos durable o persistente.
-     Está escrito en ANSI C por Salvatore Sanfilippo, quien es patrocinado por Redis Labs.
-    Es distribuido bajo un modelo de licencias dual: RSALv2 y SSP</p>
-</div>
-<h2>Operaciones CRUD en Redis</h2>
-  <p><strong>Crear (INSERT):</strong> SET col1 val1
-  </p>
-  <p><strong>Leer (SELECT):</strong> GET col1
-  </p>
-  <p><strong>Actualizar (UPDATE):</strong>SET col1 nuevo_valor
- 
-  </p>
-  <p><strong>Eliminar (DELETE):</strong> DEL col1
-
-  </p>
+  <div class="page-header">
+    <h1>Redis</h1>
+    <img src="img/redis.jpg" alt="Logo de Redis" class="header-logo">
+  </div>
+  <div class="container two-cols">
+    <div class="col definicion">
+      <h2>¿Qué es Redis?</h2>
+      <p>
+        Redis es un motor de base de datos en memoria, basado en almacenamiento de hashes (clave/valor) pero que opcionalmente puede ser usado como una base de datos durable o persistente. Está escrito en ANSI C y es distribuido bajo RSALv2 y SSP.
+      </p>
+    </div>
+    <div class="col crud">
+      <h2>Operaciones CRUD en Redis</h2>
+      <h3>Crear (INSERT):</h3>
+      <pre>SET col1 val1</pre>
+      <h3>Leer (SELECT):</h3>
+      <pre>GET col1</pre>
+      <h3>Actualizar (UPDATE):</h3>
+      <pre>SET col1 nuevo_valor</pre>
+      <h3>Eliminar (DELETE):</h3>
+      <pre>DEL col1</pre>
+    </div>
   </div>
 </main>
 <footer>2025 ECOSYSTEM - SENA La Granja</footer>

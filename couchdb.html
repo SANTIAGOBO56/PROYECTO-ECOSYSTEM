@@ -4,20 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/estilos.css">
-  <title>ECOSYSTEM</title>
+  <title>ECOSYSTEM - CouchDB</title>
 </head>
 <body>
- 
 <nav id="menu">
     <ul>
       <li class="logo">
         <a href="login/login.html"><img src="img/ecosystem.png" alt="Logo"></a>
       </li>
-
       <li><a href="index.html">Inicio</a></li>
       <li><a href="grri.html">Gestor y Motor de BD</a></li>
-
-      
       <li>
         <a href="diagrama.html">Tablas BD</a>
         <ul>
@@ -30,8 +26,6 @@
           <li><a href="responsables.html">Responsable</a></li>
         </ul>
       </li>
-
-  
       <li>
         <a href="#">BD Relaciones</a>
         <ul>
@@ -44,8 +38,6 @@
           <li><a href="firebird.html">Firebird</a></li>
         </ul>
       </li>
-
-      
       <li>
         <a href="#">BD No Relaciones</a>
         <ul>
@@ -58,41 +50,47 @@
           <li><a href="hbase.html">HBase</a></li>
         </ul>
       </li>
-
       <li><a href="informacion.html">Acerca de los Integrantes</a></li>
     </ul>
   </nav>
 <main>
-  <div class="container">
-<div>
-  <h1>Couch</h1>
-  <img src="img/couch.png" alt="">
-  <p> es una base de datos de documentos NoSQL de código abierto, desarrollada por la Fundación Apache Software
- Foundation, que utiliza documentos JSON para almacenar datos sin una estructura fija y puede ser accesible vía web
-  mediante HTTP. Se destaca por su arquitectura distribuida, escalabilidad, replicación de datos y tolerancia a fallos,
-   facilitando el desarrollo de aplicaciones web y móviles modernas al permitir la sincronización de datos 
-   incluso cuando están offline. </p>
-</div>
-<h2>Operaciones CRUD en CouchDB</h2>
-  <p><strong>Crear (INSERT):</strong> PUT /basedatos/mi_doc_id
-    {
-      "col1": "val1",
-      "col2": "val2"
-    }
-  </p>
-  <p><strong>Leer (SELECT):</strong> GET /basedatos/mi_doc_id
-  </p>
-  <p><strong>Actualizar (UPDATE):</strong> PUT /basedatos/mi_doc_id?rev=1-xxx
-    {
-      "col1": "val1",
-      "col2": "nuevo_valor"
-    }
-    
-  </p>
-  <p><strong>Eliminar (DELETE):</strong> DELETE /basedatos/mi_doc_id?rev=1-xxx
-
-  </p>
-</div>
+  <div class="page-header">
+    <h1>CouchDB</h1>
+    <img src="img/couch.png" alt="Logo de CouchDB" class="header-logo">
+  </div>
+  <div class="container two-cols">
+    <!-- Columna izquierda: Definición -->
+    <div class="col definicion">
+      <h2>¿Qué es CouchDB?</h2>
+      <p>
+        CouchDB es una base de datos de documentos NoSQL de código abierto, desarrollada por la Fundación Apache Software Foundation, que utiliza documentos JSON para almacenar datos sin una estructura fija y puede ser accesible vía web mediante HTTP. Se destaca por su arquitectura distribuida, escalabilidad, replicación de datos y tolerancia a fallos, facilitando el desarrollo de aplicaciones web y móviles modernas al permitir la sincronización de datos incluso cuando están offline.
+      </p>
+    </div>
+    <!-- Columna derecha: CRUD -->
+    <div class="col crud">
+      <h2>Operaciones CRUD en CouchDB</h2>
+      <p><strong>Crear (INSERT):</strong><br>
+        <code>PUT /basedatos/mi_doc_id
+        {
+          "col1": "val1",
+          "col2": "val2"
+        }</code>
+      </p>
+      <p><strong>Leer (SELECT):</strong><br>
+        <code>GET /basedatos/mi_doc_id</code>
+      </p>
+      <p><strong>Actualizar (UPDATE):</strong><br>
+        <code>PUT /basedatos/mi_doc_id?rev=1-xxx
+        {
+          "col1": "val1",
+          "col2": "nuevo_valor"
+        }</code>
+      </p>
+      <p><strong>Eliminar (DELETE):</strong><br>
+        <code>DELETE /basedatos/mi_doc_id?rev=1-xxx</code>
+      </p>
+    </div>
+  </div>
 </main>
 <footer>2025 ECOSYSTEM - SENA La Granja</footer>
 </body>

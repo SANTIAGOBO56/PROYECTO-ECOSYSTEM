@@ -62,47 +62,53 @@
     </ul>
   </nav>
 <main>
-  <div class="container">
-<div>
-    <h2>¿Qué es MariaDB?</h2>
-     <img src="img/Mariadb.png" alt="Logo de MariaDB" style="width:300px;height:200px;">
-    <p>
-        MariaDB es un sistema de gestión de bases de datos relacional de código abierto, derivado de MySQL. Fue creado por los desarrolladores originales de MySQL como una alternativa compatible y gratuita, tras la adquisición de MySQL por parte de Oracle. MariaDB mantiene una alta compatibilidad con MySQL, pero incorpora mejoras de rendimiento, nuevas características y mayor seguridad. Es ampliamente utilizado en aplicaciones web, empresariales y de análisis de datos.
-    </p>
-     <p>Funciones principales:</p>
-    <ul>
-      <li>Gestión de bases de datos relacionales.</li>
-      <li>Soporte para múltiples motores de almacenamiento, incluyendo InnoDB y MyISAM.</li>
-      <li>Alta compatibilidad con MySQL, facilitando la migración entre ambos sistemas.</li>
-      <li>Mejoras en el rendimiento y la escalabilidad.</li>
-      <li>Características avanzadas como replicación, particionamiento y clustering.</li>
-      <li>Seguridad mejorada con autenticación y cifrado de datos.</li>
-     <li>Soporte para consultas SQL complejas y procedimientos almacenados.</li>
-    </ul>
-     <p>Ejemplo de CRUD operacion</p>
-    <br>
-          <h1>Crear(INSERT)</h1>
-          INSERT INTO libros (titulo, autor, anio_publicacion, categoria)
-          VALUES ('Cien años de soledad', 'Gabriel García Márquez', 1967, 'Novela');
-
-          <h1>Leer(SELECT):</h1> 
-            SELECT * FROM libros;
-            SELECT titulo, anio_publicacion 
-            FROM libros 
-            WHERE autor = 'Gabriel García Márquez';
-
-
-          <h1>actualizar (UPDATE):</h1>
-            UPDATE libros
-            SET categoria = 'Realismo mágico'
-            WHERE titulo = 'Cien años de soledad';
-
-          <h1>Eliminar (DELETE):</h1>
-          
-          DELETE FROM libros
-          WHERE titulo = 'Cien años de soledad';
-
-      </div>
+  <div class="page-header">
+    <h1>MariaDB</h1>
+    <img src="img/Mariadb.png" alt="Logo de MariaDB" class="header-logo" style="width:300px;height:200px;">
+  </div>
+  <div class="container two-cols">
+    <div class="col definicion">
+      <h2>¿Qué es MariaDB?</h2>
+      <p>
+        MariaDB es un sistema de gestión de bases de datos relacional de código abierto, derivado de MySQL. Fue creado por los desarrolladores originales de MySQL como una alternativa compatible y gratuita, tras la adquisición de MySQL por parte de Oracle. Mantiene alta compatibilidad con MySQL, pero incorpora mejoras de rendimiento, nuevas características y mayor seguridad. Es ampliamente utilizado en aplicaciones web, empresariales y de análisis de datos.
+      </p>
+      <h3>Funciones principales:</h3>
+      <ul>
+        <li>Gestión de bases de datos relacionales.</li>
+        <li>Soporte para múltiples motores de almacenamiento, incluyendo InnoDB y MyISAM.</li>
+        <li>Alta compatibilidad con MySQL, facilitando la migración entre ambos sistemas.</li>
+        <li>Mejoras en el rendimiento y la escalabilidad.</li>
+        <li>Características avanzadas como replicación, particionamiento y clustering.</li>
+        <li>Seguridad mejorada con autenticación y cifrado de datos.</li>
+        <li>Soporte para consultas SQL complejas y procedimientos almacenados.</li>
+      </ul>
+    </div>
+    <div class="col crud">
+      <h2>Ejemplo de operaciones CRUD en MariaDB</h2>
+      <h3>Crear (INSERT):</h3>
+      <pre>
+INSERT INTO libros (titulo, autor, anio_publicacion, categoria)
+VALUES ('Cien años de soledad', 'Gabriel García Márquez', 1967, 'Novela');
+      </pre>
+      <h3>Leer (SELECT):</h3>
+      <pre>
+SELECT * FROM libros;
+SELECT titulo, anio_publicacion 
+FROM libros 
+WHERE autor = 'Gabriel García Márquez';
+      </pre>
+      <h3>Actualizar (UPDATE):</h3>
+      <pre>
+UPDATE libros
+SET categoria = 'Realismo mágico'
+WHERE titulo = 'Cien años de soledad';
+      </pre>
+      <h3>Eliminar (DELETE):</h3>
+      <pre>
+DELETE FROM libros
+WHERE titulo = 'Cien años de soledad';
+      </pre>
+    </div>
   </div>
 </main>
 <footer>2025 ECOSYSTEM - SENA La Granja</footer>

@@ -64,70 +64,62 @@
     </ul>
   </nav>
 <main>
-  <div class="container">
-<!-- Contenido principal -->
-<section id="contenido">
-  <h2>¿Qué es SQLite?</h2>
-  <img src="img/sqlite.png" alt="Logo de SQLite" style="width:250px;height:200px;">
-
-  <p>
-    <strong>SQLite</strong> es un sistema de gestión de bases de datos relacional ligero y de código abierto, 
-    implementado como una biblioteca en lenguaje C.  
-    A diferencia de otros sistemas, no requiere un servidor independiente, lo que lo hace muy rápido, portátil y fácil de usar.
-  </p>
-
-  <p>
-    Es ampliamente utilizado en <strong>aplicaciones móviles</strong>, <strong>navegadores web</strong> y 
-    <strong>dispositivos embebidos</strong> gracias a su simplicidad y a que almacena toda la base de datos en un solo archivo.
-  </p>
-
-  <h3>Características principales</h3>
-  <ul>
-    <li>No necesita configuración ni instalación de servidor.</li>
-    <li>Almacena toda la base de datos en un único archivo.</li>
-    <li>Compatible con gran parte del estándar SQL-92.</li>
-    <li>Excelente para proyectos pequeños y medianos.</li>
-    <li>Muy eficiente en consumo de memoria.</li>
-    <li>Soporta transacciones ACID.</li>
-  </ul>
-
-  <h3>Ejemplo de operaciones CRUD en SQLite</h3>
-  <p><strong>Crear tabla:</strong></p>
-  <pre>
+  <div class="page-header">
+    <h1>SQLite</h1>
+    <img src="img/sqlite.png" alt="Logo de SQLite" class="header-logo" style="width:250px;height:200px;">
+  </div>
+  <div class="container two-cols">
+    <div class="col definicion">
+      <h2>¿Qué es SQLite?</h2>
+      <p>
+        <strong>SQLite</strong> es un sistema de gestión de bases de datos relacional ligero y de código abierto, implementado como una biblioteca en lenguaje C. No requiere un servidor independiente, lo que lo hace muy rápido, portátil y fácil de usar.
+      </p>
+      <p>
+        Es ampliamente utilizado en <strong>aplicaciones móviles</strong>, <strong>navegadores web</strong> y <strong>dispositivos embebidos</strong> gracias a su simplicidad y a que almacena toda la base de datos en un solo archivo.
+      </p>
+      <h3>Características principales</h3>
+      <ul>
+        <li>No necesita configuración ni instalación de servidor.</li>
+        <li>Almacena toda la base de datos en un único archivo.</li>
+        <li>Compatible con gran parte del estándar SQL-92.</li>
+        <li>Excelente para proyectos pequeños y medianos.</li>
+        <li>Muy eficiente en consumo de memoria.</li>
+        <li>Soporta transacciones ACID.</li>
+      </ul>
+    </div>
+    <div class="col crud">
+      <h2>Ejemplo de operaciones CRUD en SQLite</h2>
+      <h3>Crear tabla:</h3>
+      <pre>
 CREATE TABLE Usuarios (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   nombre TEXT NOT NULL,
   correo VARCHAR(100) UNIQUE
 );
-  </pre>
-
-  <p><strong>Insertar registro:</strong></p>
-  <pre>
+      </pre>
+      <h3>Insertar registro:</h3>
+      <pre>
 INSERT INTO Usuarios (nombre, correo) 
 VALUES ('Ana López', 'ana.lopez@example.com');
-  </pre>
-
-  <p><strong>Actualizar registro:</strong></p>
-  <pre>
+      </pre>
+      <h3>Actualizar registro:</h3>
+      <pre>
 UPDATE Usuarios 
 SET correo = 'ana.nueva@example.com' 
 WHERE id = 1;
-  </pre>
-
-  <p><strong>Consultar datos:</strong></p>
-  <pre>
+      </pre>
+      <h3>Consultar datos:</h3>
+      <pre>
 SELECT nombre, correo 
 FROM Usuarios 
 WHERE nombre LIKE 'Ana%';
-  </pre>
-
-  <p><strong>Eliminar registro:</strong></p>
-  <pre>
+      </pre>
+      <h3>Eliminar registro:</h3>
+      <pre>
 DELETE FROM Usuarios 
 WHERE id = 1;
-  </pre>
-
-</section>
+      </pre>
+    </div>
   </div>
 </main>
 <footer>

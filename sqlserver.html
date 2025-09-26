@@ -63,50 +63,50 @@
     </ul>
   </nav>
 <main>
-  <div class="container">
-<div>
-  <h2>Sql Server</h2>
-    <img src="img/images (1).png">
-    <p>
-        Microsoft SQL Server es un sistema de gestión de bases de datos relacionales (RDBMS) desarrollado por Microsoft que permite almacenar y recuperar datos de forma segura y eficiente utilizando Transact-SQL (T-SQL), un lenguaje de consulta estructurado (SQL) con extensiones propias. Sirve como un servidor de bases de datos para aplicaciones y herramientas, gestionando desde grandes aplicaciones conectadas a Internet hasta aplicaciones locales, y ofrece diversas herramientas para el análisis y la gestión de datos. 
-        <br>
-        <br>
-        ¿Para qué sirve?
-        <br>
-        <br>
-        Almacenamiento y recuperación de datos:
-        Su función principal es almacenar y acceder a grandes volúmenes de información de forma segura, como listas de clientes, catálogos de productos o datos multimedia. 
-        <br>
-        <br>
-        Gestión de datos empresariales:
-        Es fundamental para el funcionamiento de aplicaciones web y otras aplicaciones empresariales al gestionar información estructurada en tablas. 
-        <br>
-        <br>
-        Análisis y Business Intelligence:
-        Ofrece herramientas para analizar datos, obtener información valiosa sobre negocios y clientes, y aprovechar la inteligencia artificial a través de la integración con servicios de Azure. 
-        <br>
-        <br>
-        Escalabilidad:
-        Microsoft comercializa diferentes ediciones para adaptarse a distintas cargas de trabajo, desde aplicaciones para una sola máquina hasta sistemas a gran escala con muchos usuarios simultáneos. 
-      <br>
-      <br>
-      <p>Ejemplo de CRUD operacion</p>
-      <br>
-
-    <p>Crear Tabla</p>
-      CREATE TABLE Usuarios (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        nombre TEXT NOT NULL,
-        telefono int(11) UNIQUE)
-    <p>INSERT</p>
-        INSERT INTO Usuarios (nombre, telefono) VALUES ('Cristiam Mosquera', '3141388129');
-    <P>Update</P>   
-        UPDATE Usuarios SET telefono = '3141388129' WHERE id = 1;
-    <p>select</p>
-        SELECT nombre, telefono FROM Usuarios WHERE nombre LIKE 'Mosquera%'; 
-    <p>Delete</p>
-           DELETE FROM Usuarios WHERE id = 1; 
-</div>
+  <div class="page-header">
+    <h1>SQL Server</h1>
+    <img src="img/images (1).png" alt="Logo de SQL Server" class="header-logo">
+  </div>
+  <div class="container two-cols">
+    <div class="col definicion">
+      <h2>¿Qué es SQL Server?</h2>
+      <p>
+        Microsoft SQL Server es un sistema de gestión de bases de datos relacionales (RDBMS) desarrollado por Microsoft que permite almacenar y recuperar datos de forma segura y eficiente utilizando Transact-SQL (T-SQL), un lenguaje de consulta estructurado (SQL) con extensiones propias. Sirve como un servidor de bases de datos para aplicaciones y herramientas, gestionando desde grandes aplicaciones conectadas a Internet hasta aplicaciones locales, y ofrece diversas herramientas para el análisis y la gestión de datos.
+      </p>
+      <h3>¿Para qué sirve?</h3>
+      <ul>
+        <li>Almacenamiento y recuperación de datos.</li>
+        <li>Gestión de datos empresariales.</li>
+        <li>Análisis y Business Intelligence.</li>
+        <li>Escalabilidad para diferentes cargas de trabajo.</li>
+      </ul>
+    </div>
+    <div class="col crud">
+      <h2>Ejemplo de operaciones CRUD en SQL Server</h2>
+      <h3>Crear Tabla</h3>
+      <pre>
+CREATE TABLE Usuarios (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  nombre TEXT NOT NULL,
+  telefono int(11) UNIQUE)
+      </pre>
+      <h3>INSERT</h3>
+      <pre>
+INSERT INTO Usuarios (nombre, telefono) VALUES ('Cristiam Mosquera', '3141388129');
+      </pre>
+      <h3>UPDATE</h3>
+      <pre>
+UPDATE Usuarios SET telefono = '3141388129' WHERE id = 1;
+      </pre>
+      <h3>SELECT</h3>
+      <pre>
+SELECT nombre, telefono FROM Usuarios WHERE nombre LIKE 'Mosquera%'; 
+      </pre>
+      <h3>DELETE</h3>
+      <pre>
+DELETE FROM Usuarios WHERE id = 1; 
+      </pre>
+    </div>
   </div>
 </main>
 <footer>2025 ECOSYSTEM - SENA La Granja</footer>

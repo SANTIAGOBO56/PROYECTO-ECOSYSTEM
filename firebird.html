@@ -4,20 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/estilos.css">
-  <title>ECOSYSTEM</title>
+  <title>ECOSYSTEM - Firebird</title>
 </head>
 <body>
- 
 <nav id="menu">
     <ul>
       <li class="logo">
         <a href="login/login.html"><img src="img/ecosystem.png" alt="Logo"></a>
       </li>
-
       <li><a href="index.html">Inicio</a></li>
       <li><a href="grri.html">Gestor y Motor de BD</a></li>
-
-      
       <li>
         <a href="diagrama.html">Tablas BD</a>
         <ul>
@@ -30,8 +26,6 @@
           <li><a href="responsables.html">Responsable</a></li>
         </ul>
       </li>
-
-  
       <li>
         <a href="#">BD Relaciones</a>
         <ul>
@@ -44,8 +38,6 @@
           <li><a href="firebird.html">Firebird</a></li>
         </ul>
       </li>
-
-      
       <li>
         <a href="#">BD No Relaciones</a>
         <ul>
@@ -58,101 +50,79 @@
           <li><a href="hbase.html">HBase</a></li>
         </ul>
       </li>
-
       <li><a href="informacion.html">Acerca de los Integrantes</a></li>
     </ul>
   </nav>
 <main>
-  <div class="container"> 
+  <div class="page-header">
+    <h1>Firebird</h1>
+    <img src="img/firebird.png" alt="Logo de Firebird" class="header-logo">
+  </div>
+  <div class="container two-cols">
+    <div class="col definicion">
+      <!-- ... definición igual ... -->
+    <h2>¿Qué es Firebird?</h2>
+      <p>
+        Firebird es un sistema de gestión de bases de datos relacionales (RDBMS) de código abierto, potente, estable y multiplataforma. Deriva del código de InterBase 6.0, liberado por Borland en 2000, y es gratuito y sin costos de licencia. Se utiliza para crear y gestionar bases de datos eficientes para diversas aplicaciones, desde pequeñas hasta grandes, gracias a su robustez y escalabilidad.
+      </p>
+      <ul>
+        <li><strong>Código abierto y gratuito:</strong> No tiene costos de licencia, lo que lo hace una opción atractiva para el desarrollo.</li>
+        <li><strong>Multiplataforma:</strong> Funciona en Windows, Linux, macOS y otras plataformas Unix.</li>
+        <li><strong>Motor robusto:</strong> Herencia de la tecnología de InterBase, lo que le confiere madurez y estabilidad.</li>
+        <li><strong>Compatible con SQL:</strong> Utiliza el lenguaje estándar SQL para consultas y manipulación de datos.</li>
+        <li><strong>Escalable:</strong> Adecuado para proyectos de cualquier tamaño, desde aplicaciones pequeñas hasta grandes sistemas empresariales.</li>
+        <li><strong>Ligero y eficiente:</strong> Se caracteriza por su bajo consumo de recursos y sencilla configuración.</li>
+      </ul>
+      <h2>¿Para qué se utiliza?</h2>
+      <p>
+        Firebird es ideal para gestionar bases de datos en una amplia variedad de aplicaciones, como: sistemas de punto de venta, análisis de procesos industriales, aplicaciones empresariales y desarrollo de aplicaciones en general.
+      </p>
+      <h2>Ventajas de Firebird</h2>
+      <ul>
+        <li><strong>Excelente rendimiento:</strong> Ofrece alta velocidad y eficiencia en la gestión de datos.</li>
+        <li><strong>Estabilidad:</strong> Su tecnología madura garantiza un funcionamiento fiable.</li>
+        <li><strong>Bajo costo total de propiedad:</strong> Al ser gratuito, permite destinar recursos a otras áreas críticas como el hardware y la capacitación.</li>
+        <li><strong>Facilidad de uso:</strong> Su configuración es sencilla, lo que facilita su adopción.</li>
+      </ul>
+    </div>
+    <div class="col crud">
+      <h2>Ejemplo de operaciones CRUD en Firebird</h2>
+      <h3>Crear (INSERT):</h3>
+      <pre>
+INSERT INTO GALERIA (NOMBRE_OBRA, AUTOR, ANIO, TIPO)
+VALUES ('La noche estrellada', 'Vincent van Gogh', 1889, 'Pintura');
 
-        <h2>Firebird</h2>
-    <img src="img/firebird.png">
-    <p>
-        Firebird es un sistema de gestión de bases de datos relacionales (RDBMS) de código abierto, potente, estable y multiplataforma. Deriva del código de InterBase 6.0, liberado por Borland en 2000, y es gratuito y sin costos de licencia. Se utiliza para crear y gestionar bases de datos eficientes para diversas aplicaciones, desde pequeñas hasta grandes, gracias a su robustez y escalabilidad. 
-        <br>
-        <br>
-        Características principales
-        <br>
-        <br>
-        Código abierto y gratuito: No tiene costos de licencia, lo que lo hace una opción atractiva para el desarrollo. 
-        <br>
-        <br>
-        Multiplataforma: Funciona en Windows, Linux, macOS y otras plataformas Unix. 
-        <br>
-        <br>
-        Motor robusto: Herencia de la tecnología de InterBase, lo que le confiere madurez y estabilidad. 
-        <br>
-        <br>
-        Compatible con SQL: Utiliza el lenguaje estándar SQL para consultas y manipulación de datos. 
-        <br>
-        <br>
-        Escalable: Adecuado para proyectos de cualquier tamaño, desde aplicaciones pequeñas hasta grandes sistemas empresariales. 
-        <br>
-        <br>
-        Ligero y eficiente: Se caracteriza por su bajo consumo de recursos y sencilla configuración. 
-        <br>
-        <br>
-        ¿Para qué se utiliza?
-        <br>
-        <br>
-        Firebird es ideal para gestionar bases de datos en una amplia variedad de aplicaciones, como: Sistemas de punto de venta, Análisis de procesos industriales, Aplicaciones empresariales, Desarrollo de aplicaciones en general. 
-        <br>
-        <br>
-        Ventajas de Firebird
-        <br>
-        <br>
-        Excelente rendimiento: Ofrece alta velocidad y eficiencia en la gestión de datos. 
-        <br>
-        <br>
-        Estabilidad: Su tecnología madura garantiza un funcionamiento fiable. 
-        <br>
-        <br>
-        Bajo costo total de propiedad: Al ser gratuito, permite destinar recursos a otras áreas críticas como el hardware y la capacitación. 
-        <br>
-        <br>
-        Facilidad de uso: Su configuración es sencilla, lo que facilita su adopción.   
-    <br>
-    <br>
->
-         <p>Ejemplo de CRUD operacion</p>
-    <br>
-          <h1>Crear(INSERT)</h1>
-          INSERT INTO GALERIA (NOMBRE_OBRA, AUTOR, ANIO, TIPO)
-          VALUES ('La noche estrellada', 'Vincent van Gogh', 1889, 'Pintura');
+INSERT INTO GALERIA (NOMBRE_OBRA, AUTOR, ANIO, TIPO)
+VALUES ('La persistencia de la memoria', 'Salvador Dalí', 1931, 'Pintura');
 
-          INSERT INTO GALERIA (NOMBRE_OBRA, AUTOR, ANIO, TIPO)
-          VALUES ('La persistencia de la memoria', 'Salvador Dalí', 1931, 'Pintura');
+INSERT INTO GALERIA (NOMBRE_OBRA, AUTOR, ANIO, TIPO)
+VALUES ('Fotografía sin título', 'Ansel Adams', 1942, 'Fotografía');
+      </pre>
+      <h3>Leer (SELECT):</h3>
+      <pre>
+SELECT * FROM GALERIA;
 
-          INSERT INTO GALERIA (NOMBRE_OBRA, AUTOR, ANIO, TIPO)
-          VALUES ('Fotografía sin título', 'Ansel Adams', 1942, 'Fotografía');
+SELECT NOMBRE_OBRA, ANIO
+FROM GALERIA
+WHERE AUTOR = 'Vincent van Gogh';
 
-
-          <h1>Leer(SELECT):</h1> 
-
-            SELECT * FROM GALERIA;
-
-
-            SELECT NOMBRE_OBRA, ANIO
-            FROM GALERIA
-            WHERE AUTOR = 'Vincent van Gogh';
-
-
-            SELECT NOMBRE_OBRA, AUTOR
-            FROM GALERIA
-            WHERE TIPO = 'Fotografía';
-
-          <h1>actualizar (UPDATE):</h1>
-          UPDATE GALERIA
-          SET TIPO = 'Obra maestra - Pintura'
-          WHERE NOMBRE_OBRA = 'La persistencia de la memoria';
-
-
-          <h1>Eliminar (DELETE):</h1>
-          
-          DELETE FROM GALERIA
-          WHERE NOMBRE_OBRA = 'Fotografía sin título';
-
-</div>
+SELECT NOMBRE_OBRA, AUTOR
+FROM GALERIA
+WHERE TIPO = 'Fotografía';
+      </pre>
+      <h3>Actualizar (UPDATE):</h3>
+      <pre>
+UPDATE GALERIA
+SET TIPO = 'Obra maestra - Pintura'
+WHERE NOMBRE_OBRA = 'La persistencia de la memoria';
+      </pre>
+      <h3>Eliminar (DELETE):</h3>
+      <pre>
+DELETE FROM GALERIA
+WHERE NOMBRE_OBRA = 'Fotografía sin título';
+      </pre>
+    </div>
+  </div>
 </main>
 <footer>2025 ECOSYSTEM - SENA La Granja</footer>
 </body>

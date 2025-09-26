@@ -63,25 +63,28 @@
     </ul>
   </nav>
 <main>
-  <div class="container">
-<div>
-  <h1>Neo4j</h1>
-  <img src="img/neo4j.png" alt="">
-  <p>Neo4j es un software libre de Base de datos orientada a grafos, implementado en Java.
-     Los desarrolladores describen a Neo4j como un motor de persistencia embebido, basado en disco, implementado en Java, completamente transaccional, 
-     que almacena datos estructurados en grafos en lugar de en tablas ("embedded, disk-based, fully transactional Java persistence engine that stores data structured in graphs rather than in tables").
-      La versión 1.0 de Neo4j fue lanzada en febrero de 2010.
-     La base de datos está licenciada en un modelo dual, tanto bajo Affero General Public License (AGPL) v3 como bajo licencia comercial.</p>
-</div>
-<h2>Operaciones CRUD en Neo4j</h2>
-  <p><strong>Crear (INSERT):</strong> CREATE (n:Persona {col1: val1, col2: val2});
-  </p>
-  <p><strong>Leer (SELECT):</strong> MATCH (n:Persona {col1: val1}) RETURN n.col1, n.col2;
-  </p>
-  <p><strong>Actualizar (UPDATE):</strong> MATCH (n:Persona {col1: val1}) SET n.col2 = nuevo_valor;
-  </p>
-  <p><strong>Eliminar (DELETE):</strong> MATCH (n:Persona {col1: val1}) DELETE n;
-  </p>
+  <div class="page-header">
+    <h1>Neo4j</h1>
+    <img src="img/neo4j.png" alt="Logo de Neo4j" class="header-logo">
+  </div>
+  <div class="container two-cols">
+    <div class="col definicion">
+      <h2>¿Qué es Neo4j?</h2>
+      <p>
+        Neo4j es un software libre de base de datos orientada a grafos, implementado en Java. Es un motor de persistencia embebido, basado en disco, completamente transaccional, que almacena datos estructurados en grafos en lugar de en tablas. Está licenciado bajo AGPL v3 y licencia comercial.
+      </p>
+    </div>
+    <div class="col crud">
+      <h2>Operaciones CRUD en Neo4j</h2>
+      <h3>Crear (INSERT):</h3>
+      <pre>CREATE (n:Persona {col1: val1, col2: val2});</pre>
+      <h3>Leer (SELECT):</h3>
+      <pre>MATCH (n:Persona {col1: val1}) RETURN n.col1, n.col2;</pre>
+      <h3>Actualizar (UPDATE):</h3>
+      <pre>MATCH (n:Persona {col1: val1}) SET n.col2 = nuevo_valor;</pre>
+      <h3>Eliminar (DELETE):</h3>
+      <pre>MATCH (n:Persona {col1: val1}) DELETE n;</pre>
+    </div>
   </div>
 </main>
 <footer>2025 ECOSYSTEM - SENA La Granja</footer>

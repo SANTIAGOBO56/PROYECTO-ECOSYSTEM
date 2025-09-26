@@ -62,60 +62,49 @@
     </ul>
   </nav>
 <main>
-  <div class="container">
-<div>
-   <h2>Postgresql</h2>
-    <img src="img/images.png">
-    <p>
-        PostgreSQL es un sistema de gestión de bases de datos relacionales (RDBMS) de código abierto, conocido por su estabilidad, fiabilidad y avanzada funcionalidad, que permite almacenar y gestionar datos tanto relacionales (SQL) como no relacionales (JSON). Es una solución popular para diversas aplicaciones, incluyendo web, móviles y geoespaciales, y se distingue por su soporte a estándares abiertos, su capacidad de escalabilidad y su comunidad activa de desarrollo. 
-        Características principales de PostgreSQL
-        <br>
-        <br>
-        Código Abierto:
-        Es gratuito, sin costos de licencia, y los usuarios pueden innovar y modificar el código fuente según sus necesidades. 
-        <br>
-        <br>
-        Base de datos relacional y no relacional:
-        Soporta consultas en SQL estándar y también datos no relacionales, como JSON. 
-        <br>
-        <br>
-        Fiabilidad y Resiliencia:
-        Incluye características como el registro de escritura previa (WAL) y la simultaneidad multiversión (MVCC), que aseguran la integridad de los datos y el rendimiento bajo alta carga. 
-        Compatibilidad con ACID:
-        Cumple con los principios de atomicidad, coherencia, aislamiento y durabilidad (ACID) para transacciones de base de datos. 
-        <br>
-        <br>
-        Escalabilidad:
-        Es capaz de manejar grandes volúmenes de datos y un alto número de usuarios simultáneos. 
-        <br>
-        <br>
-        Funciones Avanzadas:
-        Ofrece soporte para tipos de datos, índices, subconsultas, activadores y una amplia variedad de extensiones. 
-        Comunidad de Desarrollo Activa:
-        Es mejorado y mantenido por una comunidad mundial de desarrolladores y empresas. 
-    </p>
-    <h1>Operaciones crud de PostgreSQL</h1>
-    <h2>CREATE</h2> 
-      (INSERT): Insertar un producto con un nombre y descripción
-      INSERT INTO productos (nombre, description)
-      VALUES ('Teclado Mecánico', 'Teclado retroiluminado con switches azules y diseño ergonómico.');
-
-    <h2>READ</h2>
-
-    (SELECT con condición): Leer un producto específico por su nombre
-    SELECT * FROM productos WHERE nombre = 'Teclado Mecánico';
-
-    <h2>UPDATE</h2>
-     Actualizar la descripción de un producto existente
-    UPDATE productos
-    SET description = 'Teclado mecánico de alto rendimiento con switches rojos y retroiluminación RGB.'
-    WHERE nombre = 'Teclado Mecánico';
-
-    <h2>DELETE</h2>
-     Eliminar un producto
-    DELETE FROM productos
-    WHERE nombre = 'Teclado Mecánico';
-</div>
+  <div class="page-header">
+    <h1>PostgreSQL</h1>
+    <img src="img/images.png" alt="Logo de PostgreSQL" class="header-logo">
+  </div>
+  <div class="container two-cols">
+    <div class="col definicion">
+      <h2>¿Qué es PostgreSQL?</h2>
+      <p>
+        PostgreSQL es un sistema de gestión de bases de datos relacionales (RDBMS) de código abierto, conocido por su estabilidad, fiabilidad y avanzada funcionalidad. Permite almacenar y gestionar datos tanto relacionales (SQL) como no relacionales (JSON). Es popular para aplicaciones web, móviles y geoespaciales, y se distingue por su comunidad activa y soporte a estándares abiertos.
+      </p>
+      <ul>
+        <li>Código Abierto: gratuito, sin costos de licencia.</li>
+        <li>Base de datos relacional y no relacional.</li>
+        <li>Fiabilidad y Resiliencia.</li>
+        <li>Compatibilidad con ACID.</li>
+        <li>Escalabilidad.</li>
+        <li>Funciones Avanzadas.</li>
+        <li>Comunidad de Desarrollo Activa.</li>
+      </ul>
+    </div>
+    <div class="col crud">
+      <h2>Operaciones CRUD en PostgreSQL</h2>
+      <h3>CREATE (INSERT)</h3>
+      <pre>
+INSERT INTO productos (nombre, description)
+VALUES ('Teclado Mecánico', 'Teclado retroiluminado con switches azules y diseño ergonómico.');
+      </pre>
+      <h3>READ (SELECT)</h3>
+      <pre>
+SELECT * FROM productos WHERE nombre = 'Teclado Mecánico';
+      </pre>
+      <h3>UPDATE</h3>
+      <pre>
+UPDATE productos
+SET description = 'Teclado mecánico de alto rendimiento con switches rojos y retroiluminación RGB.'
+WHERE nombre = 'Teclado Mecánico';
+      </pre>
+      <h3>DELETE</h3>
+      <pre>
+DELETE FROM productos
+WHERE nombre = 'Teclado Mecánico';
+      </pre>
+    </div>
   </div>
 </main>
 <footer>2025 ECOSYSTEM - SENA La Granja</footer>

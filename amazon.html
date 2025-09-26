@@ -4,19 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/estilos.css">
-  <title>ECOSYSTEM</title>
+  <title>ECOSYSTEM - Amazon DynamoDB</title>
 </head>
 <body>
 <nav id="menu">
     <ul>
       <li class="logo">
-        <img src="img/ecosystem.png" alt="Logo"></a>
+        <img src="img/ecosystem.png" alt="Logo">
       </li>
-
       <li><a href="index.html">Inicio</a></li>
       <li><a href="grri.html">Gestor y Motor de BD</a></li>
-
-      
       <li>
         <a href="diagrama.html">Tablas BD</a>
         <ul>
@@ -29,8 +26,6 @@
           <li><a href="responsables.html">Responsable</a></li>
         </ul>
       </li>
-
-  
       <li>
         <a href="#">BD Relaciones</a>
         <ul>
@@ -43,8 +38,6 @@
           <li><a href="firebird.html">Firebird</a></li>
         </ul>
       </li>
-
-      
       <li>
         <a href="#">BD No Relaciones</a>
         <ul>
@@ -57,48 +50,57 @@
           <li><a href="hbase.html">HBase</a></li>
         </ul>
       </li>
-
       <li><a href="informacion.html">Acerca de los Integrantes</a></li>
     </ul>
-  </nav>
+</nav>
 <main>
-  <div class="container">
-<div>
-  <h1>Amazon DynamoDB</h1>
-  <img src="img/amazon.png" alt="">
-  <p>Amazon DynamoDB es un servicio de base de datos noSQL ofrecido por Amazon como parte de Amazon Web Services.
-     DynamoDB expone un modelo de datos similar y deriva su nombre de Dynamo (un sistema de almacenamiento interno utilizado inicialmente para su propio sitio web),
-      pero tiene una implementación subyacente diferente. Dynamo tenía un diseño multimaestro que requería que el cliente resolviera conflictos de versiones y DynamoDB usa replicación síncrona
-       en múltiples centros de datos para una alta durabilidad y disponibilidad. DynamoDB fue anunciado por Amazon CTO Werner Vogels el 18 de enero de 2012.</p>
-</div>
-<h2>Operaciones CRUD en Amazon DinamoDB</h2>
-  <p><strong>Crear (INSERT):</strong> PutItem {
-    "TableName": "tabla",
-    "Item": { "col1": {"S": "val1"}, "col2": {"S": "val2"} }
-  }
-  
-  </p>
-  <p><strong>Leer (SELECT):</strong> GetItem {
-    "TableName": "tabla",
-    "Key": { "col1": {"S": "val1"} }
-  }
-  
-  </p>
-  <p><strong>Actualizar (UPDATE):</strong> UpdateItem {
-    "TableName": "tabla",
-    "Key": { "col1": {"S": "val1"} },
-    "UpdateExpression": "SET col2 = :nuevo",
-    "ExpressionAttributeValues": { ":nuevo": {"S": "nuevo_valor"} }
-  }
-  
-  </p>
-  <p><strong>Eliminar (DELETE):</strong> DeleteItem {
-    "TableName": "tabla",
-    "Key": { "col1": {"S": "val1"} }
-  }
-  
-  </p>
-</div>
+  <div class="page-header">
+    <h1>Amazon DynamoDB</h1>
+    <img src="img/amazon.png" alt="Logo de Amazon DynamoDB" class="header-logo">
+  </div>
+
+  <div class="container two-cols">
+    <!-- Columna izquierda: Definición -->
+    <div class="col definicion">
+      <h2>¿Qué es Amazon DynamoDB?</h2>
+      <p>
+        <strong>Amazon DynamoDB</strong> es un servicio de base de datos NoSQL ofrecido por Amazon como parte de AWS.
+        DynamoDB expone un modelo de datos similar y deriva su nombre de Dynamo (un sistema de almacenamiento interno utilizado inicialmente para su propio sitio web),
+        pero tiene una implementación subyacente diferente. Dynamo tenía un diseño multimaestro que requería que el cliente resolviera conflictos de versiones y DynamoDB usa replicación síncrona
+        en múltiples centros de datos para una alta durabilidad y disponibilidad. DynamoDB fue anunciado por Amazon CTO Werner Vogels el 18 de enero de 2012.
+      </p>
+    </div>
+    <!-- Columna derecha: CRUD -->
+    <div class="col crud">
+      <h2>Operaciones CRUD en Amazon DynamoDB</h2>
+      <p><strong>Crear (INSERT):</strong><br>
+        <code>PutItem {
+          "TableName": "tabla",
+          "Item": { "col1": {"S": "val1"}, "col2": {"S": "val2"} }
+        }</code>
+      </p>
+      <p><strong>Leer (SELECT):</strong><br>
+        <code>GetItem {
+          "TableName": "tabla",
+          "Key": { "col1": {"S": "val1"} }
+        }</code>
+      </p>
+      <p><strong>Actualizar (UPDATE):</strong><br>
+        <code>UpdateItem {
+          "TableName": "tabla",
+          "Key": { "col1": {"S": "val1"} },
+          "UpdateExpression": "SET col2 = :nuevo",
+          "ExpressionAttributeValues": { ":nuevo": {"S": "nuevo_valor"} }
+        }</code>
+      </p>
+      <p><strong>Eliminar (DELETE):</strong><br>
+        <code>DeleteItem {
+          "TableName": "tabla",
+          "Key": { "col1": {"S": "val1"} }
+        }</code>
+      </p>
+    </div>
+  </div>
 </main>
 <footer>2025 ECOSYSTEM - SENA La Granja</footer>
 </body>
