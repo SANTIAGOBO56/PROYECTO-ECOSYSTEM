@@ -64,40 +64,46 @@
     </ul>
   </nav>
 <main>
+  <!-- Encabezado de la página -->
+  <div class="page-header">
+    <h1>MySQL</h1>
+    <img src="img/mysql.png" alt="Logo de MySQL">
+  </div>
+
+  <!-- Contenido dividido en dos columnas -->
   <div class="container">
-<!-- Contenido principal -->
-<section id="contenido">
-  <h2>¿Qué es MySQL?</h2>
-  <img src="img/mysql.png" alt="Logo de MySQL" style="max-width:200px;">
+    <!-- Definición -->
+    <div class="col definicion">
+      <h2>¿Qué es MySQL?</h2>
+      <p>
+        <strong>MySQL</strong> es un sistema de gestión de bases de datos relacional de código abierto, 
+        rápido y confiable. Permite almacenar, organizar y acceder a datos de forma eficiente mediante el lenguaje 
+        <span class="resaltado">SQL</span>.
+      </p>
+      <p>
+        Es ampliamente utilizado en aplicaciones web, gracias a su integración con tecnologías como 
+        <span class="resaltado">PHP</span>, y forma parte de la popular pila <span class="resaltado">LAMP</span> 
+        (Linux, Apache, MySQL, PHP).
+      </p>
+      <h2>¿MySQL es Relacional o No Relacional?</h2>
+      <p>
+        MySQL es una base de datos <strong>relacional (RDBMS)</strong>. Organiza los datos en tablas estructuradas con filas y columnas, 
+        y permite gestionarlos mediante SQL. A diferencia de las bases de datos <strong>NoSQL</strong>, que no usan tablas, 
+        MySQL se centra en la consistencia y en relaciones bien definidas entre los datos.
+      </p>
+    </div>
 
-  <p>
-    <strong>MySQL</strong> es un sistema de gestión de bases de datos relacional de código abierto, 
-    rápido y confiable. Permite almacenar, organizar y acceder a datos de forma eficiente mediante el lenguaje 
-    <span class="resaltado">SQL</span>.
-  </p>
-
-  <p>
-    Es ampliamente utilizado en aplicaciones web, gracias a su integración con tecnologías como 
-    <span class="resaltado">PHP</span>, y forma parte de la popular pila <span class="resaltado">LAMP</span> 
-    (Linux, Apache, MySQL, PHP).
-  </p>
-
-  <h2>¿MySQL es Relacional o No Relacional?</h2>
-  <p>
-    MySQL es una base de datos <strong>relacional (RDBMS)</strong>. Organiza los datos en tablas estructuradas con filas y columnas, 
-    y permite gestionarlos mediante SQL. A diferencia de las bases de datos <strong>NoSQL</strong>, que no usan tablas, 
-    MySQL se centra en la consistencia y en relaciones bien definidas entre los datos.
-  </p>
-
-  <h2>Operaciones CRUD en MySQL</h2>
-  <p><strong>Crear (INSERT):</strong> INSERT INTO tabla (col1, col2) VALUES (val1, val2);</p>
-  <p><strong>Leer (SELECT):</strong> SELECT col1, col2 FROM tabla WHERE condicion;</p>
-  <p><strong>Actualizar (UPDATE):</strong> UPDATE tabla SET col1 = nuevo_valor WHERE condicion;</p>
-  <p><strong>Eliminar (DELETE):</strong> DELETE FROM tabla WHERE condicion;</p>
-
-</section>
+    <!-- CRUD -->
+    <div class="col crud">
+      <h2>Operaciones CRUD en MySQL</h2>
+      <p><strong>Crear (INSERT):</strong> INSERT INTO tabla (col1, col2) VALUES (val1, val2);</p>
+      <p><strong>Leer (SELECT):</strong> SELECT col1, col2 FROM tabla WHERE condicion;</p>
+      <p><strong>Actualizar (UPDATE):</strong> UPDATE tabla SET col1 = nuevo_valor WHERE condicion;</p>
+      <p><strong>Eliminar (DELETE):</strong> DELETE FROM tabla WHERE condicion;</p>
+    </div>
   </div>
 </main>
+
 <footer>
   2025 ECOSYSTEM - SENA La Granja
 </footer>

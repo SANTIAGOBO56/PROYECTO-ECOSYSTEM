@@ -249,3 +249,46 @@ footer {
   box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
   border-radius: 6px 6px 0 0;
 }
+/* Encabezado con título arriba y logo debajo */
+.page-header {
+  text-align: center;
+  margin: 30px auto;
+}
+
+.page-header h1 {
+  font-size: 2.5rem;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+.page-header img {
+  width: 120px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Contenedor dividido en dos columnas */
+.container {
+  display: flex;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 20px auto 40px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Columnas */
+.container .col {
+  flex: 1;
+  text-align: left;
+}
+
+/* Responsive: en pantallas pequeñas se apilan */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+}
