@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/estilos.css">
+  <title>ECOSYSTEM</title>
+</head>
+<body>
+ 
+<nav id="menu">
+    <ul>
+      <li class="logo">
+        <a href="../cuadros.html"><img src="img/ecosystem.png" alt="Logo"></a>
+      </li>
+
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="../Nueva carpeta/grri.html">Gestor y Motor de BD</a></li>
+
+      
+      <li>
+        <a href="../Nueva carpeta/diagrama.html">Tablas BD</a>
+        <ul>
+          <li><a href="../Nueva carpeta/prestamos.html">Pestamos</a></li>
+          <li><a href="../Nueva carpeta/reclamos.html">Reclamos</a></li>
+          <li><a href="../Nueva carpeta/equipos.html">Equipos</a></li>
+          <li><a href="../Nueva carpeta/solicitud.html">Solicitud</a></li>
+          <li><a href="../Nueva carpeta/devolucion.html">Devolucion</a></li>
+          <li><a href="../Nueva carpeta/personas_solicitante.html">Personas Solicitante</a></li>
+          <li><a href="../Nueva carpeta/responsables.html">Responsable</a></li>
+        </ul>
+      </li>
+
+  
+      <li>
+        <a href="#">BD Relaciones</a>
+        <ul>
+          <li><a href="../Nueva carpeta/mysql.html">MySQL</a></li>
+          <li><a href="../Nueva carpeta/oracle.html">Oracle</a></li>
+          <li><a href="../Nueva carpeta/postgresql.html">PostgreSQL</a></li>
+          <li><a href="../Nueva carpeta/sqlite.html">SQlite</a></li>
+          <li><a href="../Nueva carpeta/sqlserver.html">SQL Server</a></li>
+          <li><a href="../Nueva carpeta/mariadb.html">MariaDB</a></li>
+          <li><a href="../Nueva carpeta/firebird.html">Firebird</a></li>
+        </ul>
+      </li>
+
+      
+      <li>
+        <a href="#">BD No Relaciones</a>
+        <ul>
+          <li><a href="../Nueva carpeta/mongo.html">MongoDB</a></li>
+          <li><a href="../Nueva carpeta/cassandra.html">Cassandra</a></li>
+          <li><a href="../Nueva carpeta/couchdb.html">CoushDB</a></li>
+          <li><a href="../Nueva carpeta/redis.html">Redis</a></li>
+          <li><a href="../Nueva carpeta/neo4j.html">Neo4j</a></li>
+          <li><a href="../Nueva carpeta/amazon.html">Amazon DynamoDB</a></li>
+          <li><a href="../Nueva carpeta/hbase.html">HBase</a></li>
+        </ul>
+      </li>
+
+      <li><a href="../Nueva carpeta/informacion.html">Acerca de los Integrantes</a></li>
+    </ul>
+  </nav>
+<div>
+   <h2>¿Que es SQLite?</h2>
+     <img src="img/sqlite.png" alt="Logo de SQLite" style="width:300px;height:200px;">
+    <p>
+        SQLite es un sistema de gestión de bases de datos relacional de código abierto, que se implementa como una biblioteca en C. A diferencia de otros sistemas de gestión de bases de datos, SQLite no requiere un servidor separado para funcionar, lo que lo hace ligero y fácil de usar. Es ampliamente utilizado en aplicaciones móviles, navegadores web y dispositivos embebidos debido a su simplicidad y eficiencia.
+    </p>
+     <p>Funciones principales:</p>
+    <ul>
+      <li>Gestión de bases de datos relacionales.</li>
+      <li>Soporte para múltiples motores de almacenamiento, incluyendo InnoDB y MyISAM.</li>
+      <li>Alta compatibilidad con MySQL, facilitando la migración entre ambos sistemas.</li>
+      <li>Mejoras en el rendimiento y la escalabilidad.</li>
+      <li>Características avanzadas como replicación, particionamiento y clustering.</li>
+      <li>Seguridad mejorada con autenticación y cifrado de datos.</li>
+      <li>Soporte para consultas SQL complejas y procedimientos almacenados.</li>
+      <li>Almacenamiento en disco y en memoria.</li>
+    </ul>
+<<<<<<< HEAD
+    <p>Ejemplo de CRUD operacion</p>
+    <!-- Sección CRUD en MySQL -->
+<section id="crud">
+ <!-- Sección CRUD Mejorada -->
+<section id="crud">
+  <h2>Operaciones CRUD en MySQL</h2>
+
+  <img src="crud-diagram.png" alt="Diagrama de operaciones CRUD en MySQL">
+
+  <p>
+    Las operaciones <strong>CRUD</strong> son los comandos esenciales para manipular datos en una base de datos. 
+    <strong>MySQL</strong> utiliza <span class="resaltado">SQL</span> para realizar estas acciones:
+  </p>
+
+  <div class="crud-lista">
+
+    <!-- CREATE -->
+    <div class="crud-item">
+      <h3>🟢 CREATE – Crear</h3>
+      <p>Crea nuevos registros en una tabla de la base de datos.</p>
+      <code>INSERT INTO usuarios (nombre, email) VALUES ('Ana', 'ana@mail.com');</code>
+    </div>
+
+    <!-- READ -->
+    <div class="crud-item">
+      <h3>🔵 READ – Leer</h3>
+      <p>Obtiene y muestra datos almacenados.</p>
+      <code>SELECT * FROM usuarios;</code>
+    </div>
+
+    <!-- UPDATE -->
+    <div class="crud-item">
+      <h3>🟡 UPDATE – Actualizar</h3>
+      <p>Modifica información existente.</p>
+      <code>UPDATE usuarios SET email = 'nuevo@mail.com' WHERE id = 1;</code>
+    </div>
+
+    <!-- DELETE -->
+    <div class="crud-item">
+      <h3>🔴 DELETE – Eliminar</h3>
+      <p>Elimina registros que ya no se necesitan.</p>
+      <code>DELETE FROM usuarios WHERE id = 1;</code>
+    </div>
+
+  </div>
+</section>
+=======
+    <h2>Ejemplo de CRUD operacion</h2>
+    <p>Crear Tabla</p>
+      CREATE TABLE Usuarios (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        nombre TEXT NOT NULL,
+        correo VARCHAR(100) UNIQUE)
+    <p>INSERT</p>
+        INSERT INTO Usuarios (nombre, correo) VALUES ('Ana López', 'ana.lopez@example.com');
+    <P>Update</P>   
+        UPDATE Usuarios SET correo = 'ana.nueva@example.com' WHERE id = 1;
+    <p>select</p>
+        SELECT nombre, correo FROM Usuarios WHERE nombre LIKE 'Ana%'; 
+    <p>Delete</p>
+           DELETE FROM Usuarios WHERE id = 1; 
+</div>
+<footer>2025 ECOSYSTEM - SENA La Granja</footer>
+</body>
+</html>
+>>>>>>> Cristiam-Mosquera

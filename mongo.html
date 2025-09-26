@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+  <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/estilos.css">
+  <title>ECOSYSTEM</title>
+</head>
+<body>
+<nav id="menu">
+    <ul>
+      <li class="logo">
+        <a href="../cuadros.html"><img src="img/ecosystem.png" alt="Logo"></a>
+      </li>
+
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="../Nueva carpeta/grri.html">Gestor y Motor de BD</a></li>
+
+      
+      <li>
+        <a href="../Nueva carpeta/diagrama.html">Tablas BD</a>
+        <ul>
+          <li><a href="../Nueva carpeta/prestamos.html">Pestamos</a></li>
+          <li><a href="../Nueva carpeta/reclamos.html">Reclamos</a></li>
+          <li><a href="../Nueva carpeta/equipos.html">Equipos</a></li>
+          <li><a href="../Nueva carpeta/solicitud.html">Solicitud</a></li>
+          <li><a href="../Nueva carpeta/devolucion.html">Devolucion</a></li>
+          <li><a href="../Nueva carpeta/personas_solicitante.html">Personas Solicitante</a></li>
+          <li><a href="../Nueva carpeta/responsables.html">Responsable</a></li>
+        </ul>
+      </li>
+
+  
+      <li>
+        <a href="#">BD Relaciones</a>
+        <ul>
+          <li><a href="../Nueva carpeta/mysql.html">MySQL</a></li>
+          <li><a href="../Nueva carpeta/oracle.html">Oracle</a></li>
+          <li><a href="../Nueva carpeta/postgresql.html">PostgreSQL</a></li>
+          <li><a href="../Nueva carpeta/sqlite.html">SQlite</a></li>
+          <li><a href="../Nueva carpeta/sqlserver.html">SQL Server</a></li>
+          <li><a href="../Nueva carpeta/mariadb.html">MariaDB</a></li>
+          <li><a href="../Nueva carpeta/firebird.html">Firebird</a></li>
+        </ul>
+      </li>
+
+      
+      <li>
+        <a href="#">BD No Relaciones</a>
+        <ul>
+          <li><a href="../Nueva carpeta/mongo.html">MongoDB</a></li>
+          <li><a href="../Nueva carpeta/cassandra.html">Cassandra</a></li>
+          <li><a href="../Nueva carpeta/couchdb.html">CoushDB</a></li>
+          <li><a href="../Nueva carpeta/redis.html">Redis</a></li>
+          <li><a href="../Nueva carpeta/neo4j.html">Neo4j</a></li>
+          <li><a href="../Nueva carpeta/amazon.html">Amazon DynamoDB</a></li>
+          <li><a href="../Nueva carpeta/hbase.html">HBase</a></li>
+        </ul>
+      </li>
+
+      <li><a href="../Nueva carpeta/informacion.html">Acerca de los Integrantes</a></li>
+    </ul>
+  </nav>
+<head>
+  <meta charset="UTF-8">
+  <title>MongoDB</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f9;
+      margin: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+    }
+    .row {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+      gap: 20px;
+    }
+    .card {
+      flex: 1;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+    }
+    .card img {
+      display: block;
+      margin: 0 auto 15px auto;
+      max-width: 120px;
+    }
+    .title {
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #27ae60;
+      font-size: 18px;
+    }
+    pre {
+      background: #f0f0f0;
+      padding: 10px;
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <h1>MongoDB</h1>
+
+  <div class="row">
+    <!-- Resumen (izquierda) -->
+    <div class="card">
+      <img src="img/mongodb.jpg" alt="MongoDB Logo">
+      <div class="title">📖 Resumen Breve</div>
+      <p>
+        MongoDB es una base de datos <strong>NoSQL orientada a documentos</strong>, 
+        que almacena la información en formato <strong>BSON (JSON binario)</strong>. 
+        Es altamente flexible y escalable, ideal para aplicaciones modernas que requieren 
+        <strong>agilidad en el desarrollo</strong> y <strong>manejo de datos no estructurados</strong>
+        <strong>es un base de tatos interactiva </strong><estrong>como para uso regular para los desarolladores</estrong>
+        <estrong>comodo para su uso cotidiano </estrong><estrong> entre las caracteristicas principales facilidad </estrong>
+        
+      </p>
+    </div>
+
+    <!-- CRUD (derecha) -->
+    <div class="card">
+      <div class="title">⚙️ Operaciones CRUD</div>
+      <pre><code>// Create (Insertar un documento)
+db.productos.insertOne({
+  _id: "p1",
+  nombre: "Laptop Lenovo",
+  precio: 2500.00,
+  stock: 10
+})
+
+// Read (Consultar)
+db.productos.find({ _id: "p1" })
+db.productos.find({})
+
+// Update (Actualizar)
+db.productos.updateOne(
+  { _id: "p1" },
+  { $set: { precio: 2400.00, stock: 15 } }
+)
+
+// Delete (Eliminar)
+db.productos.deleteOne({ _id: "p1" })</code></pre>
+    </div>
+  </div>
+
+  <footer>2025 ECOSYSTEM - SENA La Granja</footer>
+</body>
+</html>

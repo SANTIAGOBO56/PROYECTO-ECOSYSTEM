@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/estilos.css">
+  <title>ECOSYSTEM</title>
+</head>
+<body>
+<nav id="menu">
+    <ul>
+      <li class="logo">
+        <a href="../cuadros.html"><img src="img/ecosystem.png" alt="Logo"></a>
+      </li>
+
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="../Nueva carpeta/grri.html">Gestor y Motor de BD</a></li>
+
+      
+      <li>
+        <a href="../Nueva carpeta/diagrama.html">Tablas BD</a>
+        <ul>
+          <li><a href="../Nueva carpeta/prestamos.html">Pestamos</a></li>
+          <li><a href="../Nueva carpeta/reclamos.html">Reclamos</a></li>
+          <li><a href="../Nueva carpeta/equipos.html">Equipos</a></li>
+          <li><a href="../Nueva carpeta/solicitud.html">Solicitud</a></li>
+          <li><a href="../Nueva carpeta/devolucion.html">Devolucion</a></li>
+          <li><a href="../Nueva carpeta/personas_solicitante.html">Personas Solicitante</a></li>
+          <li><a href="../Nueva carpeta/responsables.html">Responsable</a></li>
+        </ul>
+      </li>
+
+  
+      <li>
+        <a href="#">BD Relaciones</a>
+        <ul>
+          <li><a href="../Nueva carpeta/mysql.html">MySQL</a></li>
+          <li><a href="../Nueva carpeta/oracle.html">Oracle</a></li>
+          <li><a href="../Nueva carpeta/postgresql.html">PostgreSQL</a></li>
+          <li><a href="../Nueva carpeta/sqlite.html">SQlite</a></li>
+          <li><a href="../Nueva carpeta/sqlserver.html">SQL Server</a></li>
+          <li><a href="../Nueva carpeta/mariadb.html">MariaDB</a></li>
+          <li><a href="../Nueva carpeta/firebird.html">Firebird</a></li>
+        </ul>
+      </li>
+
+      
+      <li>
+        <a href="#">BD No Relaciones</a>
+        <ul>
+          <li><a href="../Nueva carpeta/mongo.html">MongoDB</a></li>
+          <li><a href="../Nueva carpeta/cassandra.html">Cassandra</a></li>
+          <li><a href="../Nueva carpeta/couchdb.html">CoushDB</a></li>
+          <li><a href="../Nueva carpeta/redis.html">Redis</a></li>
+          <li><a href="../Nueva carpeta/neo4j.html">Neo4j</a></li>
+          <li><a href="../Nueva carpeta/amazon.html">Amazon DynamoDB</a></li>
+          <li><a href="../Nueva carpeta/hbase.html">HBase</a></li>
+        </ul>
+      </li>
+
+      <li><a href="../Nueva carpeta/informacion.html">Acerca de los Integrantes</a></li>
+    </ul>
+  </nav>
+<div>
+    <h2>¿Qué es MariaDB?</h2>
+     <img src="img/Mariadb.png" alt="Logo de MariaDB" style="width:300px;height:200px;">
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>MariaDB - Operaciones CRUD</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background: #f4f6f9;
+      color: #333;
+    }
+    h1, h2 {
+      text-align: center;
+      color: #2c3e50;
+    }
+    .section {
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    }
+    pre {
+      background: #2d2d2d;
+      color: #f8f8f2;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+      font-size: 14px;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>⚙️ Operaciones CRUD en MariaDB</h1>
+
+  <div class="section">
+    <h2>📌 ¿Qué es MariaDB?</h2>
+    <p>
+      <b>MariaDB</b> es un sistema de gestión de bases de datos relacional (RDBMS) 
+      de código abierto, creado como un fork de MySQL. Utiliza el mismo lenguaje <b>SQL</b> 
+      y es completamente compatible, pero con mejoras de rendimiento y nuevas características.
+    </p>
+<<<<<<< HEAD
+     <p>Funciones principales:</p>
+    <ul>
+      <li>Gestión de bases de datos relacionales.</li>
+      <li>Soporte para múltiples motores de almacenamiento, incluyendo InnoDB y MyISAM.</li>
+      <li>Alta compatibilidad con MySQL, facilitando la migración entre ambos sistemas.</li>
+      <li>Mejoras en el rendimiento y la escalabilidad.</li>
+      <li>Características avanzadas como replicación, particionamiento y clustering.</li>
+      <li>Seguridad mejorada con autenticación y cifrado de datos.</li>
+     <li>Soporte para consultas SQL complejas y procedimientos almacenados.</li>
+    </ul>
+     <p>Ejemplo de CRUD operacion</p>
+    <br>
+          <h1>Crear(INSERT)</h1>
+          INSERT INTO libros (titulo, autor, anio_publicacion, categoria)
+          VALUES ('Cien años de soledad', 'Gabriel García Márquez', 1967, 'Novela');
+
+          <h1>Leer(SELECT):</h1> 
+            SELECT * FROM libros;
+            SELECT titulo, anio_publicacion 
+            FROM libros 
+            WHERE autor = 'Gabriel García Márquez';
+
+
+          <h1>actualizar (UPDATE):</h1>
+            UPDATE libros
+            SET categoria = 'Realismo mágico'
+            WHERE titulo = 'Cien años de soledad';
+
+          <h1>Eliminar (DELETE):</h1>
+          
+          DELETE FROM libros
+          WHERE titulo = 'Cien años de soledad';
+
+      </div>
+<footer>2025 ECOSYSTEM - SENA La Granja</footer>
+=======
+  </div>
+
+  <div class="section">
+    <h2>🟢 CREATE (Insertar datos)</h2>
+    <p>Se utiliza el comando <b>INSERT INTO</b> para agregar registros a una tabla.</p>
+    <pre>
+CREATE TABLE usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(50),
+    email VARCHAR(100)
+);
+
+INSERT INTO usuarios (nombre, email) 
+VALUES ('Ana', 'ana@mail.com');
+    </pre>
+  </div>
+
+  <div class="section">
+    <h2>🔵 READ (Leer datos)</h2>
+    <p>Se utiliza el comando <b>SELECT</b> para consultar registros.</p>
+    <pre>
+-- Consultar todos los usuarios
+SELECT * FROM usuarios;
+
+-- Consultar un usuario específico
+SELECT * FROM usuarios WHERE id = 1;
+    </pre>
+  </div>
+
+  <div class="section">
+    <h2>🟡 UPDATE (Actualizar datos)</h2>
+    <p>Se utiliza el comando <b>UPDATE</b> para modificar registros existentes.</p>
+    <pre>
+UPDATE usuarios 
+SET email = 'nuevo@mail.com' 
+WHERE id = 1;
+    </pre>
+  </div>
+
+  <div class="section">
+    <h2>🔴 DELETE (Eliminar datos)</h2>
+    <p>Se utiliza el comando <b>DELETE</b> para borrar registros.</p>
+    <pre>
+DELETE FROM usuarios 
+WHERE id = 1;
+    </pre>
+  </div>
+
+  <div class="footer">
+    ✍️ 2025 – Ejemplo CRUD en MariaDB - ECOSYSTEM
+  </div>
+
+>>>>>>> 53361fea53e9740844499f2ea8a443b30953eaf1
+</body>
+</html>

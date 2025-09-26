@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/estilos.css">
+  <title>ECOSYSTEM</title>
+</head>
+<body>
+ 
+<nav id="menu">
+    <ul>
+      <li class="logo">
+        <a href="../Nueva carpeta/login/login.html"><img src="img/ecosystem.png" alt="Logo"></a>
+      </li>
+
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="../Nueva carpeta/grri.html">Gestor y Motor de BD</a></li>
+
+      
+      <li>
+        <a href="../Nueva carpeta/diagrama.html">Tablas BD</a>
+        <ul>
+          <li><a href="../Nueva carpeta/prestamos.html">Pestamos</a></li>
+          <li><a href="../Nueva carpeta/reclamos.html">Reclamos</a></li>
+          <li><a href="../Nueva carpeta/equipos.html">Equipos</a></li>
+          <li><a href="../Nueva carpeta/solicitud.html">Solicitud</a></li>
+          <li><a href="../Nueva carpeta/devolucion.html">Devolucion</a></li>
+          <li><a href="../Nueva carpeta/personas_solicitante.html">Personas Solicitante</a></li>
+          <li><a href="../Nueva carpeta/responsables.html">Responsable</a></li>
+        </ul>
+      </li>
+
+  
+      <li>
+        <a href="#">BD Relaciones</a>
+        <ul>
+          <li><a href="../Nueva carpeta/mysql.html">MySQL</a></li>
+          <li><a href="../Nueva carpeta/oracle.html">Oracle</a></li>
+          <li><a href="../Nueva carpeta/postgresql.html">PostgreSQL</a></li>
+          <li><a href="../Nueva carpeta/sqlite.html">SQlite</a></li>
+          <li><a href="../Nueva carpeta/sqlserver.html">SQL Server</a></li>
+          <li><a href="../Nueva carpeta/mariadb.html">MariaDB</a></li>
+          <li><a href="../Nueva carpeta/firebird.html">Firebird</a></li>
+        </ul>
+      </li>
+
+      
+      <li>
+        <a href="#">BD No Relaciones</a>
+        <ul>
+          <li><a href="../Nueva carpeta/mongo.html">MongoDB</a></li>
+          <li><a href="../Nueva carpeta/cassandra.html">Cassandra</a></li>
+          <li><a href="../Nueva carpeta/couchdb.html">CoushDB</a></li>
+          <li><a href="../Nueva carpeta/redis.html">Redis</a></li>
+          <li><a href="../Nueva carpeta/neo4j.html">Neo4j</a></li>
+          <li><a href="../Nueva carpeta/amazon.html">Amazon DynamoDB</a></li>
+          <li><a href="../Nueva carpeta/hbase.html">HBase</a></li>
+        </ul>
+      </li>
+
+      <li><a href="../Nueva carpeta/informacion.html">Acerca de los Integrantes</a></li>
+    </ul>
+  </nav>
+  <title>ECOSYSTEM - Redis</title>
+  <style>
+    /* RESET */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* NAV azul */
+    nav {
+      background: #3498db; /* azul */
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    nav .logo img { height: 40px; }
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    nav ul li { position: relative; }
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      padding: 6px 12px;
+      display: block;
+    }
+    nav ul li ul {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #5dade2;
+      display: none;
+      min-width: 150px;
+      border-radius: 4px;
+    }
+    nav ul li:hover > ul { display: block; }
+    nav ul li ul li a { color: white; }
+
+    .menu-toggle {
+      display: none;
+      font-size: 28px;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+
+    /* TITULO */
+    h1 {
+      text-align: center;
+      margin: 20px 0;
+      color: #2c3e50;
+    }
+
+    /* CONTENEDOR Y TARJETAS LADO A LADO */
+    .contenedor {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 0 20px;
+      max-width: 1000px;
+      margin: auto;
+      flex-wrap: wrap;
+    }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 20px;
+      flex: 1 1 45%; /* ocupa aproximadamente la mitad en pantallas grandes */
+    }
+    .card img {
+      display: block;
+      margin: 0 auto 15px;
+      max-width: 120px;
+    }
+    .title {
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #3498db;
+      font-size: 18px;
+    }
+    pre {
+      background: #f0f0f0;
+      padding: 12px;
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 15px;
+      margin-top: auto;
+      background: #3498db;
+      color: white;
+      font-size: 14px;
+    }
+
+    /* RESPONSIVO */
+    @media (max-width: 768px) {
+      nav ul { display: none; width: 100%; flex-direction: column; }
+      nav.active ul { display: flex; }
+      .menu-toggle { display: block; }
+      .card { flex: 1 1 100%; }
+    }
+  </style>
+</head>
+<body>
+
+ 
+
+  <!-- CONTENIDO -->
+  <h1>Redis</h1>
+  <div class="contenedor">
+    <!-- Resumen -->
+    <div class="card">
+      <p><strong>Redis</strong> es un motor de base de datos en memoria, basado en el almacenamiento en tablas de hashes (clave/valor). Opcionalmente puede usarse como base de datos durable o persistente. Está escrito en ANSI C por Salvatore Sanfilippo y distribuido bajo un modelo de licencias dual: RSALv2.</p>
+      <img src="img/redis.jpg" alt="Logo Redis">
+    </div>
+
+    <!-- CRUD -->
+    <div class="card">
+      <div class="title">📌 Operaciones CRUD</div>
+      <pre><code># CREATE (Insertar datos)
+SET producto:1 "Laptop Lenovo"
+SET producto:2 "Smartphone Samsung"
+
+# Con HASH
+HSET producto:1 nombre "Laptop Lenovo" precio 2500 stock 10
+
+# READ (Leer datos)
+GET producto:1
+HGETALL producto:1
+HGET producto:1 precio
+
+# UPDATE (Actualizar datos)
+SET producto:1 "Laptop Lenovo - Actualizado"
+HSET producto:1 stock 15
+
+# DELETE (Eliminar datos)
+DEL producto:1
+HDEL producto:1 precio</code></pre>
+    </div>
+  </div>
+
+  <footer>2025 ECOSYSTEM - SENA La Granja</footer>
+
+  <!-- JS menú hamburguesa -->
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  </script>
+
+</body>
+</html>

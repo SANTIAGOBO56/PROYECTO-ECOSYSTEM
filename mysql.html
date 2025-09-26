@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/estilos.css">
+  <title>ECOSYSTEM</title>
+</head>
+<body>
+<nav id="menu">
+    <ul>
+      <li class="logo">
+        <a href="../cuadros.html"><img src="img/ecosystem.png" alt="Logo"></a>
+      </li>
+
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="../Nueva carpeta/grri.html">Gestor y Motor de BD</a></li>
+
+      
+      <li>
+        <a href="../Nueva carpeta/diagrama.html">Tablas BD</a>
+        <ul>
+          <li><a href="../Nueva carpeta/prestamos.html">Pestamos</a></li>
+          <li><a href="../Nueva carpeta/reclamos.html">Reclamos</a></li>
+          <li><a href="../Nueva carpeta/equipos.html">Equipos</a></li>
+          <li><a href="../Nueva carpeta/solicitud.html">Solicitud</a></li>
+          <li><a href="../Nueva carpeta/devolucion.html">Devolucion</a></li>
+          <li><a href="../Nueva carpeta/personas_solicitante.html">Personas Solicitante</a></li>
+          <li><a href="../Nueva carpeta/responsables.html">Responsable</a></li>
+        </ul>
+      </li>
+
+  
+      <li>
+        <a href="#">BD Relaciones</a>
+        <ul>
+          <li><a href="../Nueva carpeta/mysql.html">MySQL</a></li>
+          <li><a href="../Nueva carpeta/oracle.html">Oracle</a></li>
+          <li><a href="../Nueva carpeta/postgresql.html">PostgreSQL</a></li>
+          <li><a href="../Nueva carpeta/sqlite.html">SQlite</a></li>
+          <li><a href="../Nueva carpeta/sqlserver.html">SQL Server</a></li>
+          <li><a href="../Nueva carpeta/mariadb.html">MariaDB</a></li>
+          <li><a href="../Nueva carpeta/firebird.html">Firebird</a></li>
+        </ul>
+      </li>
+
+      
+      <li>
+        <a href="#">BD No Relaciones</a>
+        <ul>
+          <li><a href="../Nueva carpeta/mongo.html">MongoDB</a></li>
+          <li><a href="../Nueva carpeta/cassandra.html">Cassandra</a></li>
+          <li><a href="../Nueva carpeta/couchdb.html">CoushDB</a></li>
+          <li><a href="../Nueva carpeta/redis.html">Redis</a></li>
+          <li><a href="../Nueva carpeta/neo4j.html">Neo4j</a></li>
+          <li><a href="../Nueva carpeta/amazon.html">Amazon DynamoDB</a></li>
+          <li><a href="../Nueva carpeta/hbase.html">HBase</a></li>
+        </ul>
+      </li>
+
+      <li><a href="../Nueva carpeta/informacion.html">Acerca de los Integrantes</a></li>
+    </ul>
+  </nav>
+<div>
+<h2>Que es MySQL</h2>
+    <img src="img/mysql.png" alt="">
+    <p>
+MySQL es un sistema de gestión de bases de datos 
+(DBMS, por sus siglas en inglés) de código abierto desarrollado por Oracle.
+Se ha ganado su lugar en el mundo digital como una base de datos relacional
+que permite almacenar, organizar y recuperar datos de manera eficiente. 
+MySQL es utilizado por una amplia variedad de organizaciones y aplicaciones en todo el mundo.
+Además, utiliza el lenguaje SQL (Structured Query Language) para acceder y manipular los datos.        
+   </p>
+   <h1>Operaciones CRUD en MySQL</h1>
+<section id="crud-mysql">
+  <h2>🔍 Operaciones CRUD en MySQL</h2>
+  <p class="intro">
+    Las operaciones CRUD representan las acciones básicas que puedes realizar sobre los datos en una base de datos.
+    A continuación, te mostramos qué hace cada una en MySQL:
+  </p>
+
+  <div class="crud-card create">
+    <h3>🟢 CREATE – Crear</h3>
+    <p><strong>¿Qué hace?</strong> Inserta nuevos datos en una tabla de la base de datos.</p>
+    <pre>INSERT INTO usuarios (nombre, email) VALUES ('Ana', 'ana@mail.com');</pre>
+  </div>
+
+  <div class="crud-card read">
+    <h3>🔵 READ – Leer</h3>
+    <p><strong>¿Qué hace?</strong> Recupera o consulta datos existentes de la base de datos.</p>
+    <pre>SELECT * FROM usuarios;</pre>
+  </div>
+
+  <div class="crud-card update">
+    <h3>🟡 UPDATE – Actualizar</h3>
+    <p><strong>¿Qué hace?</strong> Modifica uno o más registros existentes en la tabla.</p>
+    <pre>UPDATE usuarios SET email = 'nuevo@mail.com' WHERE id = 1;</pre>
+  </div>
+
+  <div class="crud-card delete">
+    <h3>🔴 DELETE – Eliminar</h3>
+    <p><strong>¿Qué hace?</strong> Elimina uno o más registros de una tabla.</p>
+    <pre>DELETE FROM usuarios WHERE id = 1;</pre>
+  </div>
+</section>
+
+</div>
+<footer>2025 ECOSYSTEM - SENA La Granja</footer>
+</body>
+</html>

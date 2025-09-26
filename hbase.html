@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/estilos.css">
+  <title>ECOSYSTEM - Apache HBase</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f6f9;
+      color: #333;
+      line-height: 1.6;
+    }
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin: 20px 0;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      max-width: 1100px;
+      margin: 20px auto;
+      padding: 0 15px;
+    }
+    .container, .card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .container img {
+      display: block;
+      margin: 0 auto 15px auto;
+      width: 120px;
+    }
+    .title {
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #2980b9;
+      text-align: center;
+    }
+    pre {
+      background: #2c3e50;
+      color: #ecf0f1;
+      padding: 15px;
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+    footer {
+      text-align: center;
+      margin-top: 30px;
+      padding: 15px;
+      background: #2c3e50;
+      color: #fff;
+      border-radius: 10px;
+    }
+    /* 📱 Responsivo */
+    @media (max-width: 768px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Menú de navegación -->
+  <nav id="menu">
+    <ul>
+      <li class="logo">
+        <a href="../cuadros.html"><img src="img/ecosystem.png" alt="Logo"></a>
+      </li>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="../Nueva carpeta/grri.html">Gestor y Motor de BD</a></li>
+      <li>
+        <a href="../Nueva carpeta/diagrama.html">Tablas BD</a>
+        <ul>
+          <li><a href="../Nueva carpeta/prestamos.html">Prestamos</a></li>
+          <li><a href="../Nueva carpeta/reclamos.html">Reclamos</a></li>
+          <li><a href="../Nueva carpeta/equipos.html">Equipos</a></li>
+          <li><a href="../Nueva carpeta/solicitud.html">Solicitud</a></li>
+          <li><a href="../Nueva carpeta/devolucion.html">Devolución</a></li>
+          <li><a href="../Nueva carpeta/personas_solicitante.html">Personas Solicitante</a></li>
+          <li><a href="../Nueva carpeta/responsables.html">Responsable</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">BD Relaciones</a>
+        <ul>
+          <li><a href="../Nueva carpeta/mysql.html">MySQL</a></li>
+          <li><a href="../Nueva carpeta/oracle.html">Oracle</a></li>
+          <li><a href="../Nueva carpeta/postgresql.html">PostgreSQL</a></li>
+          <li><a href="../Nueva carpeta/sqlite.html">SQLite</a></li>
+          <li><a href="../Nueva carpeta/sqlserver.html">SQL Server</a></li>
+          <li><a href="../Nueva carpeta/mariadb.html">MariaDB</a></li>
+          <li><a href="../Nueva carpeta/firebird.html">Firebird</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">BD No Relaciones</a>
+        <ul>
+          <li><a href="../Nueva carpeta/mongo.html">MongoDB</a></li>
+          <li><a href="../Nueva carpeta/cassandra.html">Cassandra</a></li>
+          <li><a href="../Nueva carpeta/couchdb.html">CouchDB</a></li>
+          <li><a href="../Nueva carpeta/redis.html">Redis</a></li>
+          <li><a href="../Nueva carpeta/neo4j.html">Neo4j</a></li>
+          <li><a href="../Nueva carpeta/amazon.html">Amazon DynamoDB</a></li>
+          <li><a href="../Nueva carpeta/hbase.html">HBase</a></li>
+        </ul>
+      </li>
+      <li><a href="../Nueva carpeta/informacion.html">Acerca de los Integrantes</a></li>
+    </ul>
+  </nav>
+
+  <!-- Contenido principal -->
+  <h1>Apache HBase</h1>
+
+  <!-- Sección en dos columnas responsivas -->
+  <div class="grid">
+    <!-- Resumen -->
+    <div class="container">
+      <img src="img/Apache HBase.png" alt="HBase Logo">
+      <h2>Resumen Breve</h2>
+      <p>
+        Apache HBase es una base de datos <strong>NoSQL distribuida</strong>, de código abierto,
+        diseñada para manejar <strong>grandes volúmenes de datos</strong> en tiempo real sobre Hadoop
+        y el sistema de archivos HDFS. Está inspirada en el modelo de Google Bigtable.
+        Es ideal para almacenar <strong>datos masivos no estructurados</strong> con escalabilidad horizontal.
+      </p>
+    </div>
+
+    <!-- CRUD -->
+    <div class="card">
+      <div class="title">📌 Operaciones CRUD</div>
+      <pre><code># Create (Insertar un registro)
+put 'productos', 'p1', 'info:nombre', 'Laptop Lenovo'
+put 'productos', 'p1', 'info:precio', '2500.00'
+put 'productos', 'p1', 'info:stock', '10'
+
+# Read (Consultar)
+get 'productos', 'p1'
+scan 'productos'
+
+# Update (Actualizar - se hace con otro put sobre la misma clave)
+put 'productos', 'p1', 'info:precio', '2400.00'
+put 'productos', 'p1', 'info:stock', '15'
+
+# Delete (Eliminar)
+delete 'productos', 'p1', 'info:stock'
+deleteall 'productos', 'p1'</code></pre>
+    </div>
+  </div>
+
+  <footer>2025 ECOSYSTEM - SENA La Granja</footer>
+
+</body>
+</html>

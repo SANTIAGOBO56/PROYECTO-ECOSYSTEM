@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ECOSYSTEM - CouchDB</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    nav {
+      background: #4CAF50;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    nav .logo img { height: 40px; }
+    nav ul { list-style: none; display: flex; flex-wrap: wrap; gap: 15px; }
+    nav ul li { position: relative; }
+    nav a { text-decoration: none; color: white; font-weight: bold; padding: 6px 12px; display: block; }
+    nav ul li ul {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #66bb6a;
+      display: none;
+      min-width: 150px;
+      border-radius: 4px;
+    }
+    nav ul li:hover > ul { display: block; }
+    nav ul li ul li a { color: white; }
+    .menu-toggle { display: none; font-size: 28px; background: none; border: none; color: white; cursor: pointer; }
+
+    h1 { text-align: center; margin: 20px 0; color: #2c3e50; }
+
+    .contenedor {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 0 20px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 20px;
+      flex: 1 1 45%;
+      min-width: 300px;
+    }
+
+    .card img { display: block; margin: 0 auto 15px; max-width: 120px; }
+    .title { font-weight: bold; margin-bottom: 10px; color: #388e3c; font-size: 18px; }
+    pre { background: #dedee4; padding: 12px; border-radius: 8px; overflow-x: auto; }
+
+    footer { text-align: center; padding: 15px; margin-top: auto; background: #4CAF50; color: white; font-size: 14px; }
+
+    @media (max-width: 768px) {
+      nav ul { display: none; width: 100%; flex-direction: column; }
+      nav.active ul { display: flex; }
+      .menu-toggle { display: block; }
+      .contenedor { flex-direction: column; align-items: center; }
+      .card { flex: 1 1 100%; }
+    }
+  </style>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/estilos.css">
+  <title>ECOSYSTEM</title>
+</head>
+<body>
+ 
+<nav id="menu">
+    <ul>
+      <li class="logo">
+        <a href="../Nueva carpeta/login/login.html"><img src="img/ecosystem.png" alt="Logo"></a>
+      </li>
+
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="../Nueva carpeta/grri.html">Gestor y Motor de BD</a></li>
+
+      
+      <li>
+        <a href="../Nueva carpeta/diagrama.html">Tablas BD</a>
+        <ul>
+          <li><a href="../Nueva carpeta/prestamos.html">Pestamos</a></li>
+          <li><a href="../Nueva carpeta/reclamos.html">Reclamos</a></li>
+          <li><a href="../Nueva carpeta/equipos.html">Equipos</a></li>
+          <li><a href="../Nueva carpeta/solicitud.html">Solicitud</a></li>
+          <li><a href="../Nueva carpeta/devolucion.html">Devolucion</a></li>
+          <li><a href="../Nueva carpeta/personas_solicitante.html">Personas Solicitante</a></li>
+          <li><a href="../Nueva carpeta/responsables.html">Responsable</a></li>
+        </ul>
+      </li>
+
+  
+      <li>
+        <a href="#">BD Relaciones</a>
+        <ul>
+          <li><a href="../Nueva carpeta/mysql.html">MySQL</a></li>
+          <li><a href="../Nueva carpeta/oracle.html">Oracle</a></li>
+          <li><a href="../Nueva carpeta/postgresql.html">PostgreSQL</a></li>
+          <li><a href="../Nueva carpeta/sqlite.html">SQlite</a></li>
+          <li><a href="../Nueva carpeta/sqlserver.html">SQL Server</a></li>
+          <li><a href="../Nueva carpeta/mariadb.html">MariaDB</a></li>
+          <li><a href="../Nueva carpeta/firebird.html">Firebird</a></li>
+        </ul>
+      </li>
+
+      
+      <li>
+        <a href="#">BD No Relaciones</a>
+        <ul>
+          <li><a href="../Nueva carpeta/mongo.html">MongoDB</a></li>
+          <li><a href="../Nueva carpeta/cassandra.html">Cassandra</a></li>
+          <li><a href="../Nueva carpeta/couchdb.html">CoushDB</a></li>
+          <li><a href="../Nueva carpeta/redis.html">Redis</a></li>
+          <li><a href="../Nueva carpeta/neo4j.html">Neo4j</a></li>
+          <li><a href="../Nueva carpeta/amazon.html">Amazon DynamoDB</a></li>
+          <li><a href="../Nueva carpeta/hbase.html">HBase</a></li>
+        </ul>
+      </li>
+
+      <li><a href="../Nueva carpeta/informacion.html">Acerca de los Integrantes</a></li>
+    </ul>
+  </nav>
+<div>
+  <h1>CouchDB</h1>
+
+  <div class="contenedor">
+    <!-- Resumen izquierda -->
+    <div class="card">
+      <img src="img/couchdb.png" alt="CouchDB Logo">
+      <div class="title">📖 Resumen Breve</div>
+      <p>
+        Apache CouchDB es una base de datos <strong>NoSQL orientada a documentos</strong> que almacena datos en JSON. 
+        Utiliza un modelo de <strong>replicación y sincronización distribuida</strong>, ideal para aplicaciones web y móviles que requieren 
+        <strong>alta disponibilidad</strong> y <strong>tolerancia a fallos</strong>.
+      </p>
+    </div>
+
+    <!-- CRUD derecha -->
+    <div class="card">
+      <div class="title">⚙️ Operaciones CRUD</div>
+      <pre><code>// Crear base de datos
+PUT /productos
+
+// Insertar documento
+POST /productos
+{
+  "_id": "p1",
+  "nombre": "Laptop Lenovo",
+  "precio": 2500,
+  "stock": 10
+}
+
+// Leer documento
+GET /productos/p1
+
+// Actualizar documento
+PUT /productos/p1
+{
+  "_rev": "1-xxxx",
+  "nombre": "Laptop Lenovo",
+  "precio": 2400,
+  "stock": 15
+}
+
+// Eliminar documento
+DELETE /productos/p1?rev=1-xxxx</code></pre>
+    </div>
+  </div>
+
+  <footer>2025 ECOSYSTEM - SENA La Granja</footer>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  </script>
+
+</body>
+</html>

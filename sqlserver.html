@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/estilos.css">
+  <title>ECOSYSTEM</title>
+</head>
+<body>
+ 
+<nav id="menu">
+    <ul>
+      <li class="logo">
+        <a href="../cuadros.html"><img src="img/ecosystem.png" alt="Logo"></a>
+      </li>
+
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="../Nueva carpeta/grri.html">Gestor y Motor de BD</a></li>
+
+      
+      <li>
+        <a href="../Nueva carpeta/diagrama.html">Tablas BD</a>
+        <ul>
+          <li><a href="../Nueva carpeta/prestamos.html">Pestamos</a></li>
+          <li><a href="../Nueva carpeta/reclamos.html">Reclamos</a></li>
+          <li><a href="../Nueva carpeta/equipos.html">Equipos</a></li>
+          <li><a href="../Nueva carpeta/solicitud.html">Solicitud</a></li>
+          <li><a href="../Nueva carpeta/devolucion.html">Devolucion</a></li>
+          <li><a href="../Nueva carpeta/personas_solicitante.html">Personas Solicitante</a></li>
+          <li><a href="../Nueva carpeta/responsables.html">Responsable</a></li>
+        </ul>
+      </li>
+
+  
+      <li>
+        <a href="#">BD Relaciones</a>
+        <ul>
+          <li><a href="../Nueva carpeta/mysql.html">MySQL</a></li>
+          <li><a href="../Nueva carpeta/oracle.html">Oracle</a></li>
+          <li><a href="../Nueva carpeta/postgresql.html">PostgreSQL</a></li>
+          <li><a href="../Nueva carpeta/sqlite.html">SQlite</a></li>
+          <li><a href="../Nueva carpeta/sqlserver.html">SQL Server</a></li>
+          <li><a href="../Nueva carpeta/mariadb.html">MariaDB</a></li>
+          <li><a href="../Nueva carpeta/firebird.html">Firebird</a></li>
+        </ul>
+      </li>
+
+      
+      <li>
+        <a href="#">BD No Relaciones</a>
+        <ul>
+          <li><a href="../Nueva carpeta/mongo.html">MongoDB</a></li>
+          <li><a href="../Nueva carpeta/cassandra.html">Cassandra</a></li>
+          <li><a href="../Nueva carpeta/couchdb.html">CoushDB</a></li>
+          <li><a href="../Nueva carpeta/redis.html">Redis</a></li>
+          <li><a href="../Nueva carpeta/neo4j.html">Neo4j</a></li>
+          <li><a href="../Nueva carpeta/amazon.html">Amazon DynamoDB</a></li>
+          <li><a href="../Nueva carpeta/hbase.html">HBase</a></li>
+        </ul>
+      </li>
+
+      <li><a href="../Nueva carpeta/informacion.html">Acerca de los Integrantes</a></li>
+    </ul>
+  </nav>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>SQL Server - Operaciones CRUD</title>
+ 
+  
+</head>
+<body>
+
+  <h1>⚙️ Operaciones CRUD en SQL Server</h1>
+
+  <div class="section">
+    <h2>📌 ¿Qué es SQL Server?</h2>
+    <p>
+<<<<<<< HEAD
+        Microsoft SQL Server es un sistema de gestión de bases de datos relacionales (RDBMS) desarrollado por Microsoft que permite almacenar y recuperar datos de forma segura y eficiente utilizando Transact-SQL (T-SQL), un lenguaje de consulta estructurado (SQL) con extensiones propias. Sirve como un servidor de bases de datos para aplicaciones y herramientas, gestionando desde grandes aplicaciones conectadas a Internet hasta aplicaciones locales, y ofrece diversas herramientas para el análisis y la gestión de datos. 
+        <br>
+        <br>
+        ¿Para qué sirve?
+        <br>
+        <br>
+        Almacenamiento y recuperación de datos:
+        Su función principal es almacenar y acceder a grandes volúmenes de información de forma segura, como listas de clientes, catálogos de productos o datos multimedia. 
+        <br>
+        <br>
+        Gestión de datos empresariales:
+        Es fundamental para el funcionamiento de aplicaciones web y otras aplicaciones empresariales al gestionar información estructurada en tablas. 
+        <br>
+        <br>
+        Análisis y Business Intelligence:
+        Ofrece herramientas para analizar datos, obtener información valiosa sobre negocios y clientes, y aprovechar la inteligencia artificial a través de la integración con servicios de Azure. 
+        <br>
+        <br>
+        Escalabilidad:
+        Microsoft comercializa diferentes ediciones para adaptarse a distintas cargas de trabajo, desde aplicaciones para una sola máquina hasta sistemas a gran escala con muchos usuarios simultáneos. 
+      <br>
+      <br>
+      <p>Ejemplo de CRUD operacion</p>
+      <br>
+
+    <p>Crear Tabla</p>
+      CREATE TABLE Usuarios (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        nombre TEXT NOT NULL,
+        telefono int(11) UNIQUE)
+    <p>INSERT</p>
+        INSERT INTO Usuarios (nombre, telefono) VALUES ('Cristiam Mosquera', '3141388129');
+    <P>Update</P>   
+        UPDATE Usuarios SET telefono = '3141388129' WHERE id = 1;
+    <p>select</p>
+        SELECT nombre, telefono FROM Usuarios WHERE nombre LIKE 'Mosquera%'; 
+    <p>Delete</p>
+           DELETE FROM Usuarios WHERE id = 1; 
+</div>
+<footer>2025 ECOSYSTEM - SENA La Granja</footer>
+=======
+      <b>Microsoft SQL Server</b> es un sistema de gestión de bases de datos relacional (RDBMS)
+      desarrollado por Microsoft. Utiliza <b>T-SQL (Transact-SQL)</b> para administrar y manipular datos.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>🟢 CREATE (Insertar datos)</h2>
+    <p>Se utiliza el comando <b>INSERT INTO</b> para agregar registros a una tabla.</p>
+    <pre>
+CREATE TABLE Usuarios (
+    id INT PRIMARY KEY IDENTITY,
+    nombre NVARCHAR(50),
+    email NVARCHAR(100)
+);
+
+INSERT INTO Usuarios (nombre, email) 
+VALUES ('Ana', 'ana@mail.com');
+    </pre>
+  </div>
+
+  <div class="section">
+    <h2>🔵 READ (Leer datos)</h2>
+    <p>Se utiliza el comando <b>SELECT</b> para consultar registros.</p>
+    <pre>
+-- Consultar todos los usuarios
+SELECT * FROM Usuarios;
+
+-- Consultar un usuario específico
+SELECT * FROM Usuarios WHERE id = 1;
+    </pre>
+  </div>
+
+  <div class="section">
+    <h2>🟡 UPDATE (Actualizar datos)</h2>
+    <p>Se utiliza el comando <b>UPDATE</b> para modificar registros existentes.</p>
+    <pre>
+UPDATE Usuarios 
+SET email = 'nuevo@mail.com' 
+WHERE id = 1;
+    </pre>
+  </div>
+
+  <div class="section">
+    <h2>🔴 DELETE (Eliminar datos)</h2>
+    <p>Se utiliza el comando <b>DELETE</b> para borrar registros.</p>
+    <pre>
+DELETE FROM Usuarios 
+WHERE id = 1;
+    </pre>
+  </div>
+
+  <div class="footer">
+    ✍️ 2025 – Ejemplo CRUD en SQL Server - ECOSYSTEM
+  </div>
+
+>>>>>>> 53361fea53e9740844499f2ea8a443b30953eaf1
+</body>
+</html>

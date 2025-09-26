@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/estilos.css">
+  <title>ECOSYSTEM</title>
+</head>
+<body>
+<nav id="menu">
+    <ul>
+      <li class="logo">
+        <a href="../cuadros.html"><img src="img/ecosystem.png" alt="Logo"></a>
+      </li>
+
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="../Nueva carpeta/grri.html">Gestor y Motor de BD</a></li>
+
+      
+      <li>
+        <a href="../Nueva carpeta/diagrama.html">Tablas BD</a>
+        <ul>
+          <li><a href="../Nueva carpeta/prestamos.html">Pestamos</a></li>
+          <li><a href="../Nueva carpeta/reclamos.html">Reclamos</a></li>
+          <li><a href="../Nueva carpeta/equipos.html">Equipos</a></li>
+          <li><a href="../Nueva carpeta/solicitud.html">Solicitud</a></li>
+          <li><a href="../Nueva carpeta/devolucion.html">Devolucion</a></li>
+          <li><a href="../Nueva carpeta/personas_solicitante.html">Personas Solicitante</a></li>
+          <li><a href="../Nueva carpeta/responsables.html">Responsable</a></li>
+        </ul>
+      </li>
+
+  
+      <li>
+        <a href="#">BD Relaciones</a>
+        <ul>
+          <li><a href="../Nueva carpeta/mysql.html">MySQL</a></li>
+          <li><a href="../Nueva carpeta/oracle.html">Oracle</a></li>
+          <li><a href="../Nueva carpeta/postgresql.html">PostgreSQL</a></li>
+          <li><a href="../Nueva carpeta/sqlite.html">SQlite</a></li>
+          <li><a href="../Nueva carpeta/sqlserver.html">SQL Server</a></li>
+          <li><a href="../Nueva carpeta/mariadb.html">MariaDB</a></li>
+          <li><a href="../Nueva carpeta/firebird.html">Firebird</a></li>
+        </ul>
+      </li>
+
+      
+      <li>
+        <a href="#">BD No Relaciones</a>
+        <ul>
+          <li><a href="../Nueva carpeta/mongo.html">MongoDB</a></li>
+          <li><a href="../Nueva carpeta/cassandra.html">Cassandra</a></li>
+          <li><a href="../Nueva carpeta/couchdb.html">CoushDB</a></li>
+          <li><a href="../Nueva carpeta/redis.html">Redis</a></li>
+          <li><a href="../Nueva carpeta/neo4j.html">Neo4j</a></li>
+          <li><a href="../Nueva carpeta/amazon.html">Amazon DynamoDB</a></li>
+          <li><a href="../Nueva carpeta/hbase.html">HBase</a></li>
+        </ul>
+      </li>
+
+      <li><a href="../Nueva carpeta/informacion.html">Acerca de los Integrantes</a></li>
+    </ul>
+  </nav>
+<body>
+
+<h1>CRUD HTML con Contexto e Imagen</h1>
+
+<div class="flex-container">
+
+  <!-- Texto / Contexto -->
+  <div class="texto">
+    <h2>Qué es HTML y CRUD</h2>
+    <p>
+      HTML (HyperText Markup Language) es el lenguaje que permite estructurar páginas web.
+      Con JavaScript, podemos implementar un CRUD (Crear, Leer, Actualizar y Eliminar)
+      para gestionar datos directamente en la página, sin necesidad de base de datos externa.
+    </p>
+    <img src="https://via.placeholder.com/300x150.png?text=Imagen+Ejemplo" alt="Imagen ejemplo">
+  </div>
+
+
+<h1>CRUD HTML / JavaScript</h1>
+
+<div class="flex-container">
+
+  <!-- CREATE -->
+  <div class="box">
+    <h2>🟢 CREATE – Crear</h2>
+    <p>Agrega un nuevo producto a la lista.</p>
+    <input type="text" id="crearNombre" placeholder="Nombre">
+    <input type="number" id="crearPrecio" placeholder="Precio">
+    <button onclick="crearProducto()">Agregar</button>
+  </div>
+
+  <!-- READ -->
+  <div class="box">
+    <h2>🔵 READ – Leer</h2>
+    <p>Muestra todos los productos existentes.</p>
+    <table>
+      <thead>
+        <tr><th>ID</th><th>Nombre</th><th>Precio</th></tr>
+      </thead>
+      <tbody id="tablaProductos"></tbody>
+    </table>
+  </div>
+
+  <!-- UPDATE -->
+  <div class="box">
+    <h2>🟡 UPDATE – Actualizar</h2>
+    <p>Modifica un producto existente por su ID.</p>
+    <input type="number" id="actualizarId" placeholder="ID a actualizar">
+    <input type="text" id="actualizarNombre" placeholder="Nuevo nombre">
+    <input type="number" id="actualizarPrecio" placeholder="Nuevo precio">
+    <button onclick="actualizarProducto()">Actualizar</button>
+  </div>
+
+  <!-- DELETE -->
+  <div class="box">
+    <h2>🔴 DELETE – Eliminar</h2>
+    <p>Elimina un producto por su ID.</p>
+    <input type="number" id="eliminarId" placeholder="ID a eliminar">
+    <button onclick="eliminarProducto()">Eliminar</button>
+  </div>
+
+</div>
+
+<script>
+let productos = [];
+let id = 1;
+
+// CREATE
+function crearProducto() {
+  const nombre = document.getElementById('crearNombre').value;
+  const precio = document.getElementById('crearPrecio').value;
+  if(nombre && precio) {
+    productos.push({id: id++, nombre, precio});
+    mostrarTabla();
+    document.getElementById('crearNombre').value = '';
+    document.getElementById('crearPrecio').value = '';
+  }
+}
+
+// READ
+function mostrarTabla() {
+  const tabla = document.getElementById('tablaProductos');
+  tabla.innerHTML = '';
+  productos.forEach(p => {
+    tabla.innerHTML += `<tr><td>${p.id}</td><td>${p.nombre}</td><td>${p.precio}</td></tr>`;
+  });
+}
+
+// UPDATE
+function actualizarProducto() {
+  const idActualizar = parseInt(document.getElementById('actualizarId').value);
+  const nombre = document.getElementById('actualizarNombre').value;
+  const precio = document.getElementById('actualizarPrecio').value;
+  const producto = productos.find(p => p.id === idActualizar);
+  if(producto) {
+    if(nombre) producto.nombre = nombre;
+    if(precio) producto.precio = precio;
+    mostrarTabla();
+  } else alert('ID no encontrado');
+}
+
+// DELETE
+function eliminarProducto() {
+  const idEliminar = parseInt(document.getElementById('eliminarId').value);
+  productos = productos.filter(p => p.id !== idEliminar);
+  mostrarTabla();
+}
+</script>
+
+</body>
+</html>
+</script>
+
+</body>
+</html>
