@@ -20,7 +20,7 @@
 
     /* NAV */
     nav {
-      background: #4CAF50; /* Verde claro */
+      background: #4CAF50;
       padding: 10px 20px;
       display: flex;
       justify-content: space-between;
@@ -46,7 +46,7 @@
       position: absolute;
       top: 100%;
       left: 0;
-      background: #66bb6a; /* submenu más claro */
+      background: #66bb6a;
       display: none;
       min-width: 150px;
       border-radius: 4px;
@@ -126,99 +126,44 @@
 </head>
 <body>
 
-  <!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/estilos.css">
-  <title>ECOSYSTEM</title>
-</head>
-<body>
- 
-<nav id="menu">
-    <ul>
-      <li class="logo">
-        <a href="../Nueva carpeta/login/login.html"><img src="img/ecosystem.png" alt="Logo"></a>
-      </li>
+<nav>
+  <div class="logo"><a href="#"><img src="img/ecosystem.png" alt="Logo"></a></div>
+  <button class="menu-toggle">&#9776;</button>
+  <ul>
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="#">Gestor y Motor de BD</a></li>
+    <li>
+      <a href="#">BD No Relacionales</a>
+      <ul>
+        <li><a href="#">MongoDB</a></li>
+        <li><a href="#">Cassandra</a></li>
+        <li><a href="#">DynamoDB</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="../Nueva carpeta/grri.html">Gestor y Motor de BD</a></li>
+<h1>Amazon DynamoDB</h1>
+<div class="contenedor">
+  <!-- Resumen -->
+  <div class="card">
+    <img src="img/amazon.png" alt="DynamoDB Logo">
+    <div class="title">☁️ Resumen Breve</div>
+    <p>
+      Amazon DynamoDB es una base de datos <strong>NoSQL completamente administrada</strong> por AWS.
+      Ofrece <strong>alta disponibilidad</strong>, <strong>baja latencia</strong> y escalabilidad automática.
+      Soporta <strong>documentos y pares clave-valor</strong>, con replicación en múltiples zonas de AWS.
+    </p>
+  </div>
 
-      
-      <li>
-        <a href="../Nueva carpeta/diagrama.html">Tablas BD</a>
-        <ul>
-          <li><a href="../Nueva carpeta/prestamos.html">Pestamos</a></li>
-          <li><a href="../Nueva carpeta/reclamos.html">Reclamos</a></li>
-          <li><a href="../Nueva carpeta/equipos.html">Equipos</a></li>
-          <li><a href="../Nueva carpeta/solicitud.html">Solicitud</a></li>
-          <li><a href="../Nueva carpeta/devolucion.html">Devolucion</a></li>
-          <li><a href="../Nueva carpeta/personas_solicitante.html">Personas Solicitante</a></li>
-          <li><a href="../Nueva carpeta/responsables.html">Responsable</a></li>
-        </ul>
-      </li>
-
-  
-      <li>
-        <a href="#">BD Relaciones</a>
-        <ul>
-          <li><a href="../Nueva carpeta/mysql.html">MySQL</a></li>
-          <li><a href="../Nueva carpeta/oracle.html">Oracle</a></li>
-          <li><a href="../Nueva carpeta/postgresql.html">PostgreSQL</a></li>
-          <li><a href="../Nueva carpeta/sqlite.html">SQlite</a></li>
-          <li><a href="../Nueva carpeta/sqlserver.html">SQL Server</a></li>
-          <li><a href="../Nueva carpeta/mariadb.html">MariaDB</a></li>
-          <li><a href="../Nueva carpeta/firebird.html">Firebird</a></li>
-        </ul>
-      </li>
-
-      
-      <li>
-        <a href="#">BD No Relaciones</a>
-        <ul>
-          <li><a href="../Nueva carpeta/mongo.html">MongoDB</a></li>
-          <li><a href="../Nueva carpeta/cassandra.html">Cassandra</a></li>
-          <li><a href="../Nueva carpeta/couchdb.html">CoushDB</a></li>
-          <li><a href="../Nueva carpeta/redis.html">Redis</a></li>
-          <li><a href="../Nueva carpeta/neo4j.html">Neo4j</a></li>
-          <li><a href="../Nueva carpeta/amazon.html">Amazon DynamoDB</a></li>
-          <li><a href="../Nueva carpeta/hbase.html">HBase</a></li>
-        </ul>
-      </li>
-
-      <li><a href="../Nueva carpeta/informacion.html">Acerca de los Integrantes</a></li>
-    </ul>
-  </nav>
-<div>
-
-  <!-- CONTENIDO -->
-  <h1>Amazon DynamoDB</h1>
-  <div class="contenedor">
-    <!-- Resumen -->
-    <div class="card">
-      <img src="img/amazon.png" alt="DynamoDB Logo">
-      <div class="title">☁️ Resumen Breve</div>
-      <p>
-        Amazon DynamoDB es una base de datos <strong>NoSQL completamente administrada</strong> por AWS.
-        Ofrece <strong>alta disponibilidad</strong>, <strong>baja latencia</strong> y escalabilidad automática.
-        Soporta <strong>documentos y pares clave-valor</strong>, con replicación en múltiples zonas de AWS.
-        <strong>Es bastante cómodo de utilizar</strong>.
-      </p>
-    </div>
-
-    <!-- CRUD -->
-    <div class="card">
-      <div class="title">📌 Operaciones CRUD</div>
-      <pre><code># Create (Insertar)
+  <!-- CRUD -->
+  <div class="card">
+    <div class="title">📌 Operaciones CRUD</div>
+    <pre><code>
+# Create (Insertar)
 aws dynamodb put-item \
 --table-name Productos \
---item '{
-  "id": {"S": "123"},
-  "nombre": {"S": "Laptop Lenovo"},
-  "precio": {"N": "2500.00"},
-  "stock": {"N": "10"}
-}'
+--item '{"id": {"S": "123"},"nombre": {"S": "Laptop Lenovo"},"precio": {"N": "2500.00"},"stock": {"N": "10"}}'
 
 # Read (Consultar)
 aws dynamodb get-item \
@@ -237,20 +182,20 @@ aws dynamodb update-item \
 # Delete (Eliminar)
 aws dynamodb delete-item \
 --table-name Productos \
---key '{"id": {"S": "123"}}'</code></pre>
-    </div>
+--key '{"id": {"S": "123"}}'
+    </code></pre>
   </div>
+</div>
 
-  <footer>2025 ECOSYSTEM - SENA La Granja</footer>
+<footer>2025 ECOSYSTEM - SENA La Granja</footer>
 
-  <!-- JS menú hamburguesa -->
-  <script>
-    const toggle = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('nav');
-    toggle.addEventListener('click', () => {
-      nav.classList.toggle('active');
-    });
-  </script>
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('nav');
+  toggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
+</script>
 
 </body>
 </html>

@@ -4,7 +4,116 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Diccionario de Datos - Ecosystem</title>
-<link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/estilos.css">
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    nav {
+      background: #4CAF50;
+      padding: 10px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav .logo img {
+      height: 50px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      padding: 6px 12px;
+      display: block;
+    }
+
+    nav ul li ul {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #66bb6a;
+      display: none;
+      min-width: 150px;
+      border-radius: 4px;
+    }
+
+    nav ul li:hover > ul {
+      display: block;
+    }
+
+    nav ul li ul li a {
+      color: white;
+    }
+
+    h2 {
+      text-align: center;
+      margin: 20px 10px;
+      color: #2c3e50;
+    }
+
+    p {
+      padding: 0 20px;
+      margin-bottom: 20px;
+      text-align: justify;
+    }
+
+    img {
+      display: block;
+      max-width: 90%;
+      margin: 0 auto 20px;
+      height: auto;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #4CAF50;
+      color: white;
+      font-size: 14px;
+      margin-top: 20px;
+    }
+
+    /* Responsividad */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      nav ul li ul {
+        position: static;
+      }
+
+      p {
+        padding: 0 10px;
+      }
+    }
+  </style>
 </head>
 <body>
 <nav id="menu">
@@ -16,11 +125,10 @@
       <li><a href="index.html">Inicio</a></li>
       <li><a href="../Nueva carpeta/grri.html">Gestor y Motor de BD</a></li>
 
-      
       <li>
         <a href="../Nueva carpeta/diagrama.html">Tablas BD</a>
         <ul>
-          <li><a href="../Nueva carpeta/prestamos.html">Pestamos</a></li>
+          <li><a href="../Nueva carpeta/prestamos.html">Prestamos</a></li>
           <li><a href="../Nueva carpeta/reclamos.html">Reclamos</a></li>
           <li><a href="../Nueva carpeta/equipos.html">Equipos</a></li>
           <li><a href="../Nueva carpeta/solicitud.html">Solicitud</a></li>
@@ -30,7 +138,6 @@
         </ul>
       </li>
 
-  
       <li>
         <a href="#">BD Relaciones</a>
         <ul>
@@ -44,13 +151,12 @@
         </ul>
       </li>
 
-      
       <li>
         <a href="#">BD No Relaciones</a>
         <ul>
           <li><a href="../Nueva carpeta/mongo.html">MongoDB</a></li>
           <li><a href="../Nueva carpeta/cassandra.html">Cassandra</a></li>
-          <li><a href="../Nueva carpeta/couchdb.html">CoushDB</a></li>
+          <li><a href="../Nueva carpeta/couchdb.html">CouchDB</a></li>
           <li><a href="../Nueva carpeta/redis.html">Redis</a></li>
           <li><a href="../Nueva carpeta/neo4j.html">Neo4j</a></li>
           <li><a href="../Nueva carpeta/amazon.html">Amazon DynamoDB</a></li>
@@ -61,50 +167,16 @@
       <li><a href="../Nueva carpeta/informacion.html">Acerca de los Integrantes</a></li>
     </ul>
   </nav>
-   <h2>¿Qué es un Gestor de Base de Datos?</h2>
-    <p>
-      Un Gestor de Base de Datos es un software que sirve como interfaz entre los usuarios, las aplicaciones y la base de datos, permitiendo definir, manipular, asegurar y recuperar la información de manera eficiente y organizada. Su principal función es gestionar el almacenamiento, la organización y el acceso a grandes volúmenes de datos, garantizando su integridad, seguridad y disponibilidad. 
-      <br>
-      <br>
-      Funciones principales de un gestor de base de datos:
-      <br>
-      <br>
-      Definir los datos:
-      <br>
-      Permite establecer la estructura y los tipos de los datos que se almacenarán en la base de datos. 
-      <br>
-      <br>
-      Manipular los datos:
-      <br>
-      Realiza operaciones como insertar, actualizar, eliminar o extraer información según las solicitudes de los usuarios. 
-      <br>
-      <br>
-      Preservar la seguridad e integridad:
-      <br>
-      Implementa medidas de seguridad para proteger los datos de accesos no autorizados y garantiza su validez. 
-      <br>
-      <br>
-      Recuperación y restauración de datos:
-      <br>
-      Ofrece mecanismos para restaurar la información en caso de fallos del sistema. 
-      <br>
-      <br>
-      Generación de informes y análisis:
-      <br>
-      Facilita la creación de análisis y la generación de informes a partir de los datos almacenados. 
-      <br>
-      <br>
-      Ejemplos de gestores de bases de datos: 
-      <br>
-      MySQL, MariaDB, PostgreSQL, Microsoft SQL Server, Oracle Database, Microsoft Access.
-    </p>
-    <br>
-    <br>
-    <img src="../img/gestorbd.png">
-  </section>
 
-  <footer>
-    <p>© 2025 ECOSYSTEM - SENA La Granja</p>
-  </footer>
+<h2>¿Qué es un Gestor de Base de Datos?</h2>
+<p>
+  Un Gestor de Base de Datos es un software que sirve como interfaz entre los usuarios, las aplicaciones y la base de datos, permitiendo definir, manipular, asegurar y recuperar la información de manera eficiente y organizada...
+</p>
+
+<img src="../img/gestorbd.png" alt="Gestor BD">
+
+<footer>
+  <p>© 2025 ECOSYSTEM - SENA La Granja</p>
+</footer>
 </body>
 </html>
