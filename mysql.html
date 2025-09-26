@@ -62,51 +62,91 @@
       <li><a href="../Nueva carpeta/informacion.html">Acerca de los Integrantes</a></li>
     </ul>
   </nav>
-<div>
-<h2>Que es MySQL</h2>
-    <img src="img/mysql.png" alt="">
-    <p>
-MySQL es un sistema de gestión de bases de datos 
-(DBMS, por sus siglas en inglés) de código abierto desarrollado por Oracle.
-Se ha ganado su lugar en el mundo digital como una base de datos relacional
-que permite almacenar, organizar y recuperar datos de manera eficiente. 
-MySQL es utilizado por una amplia variedad de organizaciones y aplicaciones en todo el mundo.
-Además, utiliza el lenguaje SQL (Structured Query Language) para acceder y manipular los datos.        
-   </p>
-   <h1>Operaciones CRUD en MySQL</h1>
-<section id="crud-mysql">
-  <h2>🔍 Operaciones CRUD en MySQL</h2>
-  <p class="intro">
-    Las operaciones CRUD representan las acciones básicas que puedes realizar sobre los datos en una base de datos.
-    A continuación, te mostramos qué hace cada una en MySQL:
-  </p>
 
-  <div class="crud-card create">
-    <h3>🟢 CREATE – Crear</h3>
-    <p><strong>¿Qué hace?</strong> Inserta nuevos datos en una tabla de la base de datos.</p>
-    <pre>INSERT INTO usuarios (nombre, email) VALUES ('Ana', 'ana@mail.com');</pre>
+  <title>MySQL y CRUD</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f9;
+      margin: 20px;
+      color: #333;
+    }
+    .content-flex {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap; /* para móviles */
+    }
+    .texto {
+      flex: 1 1 40%;
+    }
+    .texto img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 15px;
+    }
+    .crud {
+      flex: 1 1 55%;
+    }
+    .crud-card {
+      background: #fff;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+    h2, h3 {
+      color: #2c3e50;
+    }
+    pre {
+      background: #ecf0f1;
+      padding: 8px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="content-flex">
+    <!-- Texto descriptivo -->
+    <div class="texto">
+      <h2>Qué es MySQL</h2>
+      <img src="img/mysql.png" alt="Logo MySQL">
+      <p>
+        MySQL es un sistema de gestión de bases de datos (DBMS) de código abierto desarrollado por Oracle.
+        Permite almacenar, organizar y recuperar datos de manera eficiente, y utiliza SQL para manipular los datos.
+      </p>
+    </div>
+
+    <!-- CRUD -->
+    <div class="crud">
+      <h2>Operaciones CRUD en MySQL</h2>
+
+      <div class="crud-card create">
+        <h3>🟢 CREATE – Crear</h3>
+        <p>Inserta nuevos datos en una tabla.</p>
+        <pre>INSERT INTO usuarios (nombre, email) VALUES ('Ana', 'ana@mail.com');</pre>
+      </div>
+
+      <div class="crud-card read">
+        <h3>🔵 READ – Leer</h3>
+        <p>Recupera o consulta datos existentes.</p>
+        <pre>SELECT * FROM usuarios;</pre>
+      </div>
+
+      <div class="crud-card update">
+        <h3>🟡 UPDATE – Actualizar</h3>
+        <p>Modifica registros existentes.</p>
+        <pre>UPDATE usuarios SET email = 'nuevo@mail.com' WHERE id = 1;</pre>
+      </div>
+
+      <div class="crud-card delete">
+        <h3>🔴 DELETE – Eliminar</h3>
+        <p>Elimina registros de una tabla.</p>
+        <pre>DELETE FROM usuarios WHERE id = 1;</pre>
+      </div>
+    </div>
   </div>
 
-  <div class="crud-card read">
-    <h3>🔵 READ – Leer</h3>
-    <p><strong>¿Qué hace?</strong> Recupera o consulta datos existentes de la base de datos.</p>
-    <pre>SELECT * FROM usuarios;</pre>
-  </div>
-
-  <div class="crud-card update">
-    <h3>🟡 UPDATE – Actualizar</h3>
-    <p><strong>¿Qué hace?</strong> Modifica uno o más registros existentes en la tabla.</p>
-    <pre>UPDATE usuarios SET email = 'nuevo@mail.com' WHERE id = 1;</pre>
-  </div>
-
-  <div class="crud-card delete">
-    <h3>🔴 DELETE – Eliminar</h3>
-    <p><strong>¿Qué hace?</strong> Elimina uno o más registros de una tabla.</p>
-    <pre>DELETE FROM usuarios WHERE id = 1;</pre>
-  </div>
-</section>
-
-</div>
-<footer>2025 ECOSYSTEM - SENA La Granja</footer>
 </body>
 </html>

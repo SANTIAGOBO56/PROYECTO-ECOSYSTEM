@@ -62,14 +62,86 @@
       <li><a href="../Nueva carpeta/informacion.html">Acerca de los Integrantes</a></li>
     </ul>
   </nav>
-<div>
-  <h1>Neo4j</h1>
-  <img src="img/neo4j.png" alt="">
-  <p>Neo4j es un software libre de Base de datos orientada a grafos, implementado en Java.
-     Los desarrolladores describen a Neo4j como un motor de persistencia embebido, basado en disco, implementado en Java, completamente transaccional, 
-     que almacena datos estructurados en grafos en lugar de en tablas ("embedded, disk-based, fully transactional Java persistence engine that stores data structured in graphs rather than in tables").
-      La versión 1.0 de Neo4j fue lanzada en febrero de 2010.
-     La base de datos está licenciada en un modelo dual, tanto bajo Affero General Public License (AGPL) v3 como bajo licencia comercial.</p>
+
+  <title>Neo4j y CRUD</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f9;
+      margin: 20px;
+      color: #333;
+    }
+    .container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      flex: 1 1 300px;
+    }
+    h2 {
+      color: #2c3e50;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background: #3498db;
+      color: white;
+    }
+    td {
+      background: #ecf0f1;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Neo4j y CRUD</h1>
+  <div class="container">
+    <!-- Cuadro Neo4j -->
+    <div class="card">
+      <img src="img/neo4j.png" alt="neo4j Logo">
+      <h2>Neo4j</h2>
+
+    
+      <p>Neo4j es un sistema de gestión de bases de datos gráficas (GDBMS) desarrollado por Neo4j Inc.
+
+Los 
+elementos de datos que almacena Neo4j son nodos , aristas que los conectan y atributos de 
+nodos y aristas. Descrito por sus desarrolladores como una base de datos transaccional compatible con ACID con 
+almacenamiento y procesamiento nativo de grafos, Neo4j está disponible en una "edición comunitaria" de código 
+abierto , con una modificación de la Licencia Pública General de GNU , con copias de seguridad en línea y extensiones
+ de alta disponibilidad bajo una licencia comercial de código cerrado.  Neo también licencia Neo4j con estas 
+ extensiones bajo términos comerciales de código cerrado. </p>
+    </div>
+
+    <!-- Cuadro CRUD -->
+    <div class="card">
+      <h2>CRUD en Neo4j (Cypher)</h2>
+      <table>
+        <tr><th>CRUD</th><th>Ejemplo</th></tr>
+        <tr><td>Create</td><td><code>CREATE (p:Persona {nombre: 'Ana', edad: 25})</code></td></tr>
+        <tr><td>Read</td><td><code>MATCH (p:Persona) RETURN p</code></td></tr>
+        <tr><td>Update</td><td><code>MATCH (p:Persona {nombre:'Ana'}) SET p.edad = 26</code></td></tr>
+        <tr><td>Delete</td><td><code>MATCH (p:Persona {nombre:'Ana'}) DELETE p</code></td></tr>
+      </table>
+    </div>
+  </div>
+
+</body>
+</html>
+
 </div>
 <footer>2025 ECOSYSTEM - SENA La Granja</footer>
 </body>
