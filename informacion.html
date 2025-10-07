@@ -5,124 +5,165 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ECOSYSTEM</title>
   <link rel="stylesheet" href="css/estilos.css">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-           <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  
+  <style>
+    /* Ajustes para las imágenes del carrusel */
+    .carousel-inner img {
+      max-height: 500px;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    /* Estilo de las flechas del carrusel */
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      filter: invert(1) grayscale(100%);
+    }
+
+    /* Estilo opcional para la imagen del equipo */
+    .equipo-img {
+      max-width: 80%;
+      height: auto;
+      margin-top: 20px;
+    }
+
+  </style>
 </head>
 <body>
-<nav id="menu">
-  <ul>
-    <li class="logo">
-      <a href="login/login.html"><img src="img/ecosystem.png" alt="Logo"></a>
-    </li>
-    <li><a href="index.html">Inicio</a></li>
-    <li><a href="grri.html">Gestor y Motor de BD</a></li>
-    <li>
-      <a href="diagrama.html">Tablas BD</a>
-      <ul>
-        <li><a href="prestamos.html">Pestamos</a></li>
-        <li><a href="reclamos.html">Reclamos</a></li>
-        <li><a href="equipos.html">Equipos</a></li>
-        <li><a href="solicitud.html">Solicitud</a></li>
-        <li><a href="devolucion.html">Devolucion</a></li>
-        <li><a href="personas_solicitante.html">Personas Solicitante</a></li>
-        <li><a href="responsables.html">Responsable</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#">BD Relaciones</a>
-      <ul>
-        <li><a href="mysql.html">MySQL</a></li>
-        <li><a href="oracle.html">Oracle</a></li>
-        <li><a href="postgresql.html">PostgreSQL</a></li>
-        <li><a href="sqlite.html">SQlite</a></li>
-        <li><a href="sqlserver.html">SQL Server</a></li>
-        <li><a href="mariadb.html">MariaDB</a></li>
-        <li><a href="firebird.html">Firebird</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#">BD No Relaciones</a>
-      <ul>
-        <li><a href="mongo.html">MongoDB</a></li>
-        <li><a href="cassandra.html">Cassandra</a></li>
-        <li><a href="couchdb.html">CoushDB</a></li>
-        <li><a href="redis.html">Redis</a></li>
-        <li><a href="neo4j.html">Neo4j</a></li>
-        <li><a href="amazon.html">Amazon DynamoDB</a></li>
-        <li><a href="hbase.html">HBase</a></li>
-      </ul>
-    </li>
-    <li><a href="informacion.html">Acerca de los Integrantes</a></li>
-  </ul>
-</nav>
 
-<main>
-  <div class="page-header">
-    <h1>Proyecto ECOSYSTEM</h1>
-  </div>
+  <nav id="menu">
+    <ul>
+      <li class="logo">
+        <a href="login/login.html"><img src="img/ecosystem.png" alt="Logo"></a>
+      </li>
 
-  <!-- Carrusel Bootstrap -->
-  <div class="container mb-4">
-    <div id="carouselExampleCaptions" class="carousel slide">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="img/santiago.jpg" class="d-block w-100 carrusel-img" alt="Primera imagen" >
-          <div class="carousel-caption d-none d-md-block">
-            <h2>Bienvenidos a Ecosystem</h2>
-            <p>El gerente del proyecto.</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="img/luis.jpg" class="d-block w-100 carrusel-img"  >
-          <div class="carousel-caption d-none d-md-block">
-            <h2>Bienvenidos a Ecosystem</h2>
-            <p>El líder del proyecto.</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="img/cristian.jpg" class="d-block w-100 carrusel-img" alt="Tercera imagen" >
-          <div class="carousel-caption d-none d-md-block">
-            <h2>Bienvenidos a Ecosystem</h2>
-            <p>Especialista en frontend.</p>
-          </div>
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Anterior</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Siguiente</span>
-      </button>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="grri.html">Gestor y Motor de BD</a></li>
+
+      
+      <li>
+        <a href="diagrama.html">Tablas BD</a>
+        <ul>
+          
+          <li><a href="reclamos.html">Reclamos</a></li>
+          <li><a href="equipos.html">Equipos</a></li>
+          <li><a href="solicitud.html">Solicitud</a></li>
+          <li><a href="devolucion.html">Devolucion</a></li>
+          <li><a href="personas_solicitante.html">Personas Solicitante</a></li>
+          <li><a href="responsables.html">Responsable</a></li>
+        </ul>
+      </li>
+
+  
+      <li>
+        <a href="#">BD Relaciones</a>
+        <ul>
+          <li><a href="mysql.html">MySQL</a></li>
+          <li><a href="oracle.html">Oracle</a></li>
+          <li><a href="postgresql.html">PostgreSQL</a></li>
+          <li><a href="sqlite.html">SQlite</a></li>
+          <li><a href="sqlserver.html">SQL Server</a></li>
+          <li><a href="mariadb.html">MariaDB</a></li>
+          <li><a href="firebird.html">Firebird</a></li>
+        </ul>
+      </li>
+
+      
+      <li>
+        <a href="#">BD No Relaciones</a>
+        <ul>
+          <li><a href="mongo.html">MongoDB</a></li>
+          <li><a href="cassandra.html">Cassandra</a></li>
+          <li><a href="couchdb.html">CoushDB</a></li>
+          <li><a href="redis.html">Redis</a></li>
+          <li><a href="neo4j.html">Neo4j</a></li>
+          <li><a href="amazon.html">Amazon DynamoDB</a></li>
+          <li><a href="hbase.html">HBase</a></li>
+        </ul>
+      </li>
+      <li><a href="mockap.html">Prototipo</a></li>
+      <li><a href="informacion.html">Acerca de los Integrantes</a></li>
+      
+    </ul>
+  </nav>
+  <main>
+    <div class="page-header text-center my-4">
+      <h1>Proyecto ECOSISTEM</h1>
     </div>
-  </div>
 
-  <!-- Info del equipo y foto -->
-  <div class="container">
-    <div class="equipo-info">
-      <h2>Equipo de Desarrollo</h2>
-      <ul>
-        <li><strong>Luis Fernando Pinto</strong> – Líder de Proyecto</li>
-        <li><strong>Miguel Santiago Bocanegra</strong> – Gerente de Proyecto</li>
-        <li><strong>Christian Ivan Mosquera</strong> – Desarrollador</li>
-        <li><strong>Juan Pablo Tocarema</strong> – Desarrollador</li>
-      </ul>
+    <div class="container mb-5 d-flex justify-content-center">
+      <div id="carouselExampleCaptions" class="carousel slide" style="width: 800px;">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Diapositiva 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Diapositiva 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Diapositiva 3"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Diapositiva 4"></button>
+        </div>
+
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="img/santiago.jpg" class="d-block w-100" alt="Primera imagen">
+            <div class="carousel-caption d-none d-md-block">
+              <h2>Bienvenidos al Ecosystem</h2>
+              <p>Gerente del proyecto</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/luis.jpg" class="d-block w-100" alt="Segunda imagen">
+            <div class="carousel-caption d-none d-md-block">
+              <h2>Bienvenidos al Ecosystem</h2>
+              <p>Líder del proyecto</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/cristian.jpg" class="d-block w-100" alt="Tercera imagen">
+            <div class="carousel-caption d-none d-md-block">
+              <h2>Bienvenidos al Ecosystem</h2>
+              <p>Especialista en frontend</p>
+            </div>
+          </div>
+        
+         <div class="carousel-item">
+            <img src="img/tocarema.jpg" class="d-block w-100" alt="Tercera imagen">
+            <div class="carousel-caption d-none d-md-block">
+              <h2>Bienvenidos al Ecosystem</h2>
+              <p>Especialista en Backend</p>
+            </div>
+          </div>
+        </div>
+        
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
     </div>
-    <img src="img/IMG-20250912-WA0008.jpg" alt="Foto del equipo/laboratorio" class="equipo-img">
-  </div>
-</main>
-
-<footer>2025 ECOSYSTEM - SENA La Granja</footer>
+    
 
 
+    <div class="container">
+      <div class="equipo-info">
+        <h2>Equipo de Desarrollo</h2>
+        <ul>
+          <li><strong>Luis Fernando Pinto</strong> – Líder de Proyecto</li>
+          <li><strong>Miguel Santiago Bocanegra</strong> – Gerente de Proyecto</li>
+          <li><strong>Christian Iván Mosquera</strong> – Desarrollador</li>
+          <li><strong>Juan Pablo Tocarema</strong> – Desarrollador</li>
+        </ul>
+      </div>
+      <img src="img/IMG-20250912-WA0008.jpg" alt="Foto del equipo/laboratorio" class="equipo-img">
+    </div>
+  </main>
+
+  <footer>
+    ECOSISTEMA 2025 - SENA La Granja
+  </footer>
 </body>
 </html>

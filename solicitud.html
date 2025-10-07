@@ -20,7 +20,7 @@
       <li>
         <a href="diagrama.html">Tablas BD</a>
         <ul>
-          <li><a href="prestamos.html">Pestamos</a></li>
+          
           <li><a href="reclamos.html">Reclamos</a></li>
           <li><a href="equipos.html">Equipos</a></li>
           <li><a href="solicitud.html">Solicitud</a></li>
@@ -57,8 +57,9 @@
           <li><a href="hbase.html">HBase</a></li>
         </ul>
       </li>
-
+      <li><a href="mockap.html">Prototipo</a></li>
       <li><a href="informacion.html">Acerca de los Integrantes</a></li>
+      
     </ul>
   </nav>
 
@@ -78,8 +79,9 @@
           <tr><td>Id_solicitud</td><td>INT</td><td>1</td><td>Código único</td></tr>
           <tr><td>fecha_hora_registro</td><td>DATETIME</td><td>10</td><td>Fecha y hora</td></tr>
           <tr><td>Id_equipo</td><td>INT</td><td>1</td><td>Código del equipo</td></tr>
-          <tr><td>fecha_inicio</td><td>DATE</td><td>10</td><td>Inicio</td></tr>
-          <tr><td>fecha_fin</td><td>DATE</td><td>10</td><td>Fin</td></tr>
+          <tr><td>fecha_inicio</td><td>DATE</td><td>10</td><td>fecha Inicio</td></tr>
+          <tr><td>fecha_fin</td><td>DATE</td><td>10</td><td>fecha final de entrega</td></tr>
+          <tr><td>observacion</td><td>TEXT</td><td>60</td><td>Observaciones</td></tr>
           <tr><td>Id_responsable</td><td>INT</td><td>1</td><td>Responsable</td></tr>
           <tr><td>Id_persona_solicitante</td><td>INT</td><td>1</td><td>Solicitante</td></tr>
         </tbody>
